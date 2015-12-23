@@ -1,0 +1,130 @@
+1.Properties for Data Source and Data Format Definition
+---------------------------------------------------------------
+dataload.source.dataSourceClass
+	# The source data format, data class name
+	# this is required.
+	
+dataload.source.hdfsDirs
+	# The hdfs source data path
+	# this is required.
+
+dataload.only.a.large.file
+    # If there is one and only one larger file(larger than HDFS block size), set dataload.only.a.large.file to true.
+    # this is required.
+    
+dataload.source.parserType
+	# The data source type, e.g. csv, txt, jason, xml, etc.
+	# this is required.
+	
+dataload.source.streaming.fetch
+	# The data source fetching mode, using streaming fetch data or not 
+	# this is required.
+	
+	
+2.Properties for Target HBase Definition
+---------------------------------------------------------------
+hbase.target.table.name
+	# The hbase table name
+	# this is required.
+
+dataload.source.instanceDocPath
+	# The the parser mapping between source data and target hbase table
+	# this is required.
+	
+	
+
+3.Properties for MapReduce Load Stage Definition
+---------------------------------------------------------------
+dataload.mode
+	# The data load mode, mapred or local
+	# this is required.
+
+3.1 build index or not
+--------------------------------------
+buildIndex
+	# The flag of building index while running mapred load or not
+	# if there are different columns based queries or complex queries in later on business, set it to true, and not forget to specify indexConfPath with index configuration 
+	# if only run  mapred load, set it to false
+	# by default it is false
+	# this is optional.
+
+regionQuantity
+	# The region number for target hbase table, which is also the number of reduce number 
+	# if "buildIndex" is true, set it properly
+	# if "buildIndex" is false, keep it empty
+	# by default it is empty
+	# this is optional.
+	
+indexConfFileName
+	# The index configuration file path
+	# if "buildIndex" is true, set it with a index configuration path according to this target table
+	# if "buildIndex" is false, keep it empty
+	# by default it is empty
+	# this is optional.
+	
+3.2 client for mapper
+--------------------------------------
+dataload.client.queueLength:
+	# Specify client queue length
+	# this is required.
+
+dataload.client.fetchParallel:
+	# Specify client fetch parallel number
+	# this is required.
+
+dataload.client.threadsPerMapper:
+	# Specify client theads number per mapper
+	# this is required.
+
+3.3 other mapred load stage definition
+--------------------------------------
+hbase.table.useInMemory
+	# The flage of use in-memory or not
+	# by default it is empty
+	# this is optional.
+	
+hbase.table.splitKeyPrefixes
+	# The split key prefixes string of hbase target table regions
+    # by default it is empty
+	# this is optional.
+
+hbase.table.splitSize
+	# The split size of hbase target table
+	# The split size should be a number with 1*10^n, 2*10^n or 5*10^n.
+    # by default it is empty
+	# this is optional.
+	
+hbase.table.writeToWAL
+	# The write to wal flag
+	# this is required.
+	
+hbase.table.writeBufferSize
+	# The hbase target table write buffer size
+	# this is required.
+	
+hbase.table.autoFlush
+	# The hbase target table auto flush or not
+	# this is required.
+	
+hbase.table.columnReplication
+	# The column replication number of target table 
+	# this is required.
+	
+hbase.table.memStore
+	# The memstore size of target table 
+	# this is required.
+	
+	
+3.4 hbase table scheme definition in [table_name]_hdfs2hbase.xml
+
+fieldIndex
+	# The index of field
+	# the index number starts from 0.
+	# this is required.
+
+
+dataload.source.instanceDocPath
+	# The path of the [table]_hdfs2hbase.xml
+	# set it to absolute path if "dataload.mode" is "local", "dataload.source.streaming.fetch" is "false","buildIndex" is "false"
+	# set it to HDFS path if "dataload.mode" is "mapred", "dataload.source.streaming.fetch" is "false","buildIndex" is "false"
+	# this is required.

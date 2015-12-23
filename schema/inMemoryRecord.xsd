@@ -1,0 +1,90 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation>
+			HBase record schema for In Memory data. 
+			Copyright 2013 hadoop.cloudera.com. All rights reserved.
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:import schemaLocation="common.xsd"/>
+	
+	<xs:element name="inMemoryRecord">
+		<xs:complexType name="InMemoryRecordType">
+			<xs:sequence>
+				<xs:element name="rowKeySpec" type="InMemoryRowKeyType" />
+				<xs:element name="columnFamilySpec" type="InMemoryColumnFamilyType" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="InMemoryRowKeyType">
+		<xs:sequence>
+			<xs:element name="rowKeyFieldSpec" type="InMemoryRowKeyFieldType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="rowKeySeparator" type="xs:string" default="|" />
+	</xs:complexType>
+	
+	<xs:complexType name="InMemoryRowKeyFieldType">
+		<xs:sequence>
+			<xs:element name="fieldType" type="FieldType"/>
+			<xs:element name="fixedLength" type="xs:boolean" />
+			<xs:element name="length" type="xs:int" />
+			
+			<!-- If the fieldType is String, fieldPattern can be DIGIT or ALPHANUMERIC -->
+			<xs:element name="fieldPattern" type="FieldPattern" />
+			<xs:element name="randomAlgorithm" type="RandomAlgorithm" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="InMemoryColumnFamilyType">
+		<xs:complexContent>
+			<xs:extension base="BaseColumnFamilyType">
+				<xs:sequence>
+					<xs:element name="qualifierSpec" type="InMemoryQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="multiQualifierSpec" type="MultiInMemoryQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="InMemoryQualifierType">
+		<xs:complexContent>
+			<xs:extension base="BaseQualifierType">
+				<xs:sequence>
+					<xs:element name="length" type="xs:int"/>
+					<xs:element name="fieldType" type="FieldType"/>
+					<xs:element name="fieldPattern" type="FieldPattern"/>
+					<xs:element name="randomAlgorithm" type="RandomAlgorithm"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="MultiInMemoryQualifierType">
+		<xs:complexContent>
+			<xs:extension base="InMemoryQualifierType">
+				<xs:sequence>
+					<xs:element name="qualifierNum" type="xs:int"/>
+					<xs:element name="qualifierPrefix" type="xs:string"/>
+					<xs:element name="useConstant" type="xs:boolean" default="false"/>
+					<xs:element name="constantValue" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="RandomAlgorithm">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RANDOM"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="FieldPattern">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DIGIT"/>
+			<xs:enumeration value="ALPHABET"/>
+			<xs:enumeration value="ALPHANUMERIC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

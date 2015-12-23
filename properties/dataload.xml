@@ -1,0 +1,47 @@
+<dataload>
+	<!-- indicates where we should get data -->
+	<name>dataload.sourceClass</name>
+	<value>com.cloudera.bigdata.analysis.dataload.source.HDFSDataSource</value>
+	
+	<!-- indicates how we can parse the data, only for structured data at present-->
+	<name>dataload.source.format</name>
+	<value>TEXT</value>
+	
+	<!-- describes the original record and how to assemble HBase record -->
+	<name>dataload.source.recordDescriptionFile</name>
+	<value></value>
+	
+	<!-- the internal buffer size for loading threads -->
+	<name>dataload.queue.size</name>
+	<value>1000</value>
+	
+	<!-- 
+	    The number of fetch threads in SINGLE CLIENT mode; or the number of mappers in MAPRED mode.
+	    If in MAPRED mode, the number of fetch thread will be set a fixed value '1'.
+	-->
+	<name>dataload.fetchParallel</name>
+	<value>24</value>
+	
+	<name>dataload.threadPerMapper</name>
+	<!-- the number of put threads corresponding for each fetch thread -->
+	<value>2</value>
+	
+	<name>dataload.fileNum</name>
+	<value>24</value>
+	
+	<name>dataload.recordNumPerFile</name>
+	<value>100000</value>
+	
+	<name>dataload.tableName</name>
+	<value>FAKE_TABLE</value>
+	
+	<name>dataload.worker.htable.put.writeToWAL</name>
+	<value>false</value>
+	
+	<name>dataload.worker.htable.writeBufferSize</name>
+	<value>6</value>
+	
+	<name>dataload.worker.htable.autoFlush</name>
+	<value>false</value>
+	
+</dataload>

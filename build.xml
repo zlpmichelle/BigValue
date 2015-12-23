@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="BigDataAnalysis">
+	<property environment="env"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.6"/>
+	<property name="source" value="1.6"/>
+	<property name="base.dir" value="${basedir}"/>
+	<property name="name" value="BigDataAnalysis"/>
+	<property name="version" value="1.0"/>
+	<property name="final.name" value="${name}-${version}"/>
+	<property name="bin.dir" value="${basedir}/bin"/>
+	<property name="lib.dir" value="${basedir}/lib"/>
+	<property name="cdh.lib.dir" value="/opt/cloudera/parcels/CDH/jars"/>
+	<property name="conf.dir" value="${basedir}/conf"/>
+	<property name="properties.dir" value="${basedir}/properties"/>
+	<property name="docs.dir" value="${basedir}/docs"/>
+	<property name="examples.dir" value="${basedir}/examples"/>
+	<property name="obfuscator.dir" value="${basedir}/obfuscator"/>
+	<property name="schema.dir" value="${basedir}/schema"/>
+	<property name="src.dir" value="${basedir}/src"/>
+
+	<property name="build.dir" value="${basedir}/target"/>
+	<property name="dist.dir" value="${build.dir}/${final.name}"/>
+	<property name="build.classes" value="${build.dir}/classes"/>
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+		<classpath>
+			<fileset dir="${lib.dir}/antlib"/>
+		</classpath>
+	</taskdef>
+
+        <fileset id="cdh.classpath" dir="${cdh.lib.dir}" includes="**/*.jar"/>
+
+	<path id="BigDataAnalysis.classpath">
+		<fileset dir="${lib.dir}" includes="*.jar"/>
+		<fileset refid="cdh.classpath"/>
+	</path>
+
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+		<classpath>
+			<fileset dir="lib/jaxb" includes="*.jar"/>
+		</classpath>
+	</taskdef>
+
+	<target name="init" depends="jaxb">
+		<mkdir dir="target"/>
+		<mkdir dir="${build.classes}"/>
+		<!--        
+		<copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="mapreduce/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="hive/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="datagen/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy> 
+        -->
+        <!--copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="hbase/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy-->
+		<copy includeemptydirs="false" todir="${build.classes}">
+			<fileset dir="dataload/src/main/java">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<copy includeemptydirs="false" todir="${build.classes}">
+			<fileset dir="server/src/main/java">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<!--        
+		<copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="util/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy> 
+        -->
+		<copy includeemptydirs="false" todir="${build.classes}">
+			<fileset dir="test/src/test/java">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<!--        
+		<copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="core/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${build.classes}">
+            <fileset dir="solution/src/main/java">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy> 
+        -->
+		<copy includeemptydirs="false" todir="${build.classes}">
+			<fileset dir="generated/src/main/java">
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="target"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-subprojects,build-project" name="build"/>
+	<target name="build-subprojects"/>
+	<target depends="init" name="build-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="true" debuglevel="${debuglevel}" encoding="UTF-8" destdir="${build.classes}" includeantruntime="false" source="${source}" target="${target}">
+			<src path="generated/src/main/java"/>
+			<!--            
+			<src path="mapreduce/src/main/java"/>
+            <src path="hive/src/main/java"/>   
+            -->
+			<!--src path="datagen/src/main/java"/-->
+            <!--src path="hbase/src/main/java"/-->
+			<src path="dataload/src/main/java"/>
+			<src path="server/src/main/java"/>
+			<!--            
+			<src path="util/src/main/java"/>
+            <src path="core/src/main/java"/>
+            <src path="solution/src/main/java"/> 
+            -->
+			<src path="test/src/test/java"/>
+
+			<classpath refid="BigDataAnalysis.classpath"/>
+		</javac>
+	</target>
+
+	<target name="package-original-jar" depends="clean,build-project">
+		<mkdir dir="target"/>
+		<mkdir dir="${build.classes}/lib"/>
+		<copy file="conf/log4j.properties" todir="${build.classes}" />
+		<copy todir="${build.classes}">
+			<fileset dir="conf">
+				<include name="*.xml"/>
+			</fileset>
+		</copy>
+		<copy todir="${build.classes}/lib" >
+			<fileset dir="lib">
+				<include name="*.jar"/>
+			</fileset>
+			<fileset refid="cdh.classpath"/>
+		</copy>
+		<jar destfile="target/${name}-${version}.jar"
+    		basedir="${build.classes}"
+    		includes="**/*.*"/>
+	</target>
+
+	<target name="jaxb">
+		<mkdir dir="generated/src/main/java"/>
+		<xjc destdir="generated/src/main/java">
+			<schema dir="schema" includes="*.xsd"/>
+			<binding dir="schema" includes="*.xjb"/>
+		</xjc>
+	</target>
+
+	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+
+	<target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+		<copy todir="${ant.library.dir}">
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</copy>
+		<unzip dest="${ant.library.dir}">
+			<patternset includes="jdtCompilerAdapter.jar"/>
+			<fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+		</unzip>
+	</target>
+	<target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+		<property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		<antcall target="build"/>
+	</target>
+
+	<!-- ================================================================== -->
+	<!-- D I S T R I B U T I O N                                            -->
+	<!-- ================================================================== -->
+	<!--                                                                    -->
+	<!-- ================================================================== -->
+	<target name="package" depends="package-original-jar"
+  	  description="Build distribution">
+		<delete dir="${dist.dir}"/>
+		<mkdir dir="${dist.dir}"/>
+		
+		<if>
+		  <equals arg1="${cdh.version}" arg2="5.0"/>
+		  <then>
+			<exec executable="java">
+			  <arg value="-jar" />
+			  <arg value="${obfuscator.dir}/proguard4.11/lib/proguard.jar" />
+			  <arg value="@${obfuscator.dir}/analysis_CDH5.0.pro" />
+			</exec>
+		  </then>
+		  <else>
+			<exec executable="java">
+			  <arg value="-jar" />
+			  <arg value="${obfuscator.dir}/proguard4.11/lib/proguard.jar" />
+			  <arg value="@${obfuscator.dir}/analysis_CDH5.1.pro" />
+			</exec>
+		  </else>
+		</if>
+
+		
+		<!--exec executable="java">
+      	<arg value="-jar" />
+        <arg value="${obfuscator.dir}/proguard4.11/lib/proguard.jar" />
+        <arg value="@${obfuscator.dir}/analysis_CDH5.0.pro" />
+      </exec>
+
+		
+		<exec executable="java">
+			<arg value="-jar" />
+			<arg value="${obfuscator.dir}/proguard4.11/lib/proguard.jar" />
+			<arg value="@${obfuscator.dir}/analysis_CDH5.1.pro" />
+		</exec-->
+
+		<copy todir="${dist.dir}/bin" includeEmptyDirs="false">
+			<fileset dir="${bin.dir}">
+			</fileset>
+		</copy>
+
+		<copy todir="${dist.dir}/lib" includeEmptyDirs="false">
+			<fileset dir="${lib.dir}">
+			</fileset>
+		</copy>
+
+		<copy todir="${dist.dir}">
+			<fileset file="${build.dir}/${name}-${version}-obfuscator.jar"/>
+		</copy>
+
+		<copy todir="${dist.dir}/conf">
+			<fileset dir="${conf.dir}"/>
+		</copy>
+
+		<copy todir="${dist.dir}/docs">
+			<fileset dir="${docs.dir}"/>
+		</copy>
+
+		<copy todir="${dist.dir}/properties">
+			<fileset dir="${properties.dir}"/>
+		</copy>
+
+		<copy file="build.xml" tofile="${dist.dir}/build.xml"/>
+
+		<copy todir="${dist.dir}">
+			<fileset dir=".">
+				<include name="*.txt" />
+				<include name="*.sh" />
+			</fileset>
+		</copy>
+
+		<chmod perm="ugo+x" type="file" parallel="false">
+			<fileset dir="${dist.dir}/">
+				<include name="**.sh" />
+			</fileset>
+			<fileset dir="${dist.dir}/bin/">
+				<include name="**.sh" />
+			</fileset>
+			<fileset dir="${dist.dir}/properties/">
+				<include name="**.sh" />
+			</fileset>
+		</chmod>
+	</target>
+
+	<!-- ================================================================== -->
+	<!-- Make release tarball                                               -->
+	<!-- ================================================================== -->
+	<target name="tar" depends="package" description="Make release tarball">
+		<tarfileset dir="${build.dir}" mode="664">
+			<exclude name="${final.name}/bin/**.sh" />
+			<exclude name="${final.name}/**.sh" />
+			<exclude name="${final.name}/properties/**.sh" />
+			<include name="${final.name}/**" />
+		</tarfileset>
+		<tarfileset dir="${build.dir}" mode="755">
+			<include name="${final.name}/bin/**.sh" />
+			<include name="${final.name}/**.sh" />
+			<include name="${final.name}/properties/**.sh" />
+		</tarfileset>
+	</target>
+</project>

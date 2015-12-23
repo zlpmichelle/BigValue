@@ -1,0 +1,40 @@
+BigDataAnalysis MRLoad Change Log
+
+BigDataAnalysis MRLoad 1.1 - Unreleased
+Bug
+
+    1.
+
+Improvement
+
+    
+
+
+
+New Feature
+
+	1.Provide FTP to HDFS mapreduce load
+    1.Provide xml parser for inmemory mapreduce load
+    2.Provide clean up for inmemory mapreduce load
+    3.Provide xml parser for ftp2hbase mapreduce load
+    4.Provide clean up for ftp2hbase mapreduce loadls
+    5.Provide xml parser for ftp2hdfs2hbase mapreduce load
+    6.Provide clean up for ftp2hdfs2hbase mapreduce load
+    7.Support ETL for inmemory mapreduce load
+    8.Support ETL for ftp2hbase mapreduce load
+    9.Support ETL for ftp2hdfs2hbase mapreduce load 
+    10.Support FTP to Hdfs mapreduce load
+    11.Support building index when running mapred load
+    12.Support Kafka Real-time Streaming Load
+    
+Task
+
+    1.
+    
+Test
+
+    1.
+
+    
+BigDataAnalysis MRLoad Release 1.0 Final GA - 5/19/2014  - Revision 26053
+

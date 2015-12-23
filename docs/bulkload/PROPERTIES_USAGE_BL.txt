@@ -1,0 +1,197 @@
+
+idh.im.server.ip.address:
+	# The IP address of IDH IM server
+	# this is required.
+
+1.Properties for Source Definition
+---------------------------------------------------------------
+hdfs.source.file.input.path:
+	# The hdfs source file input path
+	# this is required.
+	
+hdfs.source.file.encoding:
+	# The hdfs source file encoding, supporting GB2312, GBK, GB18030, BIG5, etc.
+	# this is required.
+
+hdfs.source.file.record.fields.delimiter:
+	# The hdfs source file record fields delimiter, it can support multiple characters
+	# if delimiter string includes any of '\t', '\n', '\b','\f', '\r', please ensure to add escaped character '\' for special character
+	# if delimiter string doesn't include any of '\t', '\n', '\b','\f', '\r', no need to add escaped character '\' for special character
+	# this is required.
+	
+hdfs.source.file.record.fields.number:
+	# The hdfs source files number per record line
+	# if delimiter is the last character in your source file, then add a fake spec field for last field, so if there will be N+1 number
+	# this is required.
+	
+hdfs.source.file.record.fields.type.int:
+	# Specify the fields numbers separated by "," which are defined as INT
+	# the textRecordSpec is defined as [f1:STRING, f2:STRING, f3:INT,...]
+	# the default filed type is STRING, so if there is no INT field, set "0" to the value
+	# this is required.
+
+	
+2.Properties for Target HBase Definition
+---------------------------------------------------------------
+hdfs.generated.hfiles.output.path:
+	# The hfile output directory, comment the below line if not using bulkload to generate hfile
+	# this is required.
+	
+hbase.target.table.name:
+	# The hbase table name
+	# this is required.
+	
+hbase.target.write.to.wal.flag:
+	# The write to wal flag
+	# this is required.
+	
+hbase.target.table.cell.spec:
+	# The hbase target table cell spec, use "rowkey" as keyword of rowkey name 
+	# rowkey and column are separated by comma
+	# this is required.
+	
+rowkey:
+	# Use "rowkey" as keyword of rowkey name, define the ETL expression for rowkey
+	# the default filed name prefix is "f", so please add "f" as prefix of filed name, 
+	# the index field number starts from 1, so the field name of first field of original source data is "f1"  
+	# e.g., the first field can be write as "f1"
+	# this is required if "buildIndex" is false
+	# this is optional if "buildIndex" is true
+
+column ETL:
+	# The column ETL definition with ETL expression, following is the ETL expression function supported 
+	# the default field name prefix is "f", so please add "f" as prefix of field name
+	# e.g., the first field can be write as "f1"
+	# this is required
+
+------------Expression Usage------------
+	trim(a), rpad(a,x,y), lpad(a,x,y), substring(a,x,y), concat(a,b,c), reverse(a), rand(x)
+	defaultIfBlank(a,b), defaultIfEmpty(a,b), defaultIfNotBlank(a,b), defaultIfNotEmpty(a,'x') 
+	delete(a,'x'), keep(a,'x'), squeeze(a,'x')
+	repeat(a, 6), center(a, 20), abbreviate(a, 20)
+	strip(a, 'x'), stripStart(a,'x'), stripEnd(a,'x')
+	replace(a,'x','y'),replaceChars(a,'x','y')
+	deleteWhitespace(a), removeBlank(a), removeDigits(a), keepDigits(a) 
+	convertTo(a,mobilePhone/chineseName/idCard,default)
+    boolean(a)
+
+
+3.Properties for BulkLoad Stage Definition
+---------------------------------------------------------------
+3.1 build index or not
+--------------------------------------
+buildIndex
+	# The flag of building index while bulkload or not
+	# if there are different columns based queries or complex queries in later on business, 
+	# and you'd like to use BigDataAnalysis build-in secondary index (NOT using phoenix created table in advanced), 
+	# then set it to true, and not forget to specify indexConfPath with index configuration 
+	# else only run bulkload, set it to false
+	# by default it is false
+	# this is optional.
+
+regionQuantity
+	# The region number for target hbase table, which is also the number of reduce number 
+	# if "buildIndex" is true, set it properly
+	# if "buildIndex" is false, keep it empty
+	# by default it is empty
+	# this is optional.
+	
+indexConfFileName
+	# The index configuration file path
+	# if "buildIndex" is true, set it with a index configuration path according to this target table
+	# if "buildIndex" is false, keep it empty
+	# by default it is empty
+	# this is optional.
+
+3.2 only if not build index(buildIndex=false), following 3.2 properties only set when buildIndex=false in 3.1
+--------------------------------------
+onlyGenerateSplitKeySpec:
+	# The flag of only generating value of hbase.target.table.split.key.spec, and not run bulkload this time
+	# if only generating value of hbase.target.table.split.key.spec without running bulkload, set it to true
+	# if only run bulkload with hbase.target.table.split.key.spec specified, set it to false
+	# by default it is false
+	# this is optional.
+	
+preCreateRegions:
+	# The flag of doing regions pre-creation
+	# if loading data into an existing target HBase table, set it to false
+	# if loading data into an new target HBase table, set it to true
+	# by default it is true
+	# this is optional.
+
+rowkeyPrefix:
+	# The prefix of rowkey to count for splitting rowkey for regions pre-creation  
+	# the column delimiter of it is '|' by default, please add "|" to rowkeyPrefix for connection
+	# if "preCreateRegions" is true, specify it with apposite value
+	# if "preCreateRegions" is false, keep it empty
+	# this is optional.
+
+recordsNumPerRegion:
+	# The record number per region for regions pre-creation
+	# set it properly, and make sure it is smaller than the total record number
+	# it is better set around totalRecordNum/(coreNum * 4), coreNum is the 
+	# total processors number of all the alive regionservers
+	# if it is empty, "preCreateRegions" is "true", and "rowkeyPrefix" is set apposite, 
+	# it will use Hive to automatically calculate apposite recordsNumPerRegion value
+	# by default it is empty
+	# this is optional.
+	
+hbase.target.table.split.key.spec:
+	# The hbase target table split key spec
+	# if "preCreateRegions" is true and hbase.target.table.split.key.spec is specified, please keep rowkeyPrefix and recordsNumPerRegion empty
+	# if "preCreateRegions" is false, keep it empty
+	# by default it is empty
+	# this is optional.
+
+# 3.3 common bulkload process
+--------------------------------------
+nativeTaskEnabled:
+	# The flag of using native task
+	# by default it is true
+	# this is optional.
+
+inputSplitSize:
+	# The split size for input files combination before mapper
+	# if it is specified with a value, it means using input files combination before mapper
+	# if it is empty, it means not use it. 
+	# if not using input files combination before mapper, keep it empty
+	# if extendedHbaseRowConverterClass value is specified, that means using ExtensibleHBaseRowConverter, then keep it empty
+	# if using input files combination before mapper, specify it with apposite value, the measuring unit is B 
+	# it is better equal to totalSize/mapTaskCapacity(mapred.job.map.capacity)
+	# by default it is empty
+	# this is optional.
+	
+extendedHbaseRowConverterClass:
+	# The extended class name, need to implement your own extended hbase row converter class
+	# there is an ByteArray improved sample in com.cloudera.bigdata.analysis.dataload.transform.ImprovedExtendedHBaseRowConverter
+	# the key API for using ByteArray improved is using CommonUtils.split(final byte[] str, int length,
+    # final byte[] separator) and CommonUtils.mergeByteArray(byte[] src, byte[] dest,
+    # int offsetOfDest, byte delimiter, boolean addDelimiter) in your own extended hbase row converter class
+	# com.cloudera.bigdata.analysis.dataload.transform.SampleExtendedHBaseRowConverter is for ordinary sample
+	# $BIGDATAANALYSIS_HOME/properties/conf-bulkload-sample.properties is the sample conf for com.cloudera.bigdata.analysis.dataload.transform.SampleExtendedHBaseRowConverter 
+	# com.cloudera.bigdata.analysis.dataload.transform.NativeTaskExtendedHBaseRowConverter is for native task
+	# if using ExtensibleHBaseRowConverter, specify the extended class name, such as "com.cloudera.bigdata.analysis.dataload.transform.ImprovedExtendedHBaseRowConverter"
+	# if using default CustomizedHBaseRowConverter, keep it empty
+	# by default it is empty
+	# this is optional.
+
+importDate:
+	# The bulk load date, pattern is yyyymmdd
+	# it will use the default value "0" if not specified
+	# by default it is 0
+	# this is optional.
+
+validatorClass:	
+	# The validator class name, need to implement your own extended validator class
+	# it will use com.cloudera.bigdata.analysis.dataload.exception.DefaultRecordValidator if not specified
+    # by default it is com.cloudera.bigdata.analysis.dataload.exception.DefaultRecordValidator
+	# this is optional. 
+	
+createMalformedTable:
+	# The flag of creating malformed table
+	# by default it is false
+	# this is optional.
+	
+cleanup:	
+	# The flag of cleaning up the previous bulkload useless work
+	# this is not implemented yet

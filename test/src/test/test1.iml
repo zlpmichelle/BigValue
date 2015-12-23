@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/java" isTestSource="true" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="common" level="project" />
+    <orderEntry type="library" name="mapreduce2" level="project" />
+    <orderEntry type="library" name="lib20" level="project" />
+    <orderEntry type="library" name="lib19" level="project" />
+    <orderEntry type="library" name="lib12" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="log4j-1.2.162" level="project" />
+    <orderEntry type="library" name="log4j-1.2.161" level="project" />
+    <orderEntry type="library" name="lib9" level="project" />
+    <orderEntry type="library" name="lib8" level="project" />
+    <orderEntry type="library" name="lib13" level="project" />
+    <orderEntry type="library" name="lib7" level="project" />
+    <orderEntry type="library" name="mapreduce1" level="project" />
+    <orderEntry type="library" name="lib5" level="project" />
+    <orderEntry type="library" name="lib18" level="project" />
+    <orderEntry type="library" name="lib10" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="target" level="project" />
+    <orderEntry type="library" name="log4j-1.2.16" level="project" />
+    <orderEntry type="library" name="lib22" level="project" />
+    <orderEntry type="library" name="target5" level="project" />
+    <orderEntry type="library" name="lib14" level="project" />
+    <orderEntry type="library" name="target2" level="project" />
+    <orderEntry type="library" name="hadoop-core-1.0.3-cdh" level="project" />
+    <orderEntry type="library" name="lib21" level="project" />
+    <orderEntry type="library" name="target4" level="project" />
+    <orderEntry type="library" name="lib16" level="project" />
+    <orderEntry type="library" name="cdh5.0" level="project" />
+    <orderEntry type="module" module-name="test" />
+    <orderEntry type="module" module-name="test38" />
+    <orderEntry type="module" module-name="hadoop-mapreduce1-project" />
+    <orderEntry type="module" module-name="test23" />
+    <orderEntry type="module" module-name="test45" />
+    <orderEntry type="module" module-name="test34" />
+    <orderEntry type="module" module-name="test25" />
+    <orderEntry type="module" module-name="test36" />
+    <orderEntry type="module" module-name="test35" />
+    <orderEntry type="module" module-name="test6" />
+    <orderEntry type="module" module-name="test27" />
+    <orderEntry type="module" module-name="test12" />
+  </component>
+</module>
+

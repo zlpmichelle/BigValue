@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib14" level="project" />
+    <orderEntry type="library" name="mapreduce1" level="project" />
+    <orderEntry type="library" name="hdfs" level="project" />
+    <orderEntry type="library" name="lib18" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="hadoop-core-1.0.3-cdh" level="project" />
+    <orderEntry type="library" name="mapreduce2" level="project" />
+    <orderEntry type="library" name="common" level="project" />
+    <orderEntry type="library" name="lib21" level="project" />
+    <orderEntry type="library" name="lib9" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="cdh5.0" level="project" />
+    <orderEntry type="module" module-name="test30" />
+    <orderEntry type="module" module-name="test35" />
+    <orderEntry type="module" module-name="main33" />
+    <orderEntry type="module" module-name="hadoop-mapreduce1-project" />
+    <orderEntry type="module" module-name="main6" />
+    <orderEntry type="module" module-name="main40" />
+    <orderEntry type="module" module-name="test34" />
+  </component>
+</module>
+

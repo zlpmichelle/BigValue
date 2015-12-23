@@ -1,0 +1,16 @@
+option java_package = "com.cloudera.bigdata.analysis.index.protobuf.generated";
+option java_outer_classname = "FilterProto";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+import "QueryType.proto";
+
+message FulltableScanFilter {
+  optional Query query = 1;
+}
+
+message IndexScanFilter {
+  required bytes data = 1;
+}
+

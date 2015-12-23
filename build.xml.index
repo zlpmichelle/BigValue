@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="DataLoad" basedir="." default="jar">
+        <property name="target" value="1.6" />
+        <property name="source" value="1.6" />
+        <property name="src.dir" value="src" />
+        <property name="classes.dir" value="classes" />
+
+        <target name="clean" description="Delete all generated files">
+                <delete dir="classes" />
+                <delete file="bulkload.jar" />
+        </target>
+        
+        <target name="compile" description="Compiles the Task">
+                <mkdir dir="classes" />
+                <javac  encoding="GBK" destdir="classes" source="${source}" target="${target}" >
+                        <!--src path="hbase/src/main/java"/-->
+                        <!--src path="dataload/src/main/java"/>
+                        <src path="generated/src/main/java"/>
+						<src path="test/src/test/java"/-->
+						<src path="server/src/main/java"/>
+                <classpath>
+                        <pathelement location="lib/cdh5.0/hadoop-common-2.3.0-cdh5.0.0.jar" />
+                        <pathelement location="lib/cdh5.0/hadoop-mapreduce-client-core-2.3.0-cdh5.0.0.jar" />
+                        <pathelement location="lib/cdh5.0/hadoop-hdfs-2.3.0-cdh5.0.0.jar" />
+                        <pathelement location="lib/cdh5.0/zookeeper-3.4.5-cdh5.0.0.jar" />
+                        <pathelement location="lib/cdh5.0/commons-lang-2.6.jar" />
+                        <pathelement location="lib/cluster.jar" />
+                        <pathelement location="lib/kafka_2.8.0-0.8.0.jar" />
+                        <pathelement location="lib/scala-compiler.jar" />
+                        <pathelement location="lib/scala-library.jar" />
+                        <pathelement location="lib/metrics-annotation-2.2.0.jar" />
+
+                        <fileset dir="${basedir}/lib/cdh5.0" >
+                                <include name="**/*.jar" />
+                        </fileset>
+                </classpath>
+                </javac>
+        </target>
+
+        <target name="jar" depends="clean,compile" description="JARs the Task">
+                <jar destfile="IndexCoprocessor-1.0.jar" basedir="classes" includes="**/*.*" />
+        </target>
+
+</project>

@@ -1,0 +1,74 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation>
+			HBase record schema for TXT files. 
+			Copyright 2013 hadoop.cloudera.com. All rights reserved.
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:import schemaLocation="common.xsd"/>
+	
+	<xs:element name="txtRecord">
+		<xs:complexType name="TxtRecordType">
+			<xs:sequence>
+				<xs:element name="useSeparater" type="xs:boolean" />
+				<xs:element name="inputSeparater" type="xs:string" default="|" />
+				<xs:element name="rowKeySpec" type="RowKeyType" />
+				<xs:element name="columnFamilySpec" type="ColumnFamilyType" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="RowKeyType">
+		<xs:sequence>
+			<xs:element name="rowKeyFieldSpec" type="RowKeyFieldType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="rowKeySeparater" type="xs:string" default="|" />
+	</xs:complexType>
+	
+	<xs:complexType name="RowKeyFieldType">
+		<xs:sequence>
+			<xs:element name="fieldName" type="xs:string" />
+			<xs:element name="fixedLength" type="xs:boolean" />
+			<xs:element name="startPos" type="xs:int" />
+			<xs:element name="length" type="xs:int" />
+			<xs:element name="fieldIndex" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ColumnFamilyType">
+		<xs:complexContent>
+			<xs:extension base="BaseColumnFamilyType">
+				<xs:sequence>
+					<xs:element name="qualifierSpec" type="QualifierType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="multiQualifierSpec" type="MultiQualifierType" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="QualifierType">
+		<xs:complexContent>
+			<xs:extension base="BaseQualifierType">
+				<xs:sequence>
+					<xs:element name="startPos" type="xs:int"/>
+					<xs:element name="length" type="xs:int"/>
+					<xs:element name="fieldIndex" type="xs:int"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="MultiQualifierType">
+		<xs:complexContent>
+			<xs:extension base="BaseQualifierType">
+				<xs:sequence>
+					<xs:element name="startPos" type="xs:string"/>
+					<xs:element name="length" type="xs:string"/>
+					<xs:element name="fieldIndex" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

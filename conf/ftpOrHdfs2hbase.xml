@@ -1,0 +1,39 @@
+<txtRecord>
+	<useSeparater>true</useSeparater>
+	<inputSeparater>,</inputSeparater>
+	
+	<rowKeySpec>
+		<rowKeyFieldSpec>
+			<fieldName>r1</fieldName>
+			<fieldIndex>62</fieldIndex>
+		</rowKeyFieldSpec>
+		<rowKeyFieldSpec>
+			<fieldName>r2</fieldName>
+			<fieldIndex>12</fieldIndex>
+		</rowKeyFieldSpec>
+	</rowKeySpec>
+	
+	<columnFamilySpec>
+		<familyName>f</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+		
+		<qualifierSpec>
+			<qualifierName>q1</qualifierName>
+			<fieldIndex>83</fieldIndex>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q2</qualifierName>
+			<fieldIndex>89</fieldIndex>
+		</qualifierSpec>
+	</columnFamilySpec>
+	
+	<columnFamilySpec>	
+		<familyName>i</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+	</columnFamilySpec>
+</txtRecord>

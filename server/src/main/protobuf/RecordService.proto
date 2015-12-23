@@ -1,0 +1,24 @@
+option java_package = "com.cloudera.bigdata.analysis.index.protobuf.generated";
+option java_outer_classname = "RecordServiceProto";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+import "QueryType.proto";
+
+message RefreshRequest{
+	  optional bytes tableName = 1;
+}
+
+message RefreshResponse{
+	  optional int32 indexMapSize = 1;
+}
+
+service RecordService {
+  rpc query(Query)
+    returns (QueryResult);
+    
+  rpc refreshIndexMap(RefreshRequest)
+    returns (RefreshResponse);
+}
+

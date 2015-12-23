@@ -1,0 +1,36 @@
+BigDataAnalysis IndexQuery Change Log
+
+BigDataAnalysis IndexQuery 1.1 - Unreleased
+
+Bug
+
+    1.
+    
+Improvement
+
+    1. Support updating Index without Restart HBase
+    2. Support same table query on both mapred and bulk load
+    
+   
+New Feature
+
+	1. Implement Index Coprocessor MapReduce Load
+	2. Implement Index Coprocessor Bulk Load
+	3. Implement Index Coprocessor Query
+	4. Implement Multi-tables Incremental Load
+	4. Implement Multi-tables Incremental Query 
+	5. Implement HBase Index-based Query Paging features
+	
+    
+Task
+
+    1.
+    
+Test
+
+    1.
+
+    
+BigDataAnalysis IndexQuery Release 1.0 Final GA - 5/19/2014  - Revision 26053
+
+

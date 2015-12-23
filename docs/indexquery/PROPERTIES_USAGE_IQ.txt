@@ -1,0 +1,22 @@
+The example of single dimension query is as:
+        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "(f,q1,EQ,16778556)"
+The example of multiple dimensions query is as:
+        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "[(f,q2,EQ,460001905263155)(f,q3,EQ,01284600)]"
+
+-table:
+	# The table name needs to be queries need
+
+-resultLimimt:
+	# The query result number which needs to be returned
+
+-condition:	
+	# The condition for query 
+	
+------------Condition Operators Usage------------
+	EQ : The equals operator.
+	GT : The greater than operator.
+	GTE : The greater than or equals operator.
+	LT : The less than operator.
+	LTE :  The less than or equals operator.
+	NEQ : The not equals operator.
+	LIKE : The like equals operator. NOTE: LIKE operate only work on String value!!

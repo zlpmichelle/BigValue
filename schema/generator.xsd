@@ -1,0 +1,81 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation>
+			Schema for record description.
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:import schemaLocation="common.xsd"/>
+	
+	<xs:element name="record">
+		<xs:complexType name="RecordSpec">
+			<xs:sequence>
+				<xs:element name="type" type="StorageType"/>
+				<xs:element name="separator" type="xs:string"/>
+				<xs:element name="column" type="ColumnSpec" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="ColumnSpec">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="start" type="xs:string"/>
+			<xs:element name="end" type="xs:string"/>
+			<xs:element name="value" type="xs:string"/>
+			<xs:element name="length" type="xs:long"/>
+			<xs:element name="pattern" type="xs:string"/>
+			<xs:element name="udfName" type="xs:string"/>
+			<xs:element name="ref" type="ColumnRef"/> <!-- ref element means it refers to another element -->
+			<xs:element name="randomPattern" type="RandomPattern"/>
+			<xs:element name="randomType" type="RandomType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ColumnRef">
+		<xs:sequence>
+			<!-- only support substring of other column -->
+			<xs:element name="refColumn" type="xs:string"/>
+			<xs:element name="refStart" type="xs:int"/>
+			<xs:element name="refEnd" type="xs:int"/>
+			<xs:element name="refOp" type="OpType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="StorageType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="text"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="RandomPattern">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DIGIT"/>
+			<xs:enumeration value="ALPHABET"/>
+			<xs:enumeration value="ALPHANUMERIC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="RandomType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LONG"/>
+			<xs:enumeration value="BOOLEAN"/>
+			<xs:enumeration value="PHONE"/>
+			<xs:enumeration value="CORRELATE"/>
+			<xs:enumeration value="UDF"/>
+			<xs:enumeration value="DATETIME"/>
+			<xs:enumeration value="CONSTANT"/>
+			<xs:enumeration value="STRING"/>
+			<xs:enumeration value="URL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="OpType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IDENTITY"/>
+			<xs:enumeration value="SUBSTRING"/>
+			<xs:enumeration value="CONCACT"/>
+			<xs:enumeration value="DIGEST"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

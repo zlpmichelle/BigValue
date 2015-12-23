@@ -1,0 +1,25 @@
+
+option java_package = "com.cloudera.bigdata.analysis.index.protobuf.generated";
+option java_outer_classname = "QueryTypeProto";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+import "Client.proto";
+
+message Query {
+  optional bytes data = 1;
+}
+
+enum SearchMode {
+  FULL_TABLE_SCAN_BASED_SEARCH = 0;
+  INDEX_BASED_SEARCH = 1;
+}
+
+message QueryResult {
+  optional Query query = 1;
+  optional SearchMode searchMode = 2;
+  repeated Result records = 3;
+}
+
+

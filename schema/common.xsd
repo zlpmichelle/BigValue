@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:documentation>
+			This is a common schema file will be imported to others.
+		</xs:documentation>
+	</xs:annotation>
+	
+	<xs:complexType name="BaseColumnFamilyType">
+		<xs:sequence>
+			<xs:element name="familyName" type="xs:string" />
+			<xs:element name="compressionType" type="CompressionType" />
+			<xs:element name="replication" type="xs:short" />
+			<xs:element name="maxVersion" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="BaseQualifierType">
+		<xs:sequence>
+			<xs:element name="qualifierName" type="xs:string"/>
+			<xs:element name="buildIndex" type="xs:boolean" default="false"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="FieldType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="STRING"/>
+			<xs:enumeration value="BOOLEAN"/>
+			<xs:enumeration value="LONG"/>
+			<xs:enumeration value="BYTE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="CompressionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SNAPPY"/>
+			<xs:enumeration value="LZO"/>
+			<xs:enumeration value="GZ"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>

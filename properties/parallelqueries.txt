@@ -1,0 +1,10 @@
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "(f,q1,EQ,15291)"
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "(f,q2,EQ,20130120)"
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "(f,q3,EQ,7937)"
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "(f,q4,EQ,13299996731)"
+
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "[(f,q1,EQ,15291)(f,q3,EQ,7937)]"
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "[(f,q2,EQ,20130120)(f,q4,EQ,13299996731)]"
+
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "[(f,q1,EQ,15291)(f,q3,EQ,7937)(f,q4,EQ,13299996731)]"
+./bin/coprocessorQuery.sh -table 1tb -resultsLimit 5 -condition "[(f,q2,EQ,20130120)(f,q3,EQ,7937)(f,q4,EQ,13299996731)]"

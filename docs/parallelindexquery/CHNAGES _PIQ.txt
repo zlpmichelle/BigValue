@@ -1,0 +1,30 @@
+BigDataAnalysis ParallelIndexQuery Change Log
+
+BigDataAnalysis ParallelIndexQuery 1.1 - Unreleased
+
+Bug
+
+    1.
+    
+Improvement
+
+    1. 
+    
+   
+New Feature
+
+	1. Implement parallel HBase Index-based Query
+	
+    
+Task
+
+    1.
+    
+Test
+
+    1.
+
+    
+BigDataAnalysis ParallelIndexQuery Release 
+
+

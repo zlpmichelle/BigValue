@@ -1,0 +1,29 @@
+BigDataAnalysis Generator Change Log
+
+BigDataAnalysis Generator 1.1 - Unreleased
+
+Bug
+
+    1.
+
+Improvement
+
+    1.
+   
+New Feature
+
+    1.Support Kafka Real-time Streaming data generation
+    
+Task
+
+    1.
+    
+Test
+
+    1.
+
+    
+BigDataAnalysis Generator Release 1.0 Final GA - 5/19/2014  - Revision 26053
+
+
+

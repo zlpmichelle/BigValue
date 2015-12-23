@@ -1,0 +1,55 @@
+BigDataAnalysis BulkLoad Change Log
+
+BigDataAnalysis BulkLoad 1.1 - Unreleased
+
+Bug
+
+    1.Fix importDate timestamp setting bug
+
+Improvement
+
+    1.Support tow or more HBase column families
+    2.Support special characters delimiter, multi-character delimiter, delimiter can handling the "null" filed split, if there is no '\t', '\n', '\b','\f', '\r', no need to add escaped character with '\'
+    3.Support directly small file mapreduce table load.(TableMapReduceUtil.initTableReducerJob())
+    4.Use StringUtils.splitByWholeSeparatorPreserveAllTokens and StringUtils.split instead of orginal String split
+    5.Support Bytes Array parser of original input as extended hbase row converter class
+    6.Support automatic hive script generation and automatic record number per region calculation
+    7.Simplify pattern of input data text specification
+    8.Support internal delimiter of hbase rowkey and column 
+    9.Support UUID for rowkey
+    10.Support input compression type, like Gzip
+    11.Support onlyGenerateSplitKeySpec bulkload process, set it true to only generating value of hbase.target.table.split.key.spec without running bulkload
+    12.Support running bulkload client in any IDH client, not limited to IM, not only in IDH cluster, but also in other cluster
+   
+New Feature
+
+    1.Provide a consistent common bulkload process management and unify configuration 
+    2.Add ETL function in Customized Bulkload and provide more expression convention functions
+    3.Support user directly implemented HBase row converter (extends ExtensibleHBaseRowConverter.java, take "SampleExtendedHBaseRowConverter.java" as an example, need to specify "isExtendedHbaseRowConverter" and "extendedHbaseRowConverterClass" in conf-bulkload.properties if want to use this function.)
+    4.Support input files combination before mapper
+    5.Support malformed table creation during BulkLoad
+    6.Enable Native Task during BulkLoad
+    7.Provide codes obfuscator for BulkLoad 
+    8.Support type transformation validation for badline
+    9.Support ADD/SUB for ETL  
+    10.Support building index when running bulkload
+    11.Migration from IDH to CDH to support bulkload running on CDH 5.0 
+    
+Task
+
+    1.Support Bulk load for CDH 5.0
+    
+Test
+
+    1.
+
+    
+BigDataAnalysis BulkLoad Release 1.0 Final GA - 1/2/2014
+
+BigDataAnalysis BulkLoad Release 1.0 RC - 11/26/2014
+
+BigDataAnalysis BulkLoad Release 1.1 for IDH 2.5.1 - 3/7/2014  - Revision 25038
+
+BigDataAnalysis BulkLoad Release 1.2 for IDH 2.5.1 - 5/19/2014  - Revision 26053
+
+

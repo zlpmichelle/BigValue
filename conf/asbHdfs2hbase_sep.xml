@@ -1,0 +1,75 @@
+<txtRecord>
+	<useSeparater>true</useSeparater>
+	<inputSeparater>|</inputSeparater>
+	
+	<rowKeySpec>
+		<rowKeyFieldSpec>
+			<fieldName>r1</fieldName>
+			<fieldIndex>62</fieldIndex>
+		</rowKeyFieldSpec>
+		<rowKeyFieldSpec>
+			<fieldName>r2</fieldName>
+			<fieldIndex>12</fieldIndex>
+		</rowKeyFieldSpec>
+	</rowKeySpec>
+	
+	<columnFamilySpec>
+		<familyName>f</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+		
+		<qualifierSpec>
+			<qualifierName>q1</qualifierName>
+			<fieldIndex>1</fieldIndex>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q2</qualifierName>
+			<fieldIndex>4</fieldIndex>
+		</qualifierSpec>		
+				
+		<qualifierSpec>
+			<qualifierName>q3</qualifierName>
+			<fieldIndex>6</fieldIndex>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q4</qualifierName>
+			<fieldIndex>10</fieldIndex>
+		</qualifierSpec>
+				
+		<qualifierSpec>
+			<qualifierName>q5</qualifierName>
+			<fieldIndex>14</fieldIndex>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q6</qualifierName>
+			<fieldIndex>16</fieldIndex>
+		</qualifierSpec>
+				
+		<qualifierSpec>
+			<qualifierName>q7</qualifierName>
+			<fieldIndex>18</fieldIndex>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q8</qualifierName>
+			<fieldIndex>26</fieldIndex>
+		</qualifierSpec>		
+		
+	    <qualifierSpec>
+			<qualifierName>q9</qualifierName>
+			<fieldIndex>29</fieldIndex>
+		</qualifierSpec>
+		
+	</columnFamilySpec>
+	
+	<columnFamilySpec>	
+		<familyName>i</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+	</columnFamilySpec>
+</txtRecord>

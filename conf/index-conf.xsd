@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="columnFamily" type="xs:string"/>
+    <xs:attribute name="qualifier" type="xs:string"/>
+    <xs:attribute name="maxLength" type="xs:integer"/>
+    <xs:attribute name="isLengthVariable" type="xs:boolean"/>
+    <xs:attribute name="isOrderInverted" type="xs:boolean"/>
+    <xs:attribute name="formatter" type="xs:string"/>
+
+    <xs:element name="indexes">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="index">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="table" type="xs:string"/>
+                            <xs:choice minOccurs="1" maxOccurs="1">
+                                <xs:element name="fields">
+                                    <xs:complexType>
+                                        <xs:choice minOccurs="1" maxOccurs="unbounded">
+                                            <xs:element name="field">
+                                                <xs:complexType>
+                                                    <xs:attribute ref="columnFamily" use="required"/>
+                                                    <xs:attribute ref="qualifier" use="required"/>
+                                                    <xs:attribute ref="maxLength" use="required"/>
+                                                    <xs:attribute ref="isLengthVariable" use="required"/>
+                                                    <xs:attribute ref="isOrderInverted" use="required"/>
+                                                    <xs:attribute ref="formatter" use="optional"/>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:choice>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema> 

@@ -1,0 +1,310 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.cloudera.bigdata</groupId>
+  <artifactId>BigDataAnalysis</artifactId>
+  <version>1.0</version>
+<packaging>jar</packaging>  
+
+<!--
+ <modules>
+    <module>generated</module>
+  </modules>  
+
+  -->
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjtools</artifactId>
+            <version>1.6.5</version>
+        </dependency>
+      
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.6</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.5</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        
+        <!-- hadoop-core-1.0.3-cdh.jar 不是开源的 -->
+        <dependency>
+            <groupId>com.cloudera.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>1.0.3</version>
+			<classifier>Cloudera</classifier>
+        </dependency>
+        <!-- hbase-0.94.1-cdh.jar 不是开源的 -->
+        <dependency>
+            <groupId>com.cloudera.hbase</groupId>
+            <artifactId>hbase</artifactId>
+            <version>0.94.1</version>
+			<classifier>Cloudera</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+        
+      
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.15</version>
+            <exclusions>
+            	<exclusion>
+            		<groupId>javax.jms</groupId>
+            		<artifactId>jms</artifactId>
+            	</exclusion>
+            	
+            	<exclusion>
+            		<groupId>com.sun.jdmk</groupId>
+            		<artifactId>jmxtools</artifactId>
+            	</exclusion>
+            	
+            	<exclusion>
+            		<groupId>com.sun.jmx</groupId>
+            		<artifactId>jmxri</artifactId>
+            	</exclusion>
+            	
+            	<exclusion>
+            		<groupId>javax.mail</groupId>
+            		<artifactId>mail</artifactId>
+            	</exclusion>
+            </exclusions>
+        </dependency>
+        <!--1.2.15 要依赖两个sun的包，但sun的包已经被移除了 -->
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>2.4.0a</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.rrd4j</groupId>
+            <artifactId>rrd4j</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        
+        <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+        
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>r09</version>
+        </dependency>
+        
+        <!-- zookeeper-3.4.5-cdh.jar -->
+        <dependency>
+            <groupId>com.cloudera.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.5</version>
+			<classifier>Cloudera</classifier>
+        </dependency>
+        
+		<!-- sigar是fangpei那个 在中央仓库里面没有 -->
+        <dependency>
+            <groupId>org.hyperic.sigar</groupId>
+            <artifactId>sigar</artifactId>
+            <version>1.6.5</version>
+        </dependency> 
+        
+        <!-- com.cloudera.hadoop.tool.jar -->
+        <dependency>
+            <groupId>com.cloudera.hadoop</groupId>
+            <artifactId>com.cloudera.hadoop.tool</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- com.cloudera.hadoop.util.jar -->
+        <dependency>
+            <groupId>com.cloudera.hadoop</groupId>
+            <artifactId>com.cloudera.hadoop.util</artifactId>
+            <version>1.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.1</version>
+        </dependency>
+        
+        <!-- cluster的版本有好多 我们用的是fangpei写得那个。。 -->
+        <dependency>
+            <groupId>com.intel.fangpei</groupId>
+            <artifactId>cluster</artifactId>
+            <version>1.0</version>
+        </dependency> 
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.5</version>
+        </dependency>
+        
+        <!-- hive-exec-0.11.0-cdh.jar -->
+        <dependency>
+            <groupId>com.cloudera.hive</groupId>
+            <artifactId>hive-exec</artifactId>
+            <version>0.11.0</version>
+			<classifier>Cloudera</classifier>
+        </dependency>
+        
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.3</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>net.sf.jopt-simple</groupId>
+            <artifactId>jopt-simple</artifactId>
+            <version>4.5</version>
+        </dependency>
+
+    </dependencies>
+    
+	<repositories>
+        <repository>
+            <id>cloudera.hadoop</id>
+            <url>http://192.168.0.100:8081/nexus/content/repositories/cloudera.hadoop</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+	</repositories>
+	<build>  
+	
+		<plugins>
+		    <plugin>  
+            <groupId>org.codehaus.mojo</groupId>  
+            <artifactId>build-helper-maven-plugin</artifactId>  
+            <version>1.1</version>  
+            <executions>  
+              <execution>  
+                <id>add-source</id>  
+                <phase>generate-sources</phase>  
+                <goals>  
+                  <goal>add-source</goal>  
+                </goals>  
+                <configuration>  
+                  <sources>  
+                    <source>generated</source> 
+                    <source>test</source>
+                    <source>dataload</source>
+                    <!-- 
+                    <source>endpoint</source>  
+                    <source>hive</source>  
+                    <source>hbase</source>
+                    <source>mapreduce</source>
+                    <source>core</source>
+                    <source>solution</source>
+                    <source>util</source>
+                    -->
+                    <source>datagen</source>
+                  </sources>  
+                </configuration>  
+              </execution>  
+            </executions>  
+          </plugin>  
+        </plugins>
+	
+	
+		<resources>
+			<resource>
+				<directory>conf</directory>
+				<includes>
+					<include>log4j.properties</include>
+				</includes>
+			</resource>
+
+			<resource>
+				<directory>conf</directory>
+				<includes>
+					<include>*.xml</include>
+				</includes>
+			</resource>
+			
+			<resource>
+				<directory>.</directory>
+				<includes>
+					<include>lib/**/*.jar</include>
+				</includes>
+			</resource>
+			
+			<resource>
+				<directory>dataload/src/main/java</directory>
+				<excludes> 
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			
+			<resource>
+				<directory>test/src/test/java</directory>
+				<excludes> 
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+			
+			<resource>
+				<directory>solution/src/main/java</directory>
+				<excludes> 
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+</project>
+
+
+
+
