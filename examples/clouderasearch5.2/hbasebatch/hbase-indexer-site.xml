@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<configuration>
+  <property>
+      <name>hbase.zookeeper.quorum</name>
+          <value>ip-172-31-12-149.us-west-2.compute.internal,ip-172-31-12-150.us-west-2.compute.internal,ip-172-31-12-151.us-west-2.compute.internal</value>
+            </property>
+
+  <property>
+     <name>hbaseindexer.zookeeper.connectstring</name>
+        <value>ip-172-31-12-149.us-west-2.compute.internal,ip-172-31-12-150.us-west-2.compute.internal,ip-172-31-12-151.us-west-2.compute.internal:2181</value>
+          </property>
+</configuration>

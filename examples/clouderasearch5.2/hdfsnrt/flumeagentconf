@@ -1,0 +1,19 @@
+nrtcsv.sources = src1
+nrtcsv.channels = ch1
+nrtcsv.sinks = sink1
+ 
+nrtcsv.sources.src1.type = exec
+nrtcsv.sources.src1.shell = /bin/bash -c
+nrtcsv.sources.src1.command = tail -n +0 -F /tmp/customer.tbl1
+
+nrtcsv.sources.src1.channels = ch1
+nrtcsv.channels.ch1.type = memory
+nrtcsv.channels.ch1.capacity = 500
+
+ 
+nrtcsv.sinks.sink1.type = org.apache.flume.sink.solr.morphline.MorphlineSolrSink
+nrtcsv.sinks.sink1.channel = ch1
+nrtcsv.sinks.sink1.batchSize = 10
+nrtcsv.sinks.sink1.batchDurationMillis = 1000
+nrtcsv.sinks.sink1.morphlineId = morphline1
+nrtcsv.sinks.sink1.morphlineFile = morphlines.conf

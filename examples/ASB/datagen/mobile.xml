@@ -1,0 +1,447 @@
+<record>
+	<type></type>
+	<separator>|</separator>
+	
+	<column>
+		<name>id</name>
+		<value></value>
+    		<randomType>CONSTANT</randomType>
+	</column>
+
+	<column>
+		<name>detector!</name>
+		<start>1</start>
+		<end>1000</end>
+		<randomType>LONG</randomType>
+	</column>
+
+<column>
+    <name>createtime</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>flow_id</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_id!</name>
+    <length>16</length>
+    <randomPattern>DIGIT</randomPattern>
+    <randomType>STRING</randomType>
+</column>
+
+
+<column>
+    <name>orig_realm</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_device!</name>
+    <length>16</length>
+    <randomPattern>DIGIT</randomPattern>
+    <randomType>STRING</randomType>
+</column>
+
+<column>
+    <name>orig_ip</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_port</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_session</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_network!</name>
+    <start>1</start>
+    <end>1000</end>
+    <randomType>LONG</randomType>
+</column>
+
+<column>
+    <name>orig_ha</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_fa</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>orig_rnc</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>orig_bs!</name>
+    <start>1</start>
+    <end>10000000000</end>
+    <randomType>LONG</randomType>
+</column>
+
+<column>
+    <name>orig_qci</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_id!</name>
+    <length>16</length>
+    <randomPattern>DIGIT</randomPattern>
+    <randomType>STRING</randomType>
+</column>
+
+
+<column>
+    <name>resp_realm</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>resp_device!</name>
+    <length>16</length>
+    <randomPattern>DIGIT</randomPattern>
+    <randomType>STRING</randomType>
+</column>
+
+<column>
+    <name>resp_ip</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>resp_port</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_session</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_network</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_ha</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_fa</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_rnc</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>resp_bs!</name>
+    <start>1</start>
+    <end>10000000000</end>
+    <randomType>LONG</randomType>
+</column>
+
+
+<column>
+    <name>resp_qci</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>proto</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+
+<column>
+    <name>application!</name>
+    <start>1</start>
+    <end>10000000000</end>
+    <randomType>LONG</randomType>
+</column>
+<!--
+<column>
+    <name>flow_open_reason</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>flow_close_reason</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>flow_start</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>flow_start_frac</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_first</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_last</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_first</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_last</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_pkts</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_bytes</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_num_conn_setup</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>o2r_airtime</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>o2r_handshake_rtt</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+
+<column>
+    <name>r2o_pkts</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_bytes</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_num_conn_setup</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_airtime</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>r2o_handshake_rtt</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>loss</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>loss</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>min_rtt</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>max_rtt</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>mean_rtt</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>rtt_samples</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>busy_time</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>num_timeouts</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>syn_retries</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>syn_acks</name>
+    <start>1</start>
+    <end>1000</end>
+    <randomType>LONG</randomType>
+</column>
+<column>
+    <name>unacks</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>down_busy_bytes</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>very_busy_bytes</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>vvery_busy_time</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>num_consolidated_flows</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>num_distinct_ip</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>client</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>os</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>resp_code</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+<column>
+    <name>resp_time</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>app_protocol</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+
+<column>
+    <name>flags</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>http_host</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>
+</column>
+
+<column>
+    <name>http_uri</name>
+    <value></value>
+    <randomType>CONSTANT</randomType>    
+</column>
+-->
+</record>
+

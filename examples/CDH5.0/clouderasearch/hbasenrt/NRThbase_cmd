@@ -1,0 +1,79 @@
+
+
+Enabling cluster-wide HBase replication
+vim /opt/cloudera/parcels/CDH/share/doc/hbase-solr-doc-1.5+cdh5.2.0+19/demo/hbase-site.xml
+
+restart hbase
+
+hbase shell:
+disable 'record'
+alter 'record', {NAME => 'data', REPLICATION_SCOPE => 1}
+enable 'record'
+
+
+
+Configure individual Lily HBase NRT Indexer Services:
+vim /etc/hbase-solr/conf/hbase-indexer-site.xml
+
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>ip-172-31-12-149.us-west-2.compute.internal,ip-172-31-12-150.us-west-2.compute.internal,ip-172-31-12-151.us-west-2.compute.internal</value>
+  </property>
+
+  <property>
+   <name>hbaseindexer.zookeeper.connectstring</name>
+   <value>ip-172-31-12-149.us-west-2.compute.internal,ip-172-31-12-150.us-west-2.compute.internal,ip-172-31-12-151.us-west-2.compute.internal:2181</value>
+  </property>
+
+scp /etc/hbase-solr/conf/hbase-indexer-site.xml root@172.31.12.150:/etc/hbase-solr/conf/
+scp /etc/hbase-solr/conf/hbase-indexer-site.xml root@172.31.12.151:/etc/hbase-solr/conf/  
+
+
+CM->lilyhbase->configuration->morphlines  
+
+The morphlines.conf configuration file must be present on every host that runs an indexer.
+
+restart lily hbase
+
+
+hbase-indexer delete-indexer --name myIndexer
+
+hbase-indexer add-indexer --name myIndexer \
+--indexer-conf /root/solr/morphline-hbase-mapper.xml \
+--connection-param solr.zk=$ZKHOST/solr \
+--connection-param solr.collection=hbase-collection1 \
+--zookeeper $ZKHOST:2181
+
+
+[root@ip-172-31-12-149 conf]# hbase-indexer list-indexers
+ZooKeeper connection string not specified, using default: localhost:2181
+
+Number of indexes: 1
+
+myIndexer
+  + Lifecycle state: ACTIVE
+  + Incremental indexing state: SUBSCRIBE_AND_CONSUME
+  + Batch indexing state: INACTIVE
+  + SEP subscription ID: Indexer_myIndexer
+  + SEP subscription timestamp: 2014-09-30T08:03:22.961Z
+  + Connection type: solr
+  + Connection params:
+    + solr.collection = hbase-collection1
+    + solr.zk = ip-172-31-12-149.us-west-2.compute.internal,ip-172-31-12-150.us-west-2.compute.internal,ip-172-31-12-151.us-west-2.compute.internal/solr
+  + Indexer config:
+      576 bytes, use -dump to see content
+  + Indexer component factory: com.ngdata.hbaseindexer.conf.DefaultIndexerComponentFactory
+  + Additional batch index CLI arguments:
+      (none)
+  + Default additional batch index CLI arguments:
+      (none)
+  + Processes
+    + 1 running processes
+    + 0 failed processes
+    
+    
+put 'record', 'row1', 'data', 'value'
+put 'record', 'row2', 'data', 'value2'
+
+
+put 'record', 'row11', 'data', 'wo'

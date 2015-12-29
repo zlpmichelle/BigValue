@@ -1,64 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/20g.pro" afterPath="$PROJECT_DIR$/conf/20g.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/2g.pro" afterPath="$PROJECT_DIR$/conf/2g.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/5red.pro" afterPath="$PROJECT_DIR$/conf/5red.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CHANGES.txt" afterPath="$PROJECT_DIR$/CHANGES.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/bulkload/CHNAGES _BL.txt" afterPath="$PROJECT_DIR$/docs/bulkload/CHNAGES _BL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/indexquery/CHNAGES _IQ.txt" afterPath="$PROJECT_DIR$/docs/indexquery/CHNAGES _IQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mrload/CHNAGES _MRL.txt" afterPath="$PROJECT_DIR$/docs/mrload/CHNAGES _MRL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/parallelindexquery/CHNAGES _PIQ.txt" afterPath="$PROJECT_DIR$/docs/parallelindexquery/CHNAGES _PIQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/datagen/CHNAGES_G.txt" afterPath="$PROJECT_DIR$/docs/datagen/CHNAGES_G.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/bulkload/GET_START_BL.txt" afterPath="$PROJECT_DIR$/docs/bulkload/GET_START_BL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/indexquery/GET_START_IQ.txt" afterPath="$PROJECT_DIR$/docs/indexquery/GET_START_IQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mrload/GET_START_MRL.txt" afterPath="$PROJECT_DIR$/docs/mrload/GET_START_MRL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/parallelindexquery/GET_START_PIQ.txt" afterPath="$PROJECT_DIR$/docs/parallelindexquery/GET_START_PIQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/bulkload/PROPERTIES_USAGE_BL.txt" afterPath="$PROJECT_DIR$/docs/bulkload/PROPERTIES_USAGE_BL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/indexquery/PROPERTIES_USAGE_IQ.txt" afterPath="$PROJECT_DIR$/docs/indexquery/PROPERTIES_USAGE_IQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/bulkload/README_BL.txt" afterPath="$PROJECT_DIR$/docs/bulkload/README_BL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/indexquery/README_IQ.txt" afterPath="$PROJECT_DIR$/docs/indexquery/README_IQ.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/mrload/README_MRL.txt" afterPath="$PROJECT_DIR$/docs/mrload/README_MRL.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obfuscator/analysis_CDH5.0.pro" afterPath="$PROJECT_DIR$/obfuscator/analysis_CDH5.0.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obfuscator/analysis_CDH5.1.pro" afterPath="$PROJECT_DIR$/obfuscator/analysis_CDH5.1.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/asb-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/asb-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/asb5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/asb5-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sh" afterPath="$PROJECT_DIR$/build.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/bulkLoad.sh" afterPath="$PROJECT_DIR$/bin/bulkLoad.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-bulkload-asb.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-asb.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-bulkload-asb5red.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-asb5red.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-bulkload-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-bulkload.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-inmemory-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-inmemory-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/coprocessorDebug.sh" afterPath="$PROJECT_DIR$/bin/coprocessorDebug.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/coprocessorQuery.sh" afterPath="$PROJECT_DIR$/bin/coprocessorQuery.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/current.properties" afterPath="$PROJECT_DIR$/conf/current.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/current_hdfs2hbase.properties" afterPath="$PROJECT_DIR$/conf/current_hdfs2hbase.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/deletescanfilter.sh" afterPath="$PROJECT_DIR$/bin/deletescanfilter.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/deployMutipleClient.sh" afterPath="$PROJECT_DIR$/bin/deployMutipleClient.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protobuf/exec.sh" afterPath="$PROJECT_DIR$/protobuf/exec.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ftp2HBase.sh" afterPath="$PROJECT_DIR$/bin/ftp2HBase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ftp2Hdfs.sh" afterPath="$PROJECT_DIR$/bin/ftp2Hdfs.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/ftp2Hdfs2Hbase.sh" afterPath="$PROJECT_DIR$/bin/ftp2Hdfs2Hbase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/genStreamingData.sh" afterPath="$PROJECT_DIR$/bin/genStreamingData.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/hdfsOrHbase2HbaseEtl.sh" afterPath="$PROJECT_DIR$/bin/hdfsOrHbase2HbaseEtl.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/hfileIncrementalLoad.sh" afterPath="$PROJECT_DIR$/bin/hfileIncrementalLoad.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/inMemoryAndHdfs2HBase.sh" afterPath="$PROJECT_DIR$/bin/inMemoryAndHdfs2HBase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/mrload.pro" afterPath="$PROJECT_DIR$/conf/mrload.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/mrload5red.pro" afterPath="$PROJECT_DIR$/conf/mrload5red.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/openDebugForHbase.sh" afterPath="$PROJECT_DIR$/bin/openDebugForHbase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/parallelCoprocessorQuery.sh" afterPath="$PROJECT_DIR$/bin/parallelCoprocessorQuery.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/refreshIndexConf.sh" afterPath="$PROJECT_DIR$/bin/refreshIndexConf.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/regionSplitKey.sh" afterPath="$PROJECT_DIR$/bin/regionSplitKey.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/restartHBase.sh" afterPath="$PROJECT_DIR$/bin/restartHBase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/splitGzipFile2SmallerGzip.sh" afterPath="$PROJECT_DIR$/bin/splitGzipFile2SmallerGzip.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/unicom-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/unicom-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/unicom5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/unicom5-hdfs2hbase-sample.properties" />
-    </list>
+    <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="" />
     <ignored path="BigValue.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,17 +23,67 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="conf-bulkload-asb.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-bulkload-asb.properties">
+        <entry file="file://$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="58" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="conf-bulkload-asb5red.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-bulkload-asb5red.properties">
+        <entry file="file://$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb5red.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asb-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/ASB/dataload/asb-hdfs2hbase-sample.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asb5-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/ASB/dataload/asb5-hdfs2hbase-sample.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unicom-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom-hdfs2hbase-sample.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unicom5-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom5-hdfs2hbase-sample.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf-bulkload-unicom.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/bulkload/conf-bulkload-unicom.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
@@ -99,21 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf-bulkload-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-bulkload-sample.properties">
+      <file leaf-file-name="conf-bulkload-1tb.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conf-bulkload.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-bulkload.properties">
+      <file leaf-file-name="conf-bulkload-1tbdata.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -122,58 +115,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5258621">
-              <caret line="276" column="45" selection-start-line="276" selection-start-column="45" selection-end-line="276" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unicom-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/unicom-hdfs2hbase-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unicom5-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/unicom5-hdfs2hbase-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf-inmemory-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-inmemory-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asb-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/asb-hdfs2hbase-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="asb5-hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/asb5-hdfs2hbase-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.6551724">
+              <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -199,27 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bin/coprocessorQuery.sh" />
-        <option value="$PROJECT_DIR$/bin/deletescanfilter.sh" />
-        <option value="$PROJECT_DIR$/bin/deployMutipleClient.sh" />
-        <option value="$PROJECT_DIR$/bin/ftp2HBase.sh" />
-        <option value="$PROJECT_DIR$/bin/ftp2Hdfs.sh" />
-        <option value="$PROJECT_DIR$/bin/ftp2Hdfs2Hbase.sh" />
-        <option value="$PROJECT_DIR$/bin/genStreamingData.sh" />
-        <option value="$PROJECT_DIR$/bin/hdfsOrHbase2HbaseEtl.sh" />
-        <option value="$PROJECT_DIR$/bin/hfileIncrementalLoad.sh" />
-        <option value="$PROJECT_DIR$/bin/inMemoryAndHdfs2HBase.sh" />
-        <option value="$PROJECT_DIR$/bin/openDebugForHbase.sh" />
-        <option value="$PROJECT_DIR$/bin/parallelCoprocessorQuery.sh" />
-        <option value="$PROJECT_DIR$/bin/refreshIndexConf.sh" />
-        <option value="$PROJECT_DIR$/bin/regionSplitKey.sh" />
-        <option value="$PROJECT_DIR$/bin/restartHBase.sh" />
-        <option value="$PROJECT_DIR$/bin/splitGzipFile2SmallerGzip.sh" />
-        <option value="$PROJECT_DIR$/docs/bulkload/CHNAGES _BL.txt" />
-        <option value="$PROJECT_DIR$/docs/bulkload/GET_START_BL.txt" />
-        <option value="$PROJECT_DIR$/docs/bulkload/PROPERTIES_USAGE_BL.txt" />
-        <option value="$PROJECT_DIR$/docs/bulkload/README_BL.txt" />
-        <option value="$PROJECT_DIR$/docs/datagen/CHNAGES_G.txt" />
         <option value="$PROJECT_DIR$/docs/indexquery/CHNAGES _IQ.txt" />
         <option value="$PROJECT_DIR$/docs/indexquery/GET_START_IQ.txt" />
         <option value="$PROJECT_DIR$/docs/indexquery/PROPERTIES_USAGE_IQ.txt" />
@@ -249,6 +171,27 @@
         <option value="$PROJECT_DIR$/properties/conf-bulkload-asb5red.properties" />
         <option value="$PROJECT_DIR$/properties/conf-bulkload-sample.properties" />
         <option value="$PROJECT_DIR$/properties/conf-bulkload.properties" />
+        <option value="$PROJECT_DIR$/examples/ASB/conf/test_index-conf.xml" />
+        <option value="$PROJECT_DIR$/examples/ASB/README.txt" />
+        <option value="$PROJECT_DIR$/examples/ASB/datagen/datagen_local.cygwin" />
+        <option value="$PROJECT_DIR$/examples/ASB/datagen/datagen_local.sh" />
+        <option value="$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.cygwin" />
+        <option value="$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.sh" />
+        <option value="$PROJECT_DIR$/examples/reference/datagen/generator_local.cygwin" />
+        <option value="$PROJECT_DIR$/examples/reference/datagen/generator_mapreduce.cygwin" />
+        <option value="$PROJECT_DIR$/examples/CDH5.0/bulkload/current.properties" />
+        <option value="$PROJECT_DIR$/examples/CDH5.0/mrload/current_hdfs2hbase.properties" />
+        <option value="$PROJECT_DIR$/examples/CDH5.0/mrload/current_inmemory.properties" />
+        <option value="$PROJECT_DIR$/examples/CDH5.0/parallelquery_scalabilitytest/bulkload/current.properties" />
+        <option value="$PROJECT_DIR$/examples/GD_China_UniCom/bulkload/conf-bulkload-unicom.properties" />
+        <option value="$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb.properties" />
+        <option value="$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb5red.properties" />
+        <option value="$PROJECT_DIR$/examples/ASB/dataload/asb-hdfs2hbase-sample.properties" />
+        <option value="$PROJECT_DIR$/examples/ASB/dataload/asb5-hdfs2hbase-sample.properties" />
+        <option value="$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom-hdfs2hbase-sample.properties" />
+        <option value="$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom5-hdfs2hbase-sample.properties" />
+        <option value="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties" />
+        <option value="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
@@ -417,7 +360,105 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datagen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ASB" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bulkload" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datagen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -439,145 +480,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="datagen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -593,159 +496,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YCSBCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YCSBCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YCSBCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YCSBCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ycsb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bench" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YCSBCore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ycsb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="workloads" />
+              <option name="myItemId" value="analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -993,9 +744,9 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.49617592" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3732484" sideWeight="0.5863336" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3732484" sideWeight="0.56796473" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3732484" sideWeight="0.41366643" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3732484" sideWeight="0.43203527" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.5325048" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.47705546" order="-1" side_tool="false" content_ui="tabs" />
@@ -1034,190 +785,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/coprocessorQuery.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/deletescanfilter.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/deployMutipleClient.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ftp2HBase.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ftp2Hdfs.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ftp2Hdfs2Hbase.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/genStreamingData.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdfsOrHbase2HbaseEtl.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hfileIncrementalLoad.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/inMemoryAndHdfs2HBase.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/openDebugForHbase.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/parallelCoprocessorQuery.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/refreshIndexConf.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/regionSplitKey.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/restartHBase.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/splitGzipFile2SmallerGzip.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/bulkload/CHNAGES _BL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/bulkload/GET_START_BL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="102" selection-start-line="26" selection-start-column="102" selection-end-line="26" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/bulkload/PROPERTIES_USAGE_BL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/bulkload/README_BL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/datagen/CHNAGES_G.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/indexquery/CHNAGES _IQ.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/indexquery/GET_START_IQ.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/indexquery/PROPERTIES_USAGE_IQ.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1372,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/properties/asb-hdfs2hbase-sample.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.8728448">
           <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding />
         </state>
@@ -1380,7 +947,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/properties/asb5-hdfs2hbase-sample.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.8728448">
           <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding />
         </state>
@@ -1388,7 +955,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/properties/unicom-hdfs2hbase-sample.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7758621">
           <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
           <folding />
         </state>
@@ -1396,7 +963,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/properties/unicom5-hdfs2hbase-sample.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7435345">
           <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
           <folding />
         </state>
@@ -1434,10 +1001,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/obfuscator/proguard4.11/src/proguard/GPL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33189654">
+          <caret line="172" column="43" selection-start-line="172" selection-start-column="43" selection-end-line="172" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/conf/asbHdfs2hbase_3q.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/conf/test_index-conf.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/datagen/datagen_local.cygwin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/datagen/datagen_local.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.cygwin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/reference/datagen/generator_local.cygwin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/reference/datagen/generator_mapreduce.cygwin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="35" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/bulkload/current.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/mrload/current_hdfs2hbase.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/mrload/current_inmemory.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/parallelquery_scalabilitytest/bulkload/current.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/bulkload/conf-bulkload-unicom.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="63" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb5red.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/dataload/asb-hdfs2hbase-sample.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/ASB/dataload/asb5-hdfs2hbase-sample.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom-hdfs2hbase-sample.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom5-hdfs2hbase-sample.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5258621">
-          <caret line="276" column="45" selection-start-line="276" selection-start-column="45" selection-end-line="276" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.6551724">
+          <caret line="223" column="49" selection-start-line="223" selection-start-column="49" selection-end-line="223" selection-end-column="49" />
           <folding />
         </state>
       </provider>

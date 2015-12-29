@@ -1,0 +1,1 @@
+java -cp .;..\..\..\target\BigValue-1.0.jar;..\..\..\lib\* com.cloudera.bigdata.analysis.datagen.GeneratorDriver --instanceDoc=generator.xml --totalSize=1000 --minSize=10 --maxSize=100 --outputDir=hdfs://192.168.0.150:8020/reference --replicaNum=1 --mode=local --parallel=2

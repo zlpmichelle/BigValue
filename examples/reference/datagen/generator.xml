@@ -1,0 +1,156 @@
+<record>
+	<type></type>
+	<separator>|</separator>
+	
+	<column>
+		<name>time_id</name>
+		<start>201212230000</start>
+		<end>201212231000</end>
+		<pattern>YYYYMMDDHHmm</pattern>
+		<randomType>DATETIME</randomType>
+	</column>
+	
+	<column>
+		<name>phone_num</name>
+		<start>13300000000</start>
+		<end>18900000000</end>
+		<randomType>PHONE</randomType>
+	</column>
+	
+	<column>
+		<name>filesize_rnk_cd</name>
+		<start>0</start>
+		<end>4</end>
+		<randomType>LONG</randomType>
+	</column>
+	
+	<column>
+		<name>rand_id</name>
+		<length>32</length>
+		<randomType>STRING</randomType>
+	</column>
+	
+	<column>
+		<name>city_id</name>
+		<ref>
+			<refColumn>phone_num</refColumn>
+			<refOp>SUBSTRING</refOp>
+			<refStart>3</refStart>
+			<refEnd>6</refEnd>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>userbrand_cd</name>
+		<ref>
+			<refColumn>phone_num</refColumn>
+			<refOp>SUBSTRING</refOp>
+			<refStart>6</refStart>
+			<refEnd>9</refEnd>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>code_id</name>
+		<value>61</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+	
+	<column>
+		<name>collect_tms</name>
+		<value>2012-12-23 10:00:00</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+
+	<column>
+		<name>msisdn</name>
+		<ref>
+			<refColumn>phone_num</refColumn>
+			<refOp>DIGEST</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>ts_incomming_req</name>
+		<ref>
+			<refColumn>collect_tms</refColumn>
+			<refOp>IDENTITY</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>ts_outgoing_req</name>
+		<ref>
+			<refColumn>collect_tms</refColumn>
+			<refOp>IDENTITY</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>ts_incomming_resp</name>
+		<ref>
+			<refColumn>collect_tms</refColumn>
+			<refOp>IDENTITY</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>ts_outgoing_resp</name>
+		<ref>
+			<refColumn>collect_tms</refColumn>
+			<refOp>IDENTITY</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>ts_ack</name>
+		<value>340</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+	
+	<column>
+		<name>session_dur</name>
+		<value>250</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+	
+	<column>
+		<name>url</name>
+		<value>172-234.16-168.1-10.1-255</value>
+		<randomType>URL</randomType>
+	</column>
+	
+	<column>
+		<name>sp_domain</name>
+		<ref>
+			<refColumn>url</refColumn>
+			<refOp>IDENTITY</refOp>
+		</ref>
+		<randomType>CORRELATE</randomType>
+	</column>
+	
+	<column>
+		<name>file_type</name>
+		<value>html</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+	
+	<column>
+		<name>service_type</name>
+		<udfName>com.cloudera.bigdata.analysis.custom.datagen.ServiceTypeGenerator</udfName>
+		<randomType>UDF</randomType>
+	</column>
+	
+	<column>
+		<name>wap_http_status_cd</name>
+		<value>10020</value>
+		<randomType>CONSTANT</randomType>
+	</column>
+</record>

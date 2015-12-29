@@ -1,0 +1,96 @@
+<inMemoryRecord>
+	<rowKeySpec rowKeySeparator="|">
+		<rowKeyFieldSpec>
+			<fieldType>STRING</fieldType>
+			<fixedLength>true</fixedLength>
+			<length>12</length>
+			<fieldPattern>ALPHABET</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</rowKeyFieldSpec>
+		<rowKeyFieldSpec>
+			<fieldType>STRING</fieldType>
+			<fixedLength>true</fixedLength>
+			<length>8</length>
+			<fieldPattern>DIGIT</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</rowKeyFieldSpec>
+	</rowKeySpec>
+	
+	<columnFamilySpec>
+		<familyName>f</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+		
+		<qualifierSpec>
+			<qualifierName>q1</qualifierName>
+			<buildIndex>false</buildIndex>
+			<length>10</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>ALPHABET</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q2</qualifierName>
+			<buildIndex>false</buildIndex>
+			<length>16</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>ALPHABET</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q3</qualifierName>
+			<buildIndex>false</buildIndex>
+			<length>16</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>DIGIT</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</qualifierSpec>
+		
+		<qualifierSpec>
+			<qualifierName>q4</qualifierName>
+			<buildIndex>false</buildIndex>
+			<length>8</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>DIGIT</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</qualifierSpec>
+	</columnFamilySpec>
+	
+	<columnFamilySpec>
+		<familyName>g</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>2</replication>
+		<maxVersion>1</maxVersion>
+		
+		<qualifierSpec>
+			<qualifierName>q1</qualifierName>
+			<buildIndex>false</buildIndex>
+			<length>25</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>ALPHABET</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</qualifierSpec>
+		
+		<multiQualifierSpec>
+			<qualifierPrefix>m</qualifierPrefix>
+			<qualifierNum>10</qualifierNum>
+			<buildIndex>false</buildIndex>
+			<useConstant>true</useConstant>
+			<constantValue>Shanghai, China</constantValue>
+			<length>50</length>
+			<fieldType>STRING</fieldType>
+			<fieldPattern>ALPHABET</fieldPattern>
+			<randomAlgorithm>RANDOM</randomAlgorithm>
+		</multiQualifierSpec>
+	</columnFamilySpec>
+	
+	<columnFamilySpec>	
+		<familyName>i</familyName>
+		<compressionType>SNAPPY</compressionType>
+		<replication>1</replication>
+		<maxVersion>1</maxVersion>
+	</columnFamilySpec>
+</inMemoryRecord>

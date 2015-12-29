@@ -1,0 +1,95 @@
+path: /root/flume-syslog-solr
+
+solrctl instancedir --generate /root/solr/flume-nrt-syslog
+
+
+schema.xml
+<fields>
+  <field name="id" type="string" indexed="true" stored="true" />
+  <field name="syslog_hostname" type="string" indexed="true" stored="true" />
+  <field name="syslog_timestamp" type="string" indexed="true" stored="true" />
+  <field name="syslog_program" type="string" indexed="true" stored="true" />
+  <field name="syslog_pid" type="int" indexed="true" stored="true" />
+  <field name="syslog_message" type="string" indexed="true" stored="true" />
+  <field name="text" type="text_general" indexed="true" stored="true" multiValued="true"/>
+  <field name="_version_" type="long" indexed="true" stored="true"/>
+</fields>
+ 
+<uniqueKey>id</uniqueKey>
+ 
+<copyField source="syslog_hostname" dest="text"/>
+<copyField source="syslog_timestamp" dest="text"/>
+<copyField source="syslog_program" dest="text"/>
+<copyField source="syslog_pid" dest="text"/>
+<copyField source="syslog_message" dest="text"/>
+
+
+solrctl --zk $ZKHOST:2181/solr instancedir --create flume-nrt-syslog-collection /root/solr/flume-nrt-syslog
+
+solrctl --zk $ZKHOST:2181/solr collection --create flume-nrt-syslog-collection -s 3
+
+
+CM -> Flume -> Agent Default Group -> Configuration File
+a1.sources = r1
+a1.channels = c1
+a1.sinks = s1
+ 
+a1.sources.r1.type = syslogtcp
+a1.sources.r1.port = 5144
+a1.sources.r1.host = ip-172-31-12-149.us-west-2.compute.internal
+a1.sources.r1.keepFields = true
+ 
+a1.sources.r1.channels = c1
+a1.channels.c1.type = memory
+ 
+a1.sinks.s1.type = org.apache.flume.sink.solr.morphline.MorphlineSolrSink
+a1.sinks.s1.channel = c1
+a1.sinks.s1.batchSize = 10
+a1.sinks.s1.batchDurationMillis = 1000
+a1.sinks.s1.morphlineId = morphline1
+a1.sinks.s1.morphlineFile = morphlines.conf
+
+ Flume > Agent > Flume-NG Solr Sink > Morphlines File
+ SOLR_LOCATOR : {
+  collection : flume-nrt-syslog-collection
+  zkHost : "$ZK_HOST"
+}
+morphlines : [
+  {
+    id : morphline1
+    importCommands : ["org.kitesdk.**","org.apache.solr.**"]
+     
+    commands : [
+      ## Read each rsyslog line
+      { readLine { charset : UTF-8 }}
+      ## parse the message and extract the fields we want
+      { grok 
+        { dictionaryFiles : [grok-dictionary.conf]
+           expressions : {
+                message : """<%{POSINT:syslog_pri}>%{SYSLOGTIMESTAMP:syslog_timestamp} %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}"""
+          }
+        }
+      }
+       
+      ## Generate a unique id for each record
+      { generateUUID { field : id } }
+      ## Discard fields we don't care about
+      { sanitizeUnknownSolrFields { solrLocator : ${SOLR_LOCATOR} } }
+       
+      ## Update the Solr Index
+      { loadSolr { solrLocator : ${SOLR_LOCATOR} } }
+    ]
+  }
+] 
+
+
+restart flume
+
+vim /etc/rsyslog.conf port 5144
+
+sudo service rsyslog restart
+
+Hue
+
+
+logger This is Spinal Tap    ---> NRT in HUe   spinal

@@ -1,0 +1,10 @@
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "(f,q1,EQ,RandomIntegerGenerator_0_43200)"
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "(f,q2,EQ,RandomTimeGenerator_20131201_20131231_yyyyMMdd)"
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "(f,q3,EQ,RandomIntegerGenerator_0_43200)"
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "(f,q4,EQ,RandomLongGenerator_13299990000_13300000000)"
+
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "[(f,q1,EQ,RandomIntegerGenerator_0_43200)(f,q3,EQ,RandomIntegerGenerator_0_43200)]"
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "[(f,q2,EQ,RandomTimeGenerator_20131201_20131231_yyyyMMdd)(f,q4,EQ,RandomLongGenerator_13299990000_13300000000)]"
+
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "[(f,q1,EQ,RandomIntegerGenerator_0_43200)(f,q2,EQ,RandomTimeGenerator_20131201_20131231_yyyyMMdd)(f,q4,EQ,RandomLongGenerator_13299990000_13300000000)]"
+./bin/coprocessorQuery.sh -table 1tbdata -resultsLimit 5 -condition "[(f,q2,EQ,RandomTimeGenerator_20131201_20131231_yyyyMMdd)(f,q3,EQ,RandomIntegerGenerator_0_43200)(f,q4,EQ,RandomLongGenerator_13299990000_13300000000)]"

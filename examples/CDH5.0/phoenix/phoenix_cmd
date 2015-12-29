@@ -1,0 +1,137 @@
+1.create table
+!sql CREATE TABLE "nci20gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+
+2.count table
+!sql SELECT COUNT("f"."q1") FROM "nci20gb";
+
+3.create global index
+!sql CREATE INDEX NCI20GB_Q4 ON "nci20gb" ("f"."q4");
+
+nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/nci20gb.sql
+
+4.explian global index
+!sql EXPLAIN SELECT "f"."q4" FROM "nci20gb" WHERE "f"."q4" > '1234' LIMIT 5;
+
+5.execute gloable index query
+!sql SELECT "f"."q4" FROM "nci20gb" WHERE "f"."q4" > '1234' LIMIT 5;
+
+6.rebuild global index
+!sql ALTER INDEX IF EXISTS NCI20GB_Q4 ON "nci20gb" REBUILD;
+
+
+7. create local index
+!sql CREATE LOCAL INDEX NCI20GB_LOCAL_Q3 ON "nci20gb" ("f"."q3");
+
+nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/nci20gb.sql
+
+8. explain local index
+!sql EXPLAIN SELECT "f"."q3" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+
+!sql EXPLAIN SELECT "f"."q5" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+
+9. execute local index query
+!sql SELECT "f"."q3" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+
+10. rebuild local index
+!sql ALTER INDEX IF EXISTS NCI20GB_LOCAL_Q3 ON "nci20gb" REBUILD;
+
+!sql ALTER INDEX IF EXISTS NCI20GB_LOCAL_Q3 ON "nci20gb" DISABLE;
+
+https://issues.apache.org/jira/browse/PHOENIX-1112
+
+11. drop inde table
+!sql DROP INDEX NCI20GB_LOCAL_Q3 on "nci20gb";
+
+
+12. rowkey query 
+!sql EXPLAIN SELECT "f"."q1" FROM "nci20gb" WHERE MYPK > '1234' LIMIT 5;
+
+!sql SELECT "f"."q1" FROM "nci20gb" WHERE MYPK > '1234' LIMIT 5;
+
+
+
+!sql SELECT COUNT("f"."q1") FROM "test";
+!sql CREATE INDEX TEST_Q4 ON "test" ("f"."q4");
+!sql EXPLAIN SELECT "f"."q4" FROM "test" WHERE "f"."q4" > '1234' LIMIT 5;
+!sql CREATE LOCAL INDEX TEST_LOCAL_Q3 ON "test" ("f"."q3");
+!sql EXPLAIN SELECT "f"."q5" FROM "test" WHERE "f"."q3" > '1234' LIMIT 5;
+
+
+
+!sql CREATE TABLE "test" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 6;
+
+
+CREATE INDEX TEXT_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE ("f"."q3");
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> CREATE INDEX TEXT_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE ("f"."q3");
+12 rows affected (0.978 seconds)
+
+!sql EXPLAIN SELECT "f"."q1", "f"."q2", "f"."q3" FROM "test" WHERE "f"."q1" > '1234' and "f"."q2" > '1234' and "f"."q3" > '1234' LIMIT 5;
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> !sql EXPLAIN SELECT "f"."q1", "f"."q2", "f"."q3" FROM "test" WHERE "f"."q1" > '1234' and "f"."q2" > '1234' and "f"."q3" > '1234' LIMIT 5;
++------------+
+|    PLAN    |
++------------+
+| CLIENT PARALLEL 22-WAY SKIP SCAN ON 6 RANGES OVER TEXT_Q1Q2Q3 [0,*] - [5,~'1234'] |
+|     SERVER FILTER BY (q2 > '1234' AND f.q3 > '1234') |
+|     SERVER 5 ROW LIMIT |
+| CLIENT MERGE SORT |
+| CLIENT 5 ROW LIMIT |
++------------+
+5 rows selected (0.055 seconds)
+
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> !sql SELECT "f"."q1", "f"."q2", "f"."q3" FROM "test" WHERE "f"."q1" > '1234' and "f"."q2" > '1234' and "f"."q3" > '1234' LIMIT 5;
++------------+------------+------------+
+|     q1     |     q2     |     q3     |
++------------+------------+------------+
+| null       | a4q2       | a4q3       |
+| a          | b          | c          |
+| a          | b          | c          |
+| 965119696  | 5108836081253744 | 7663125842424245 |
+| 445732696  | 2725686505390132 | 6447673564367638 |
++------------+------------+------------+
+5 rows selected (0.208 seconds)
+
+CREATE INDEX TEXT_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE ("f"."q3")
+    SALT_BUCKETS=10, DATA_BLOCK_ENCODING='NONE';
+
+
+
+
+CREATE LOCAL INDEX TEXT_LOCAL_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE ("f"."q3");
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> CREATE LOCAL INDEX TEXT_LOCAL_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE ("f"."q3");
+12 rows affected (1.869 seconds)
+
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> !sql EXPLAIN SELECT "f"."q1", "f"."q2", "f"."q3" FROM "test" WHERE "f"."q1" > '1234' and "f"."q2" > '1234' and "f"."q3" > '1234' LIMIT 5;
++------------+
+|    PLAN    |
++------------+
+| CLIENT PARALLEL 6-WAY RANGE SCAN OVER _LOCAL_IDX_test [-32767,*] - [-32767,~'1234'] |
+|     SERVER FILTER BY (q2 > '1234' AND f.q3 > '1234') |
+|     SERVER 5 ROW LIMIT |
+| CLIENT MERGE SORT |
+| CLIENT 5 ROW LIMIT |
++------------+
+5 rows selected (0.048 seconds)
+
+0: jdbc:phoenix:172.31.12.149,172.31.12.150,1> !sql SELECT "f"."q1", "f"."q2", "f"."q3" FROM "test" WHERE "f"."q1" > '1234' and "f"."q2" > '1234' and "f"."q3" > '1234' LIMIT 5;
++------------+------------+------------+
+|     q1     |     q2     |     q3     |
++------------+------------+------------+
+| a          | b          | c          |
+| a          | b          | c          |
+| 965119696  | 5108836081253744 | 7663125842424245 |
+| 445732696  | 2725686505390132 | 6447673564367638 |
+| 1826405066 | 3937447344735161 | 7336226789420864 |
++------------+------------+------------+
+5 rows selected (0.086 seconds)
+
+
+
+!sql CREATE TABLE "nci2gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+
+
+!sql CREATE TABLE "nci2gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" UNSIGNED_INT, "f"."q3" VARCHAR, "f"."q4" UNSIGNED_DOUBLE, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+
+
+!sql CREATE INDEX NCI2GB_Q2 ON "nci2gb" ("f"."q2");
+
+﻿upsert into "nci" values('1zh', 'azhangliping', '123', 'c', 'd','e');

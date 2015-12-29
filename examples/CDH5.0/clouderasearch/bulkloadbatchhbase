@@ -1,0 +1,246 @@
+solrctl instancedir --generate /root/solr/test-collection
+edit /root/solr/test-collection/conf/schema.xml
+solrctl instancedir --create test-collection /root/solr/test-collection
+solrctl instancedir --update test-collection /root/solr/test-collection
+
+solrctl collection --create test-collection
+solrctl collection --reload test-collection
+
+
+/root/solr/test-collection/morphline-hbase-mapper.xml
+<?xml version="1.0"?>
+<indexer table="test" mapper="com.ngdata.hbaseindexer.morphline.MorphlineResultToSolrMapper">
+
+   <!-- The relative or absolute path on the local file system to the morphline configuration file. -->
+   <!-- Use relative path "morphlines.conf" for morphlines managed by Cloudera Manager -->
+   <param name="morphlineFile" value="/etc/hbase-solr/conf/morphlines.conf"/>
+
+   <!-- The optional morphlineId identifies a morphline if there are multiple morphlines in morphlines.conf -->
+   <!-- <param name="morphlineId" value="morphline1"/> -->
+
+</indexer>
+
+edit /etc/hbase-solr/conf/morphlines.conf
+SOLR_LOCATOR : {
+  # Name of solr collection
+  collection : test-collection
+
+  # ZooKeeper ensemble
+  zkHost : "$ZK_HOST"
+}
+
+
+morphlines : [
+{
+id : morphline1
+importCommands : ["org.kitesdk.**", "com.ngdata.**"]
+
+commands : [
+  {
+    extractHBaseCells {
+      mappings : [
+        {
+          inputColumn : "f:*"
+          outputField : "f"
+          type : string
+          source : value
+        }
+      ]
+    }
+  }
+
+
+  { logDebug { format : "output record: {}", args : ["@{}"] } }
+]
+}
+]
+
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn \
+jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0-job.jar \
+--conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
+-D 'mapred.child.java.opts=-Xmx500m' \
+--hbase-indexer-file /root/solr/test-collection/morphline-hbase-mapper.xml \
+--zk-host $ZKHOME/solr --collection test-collection1 \
+--go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties
+
+
+-----------------
+
+NRT:
+disable 'test'
+alter 'test', {NAME => 'f', REPLICATION_SCOPE => 1}
+enable 'test'
+
+solrctl instancedir --generate /root/solr/test-collection
+edit /root/solr/test-collection/conf/schema.xml
+
+solrctl instancedir --create test-collection /root/solr/test-collection
+solrctl instancedir --delete test-collection
+
+solrctl collection --create test-collection -s 3
+solrctl collection --delete test-collection
+
+cat /root/solr/test-collection/morphline-hbase-mapper.xml
+CM->lilyhbase->configuration->morphlines.conf  
+
+SOLR_LOCATOR : {
+  # Name of solr collection
+  collection : test-collection
+
+  # ZooKeeper ensemble
+  zkHost : "$ZK_HOST"
+}
+
+
+morphlines : [
+{
+id : morphline1
+importCommands : ["org.kitesdk.**", "com.ngdata.**"]
+
+commands : [
+  {
+    extractHBaseCells {
+      mappings : [
+        {
+          inputColumn : "f:*"
+          outputField : "f"
+          type : string
+          source : value
+        }
+      ]
+    }
+  }
+
+
+  { logDebug { format : "output record: {}", args : ["@{}"] } }
+]
+}
+]
+
+restart lilyhbase
+
+hbase-indexer delete-indexer --name testIndexer
+
+hbase-indexer add-indexer --name testIndexer \
+--indexer-conf /root/solr/test-collection/morphline-hbase-mapper.xml \
+--connection-param solr.zk=$ZKHOST/solr \
+--connection-param solr.collection=test-collection \
+--zookeeper $ZKHOST:2181
+
+
+hbase-indexer list-indexers
+
+
+
+put 'test', '3', 'f:q1', 'a3'
+put 'test', 'row1', 'f:q1', 'value1'
+
+
+upsert into "test" values('1', 'a', 'b', 'c', 'd','e');
+upsert into "test" values('2', 'a2', 'b2', 'c2', 'd2','e2');
+
+---------------------------
+NRT:
+
+solrctl instancedir --generate /root/solr/zlp-collection
+
+edit /root/solr/zlp-collection1/conf/schema.xml
+
+solrctl instancedir --create zlp-collection /root/solr/zlp-collection
+
+solrctl collection --create zlp-collection
+
+edit /root/solr/zlp-collection1/morphline-hbase-mapper.xml
+Notice:  <param name="morphlineFile" value="/etc/hbase-solr/conf/morphlines.conf"/> value can not be change to other path
+
+CM->lilyhbase->configuration->morphlines.conf  
+restart lily hbase
+
+hbase-indexer add-indexer --name zlpIndexer \
+--indexer-conf /root/solr/zlp-collection/morphline-hbase-mapper.xml \
+--connection-param solr.zk=$ZKHOST/solr \
+--connection-param solr.collection=zlp-collection \
+--zookeeper $ZKHOST:2181
+
+
+hbase-indexer list-indexers
+
+
+put 'zlp', '3', 'f', 'v3'
+
+
+---------------------------
+Batch:
+
+solrctl instancedir --generate /root/solr/nci2gb-collection
+vim /root/solr/nci2gb-collection/conf/schema.xml
+solrctl instancedir --create nci2gb-collection /root/solr/nci2gb-collection
+solrctl instancedir --update nci2gb-collection /root/solr/nci2gb-collection
+solrctl instancedir --delete nci2gb-collection
+
+solrctl instancedir --create nci20gb-collection /root/solr/nci20gb-collection
+solrctl instancedir --delete nci20gb-collection
+
+
+/root/solr/morphline-hbase-mapper.xml
+/etc/hbase-solr/conf/morphlines.conf
+configure and restart Lilyhbase(Chinese Segmentation need to restart lily hbase)
+solrctl collection --create nci2gb-collection -s 3
+solrctl collection --reload nci2gb-collection
+solrctl collection --delete nci2gb-collection
+
+solrctl collection --create nci20gb-collection -s 3
+solrctl collection --delete nci20gb-collection
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn \
+jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0-job.jar \
+--conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
+-D 'mapred.child.java.opts=-Xmx500m' \
+--hbase-indexer-file /root/solr/morphline-hbase-mapper.xml \
+--zk-host $ZKHOME/solr --collection nci2gb-collection \
+--go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties --reducers 24
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn \
+jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0-job.jar \
+--conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
+-D 'mapred.child.java.opts=-Xmx10240m' \
+--hbase-indexer-file /root/solr/morphline-hbase-mapper.xml \
+--zk-host $ZKHOME/solr --collection nci20gb-collection \
+--go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties --reducers 240
+
+--reducers
+
+
+--------
+NRT:
+disable 'nci2gb'
+alter 'nci2gb', {NAME => 'f', REPLICATION_SCOPE => 1}
+enable 'nci2gb'
+
+solrctl instancedir --generate /root/solr/nci2gb-collection
+vim /root/solr/nci2gb-collection/conf/schema.xml
+solrctl instancedir --create nci2gb-collection /root/solr/nci2gb-collection
+solrctl instancedir --delete nci2gb-collection
+
+/root/solr/morphline-hbase-mapper.xml
+CM->lilyhbase->configuration->morphlines.conf  
+restart lily hbase
+configure and restart Lilyhbase(Chinese Segmentation need to restart lily hbase)
+solrctl collection --create nci2gb-collection -s 3
+solrctl collection --delete nci2gb-collection
+
+hbase-indexer add-indexer --name nci2gbIndexer \
+--indexer-conf /root/solr/morphline-hbase-mapper.xml \
+--connection-param solr.zk=$ZKHOST/solr \
+--connection-param solr.collection=nci2gb-collection \
+--zookeeper $ZKHOST:2181
+
+
+hbase-indexer list-indexers
+hbase-indexer delete-indexer --name nci2gbIndexer
+
+
+put 'nci2gb', '3', 'f:q1', 'v3zhangliping'
+upsert into "nci2gb" values('1zh', 'azhangliping', 'b', 'c', 'd','e');
+

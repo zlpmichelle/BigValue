@@ -1,0 +1,79 @@
+solrctl instancedir --delete hbase-collection1
+solrctl collection --delete hbase-collection1
+solrctl collection --deletedocs hbase-collection1
+
+
+create 'record', {NAME => 'data'}
+
+put 'record', 'row1', 'data', 'value'
+put 'record', 'row2', 'data', 'value2'
+
+solrctl instancedir --generate /root/solr/hbase-collection1
+edit /root/solr/hbase-collection1/conf/schema.xml
+solrctl instancedir --create hbase-collection1 /root/solr/hbase-collection1
+
+solrctl collection --create hbase-collection1
+
+morphline-hbase-mapper.xml
+<?xml version="1.0"?>
+<indexer table="record" mapper="com.ngdata.hbaseindexer.morphline.MorphlineResultToSolrMapper">
+
+   <!-- The relative or absolute path on the local file system to the morphline configuration file. -->
+   <!-- Use relative path "morphlines.conf" for morphlines managed by Cloudera Manager -->
+   <param name="morphlineFile" value="/etc/hbase-solr/conf/morphlines.conf"/>
+
+   <!-- The optional morphlineId identifies a morphline if there are multiple morphlines in morphlines.conf -->
+   <!-- <param name="morphlineId" value="morphline1"/> -->
+
+</indexer>
+
+
+Lily HBase -> Configurations->Service-Wide->Morphlines  (restart)
+/etc/hbase-solr/conf/morphlines.conf
+
+SOLR_LOCATOR : {
+  # Name of solr collection
+  collection : hbase-collection1
+  
+  # ZooKeeper ensemble
+  zkHost : "$ZK_HOST" 
+}
+
+
+morphlines : [
+{
+id : morphline1
+importCommands : ["org.kitesdk.**", "com.ngdata.**"]
+
+commands : [                    
+  {
+    extractHBaseCells {
+      mappings : [
+        {
+          inputColumn : "data:*"
+          outputField : "data" 
+          type : string 
+          source : value
+        }
+      ]
+    }
+  }
+
+
+  { logDebug { format : "output record: {}", args : ["@{}"] } }
+]
+}
+]
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn \
+jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0-job.jar \
+--conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
+-D 'mapred.child.java.opts=-Xmx500m' \
+--hbase-indexer-file /root/solr/morphline-hbase-mapper.xml \
+--zk-host $ZKHOME/solr --collection hbase-collection1 \
+--go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties
+
+job:
+HBaseMapReduceIndexerTool/HBaseIndexerMapper
+org.apache.solr.hadoop.ForkedMapReduceIndexerTool/ForkedTreeMergeMapper
+

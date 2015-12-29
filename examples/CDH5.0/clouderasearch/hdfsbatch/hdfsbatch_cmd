@@ -1,0 +1,102 @@
+path: /root/solr/solr_configs3
+
+cp lucene-analyzers-smartcn-4.4.0-cdh5.2.0.jar /opt/cloudera/parcels/CDH/lib/solr/webapps/solr/WEB-INF/lib/
+
+hdfs --config /opt/cloudera/parcels/CDH-5.2.0-1.cdh5.2.0.p0.36/lib/hadoop/etc/hadoop/ namenode -upgrade
+
+hdfs --config /opt/cloudera/parcels/CDH-5.2.0-1.cdh5.2.0.p0.36/lib/hadoop/etc/hadoop/* namenode -rollingUpgrade started
+
+fater upgrade 5.1.3 to 5.2, ACTION-> HDFS upgrade namenode metadata ---> Finalize Metadata Upgrade --->  then, restart HDFS
+
+Batch Mapreduce
+solrctl instancedir --delete collection3
+solrctl collection --delete collection3
+solrctl collection --deletedocs collection3 (删除)
+
+ solrctl instancedir --generate /root/solr/solr_configs3
+ cp /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/solr-nrt/collection1/conf/schema.xml /root/solr/solr_configs3/conf
+ solrctl instancedir --create collection3 /root/solr/solr_configs3
+ solrctl collection --create collection3 -s 3  （HDFS /solr/collection3/core_node3 ）
+ cp -r /root/solr/solr_configs3 /root/solr/collection3
+ sudo -u hdfs hadoop fs -mkdir -p /user/root
+ sudo -u hdfs hadoop fs -chown root:root /user/root
+ hadoop fs -mkdir -p /user/root/indir
+ hadoop fs -copyFromLocal /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/test-documents/sample-statuses-*.avro /user/root/indir/
+ 
+ hadoop fs -rm -r -skipTrash /user/root/outdir
+ hadoop fs -mkdir /user/root/outdir
+ 
+ 
+ Online:
+ 
+ solrctl collection --deletedocs collection3
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn jar \
+/opt/cloudera/parcels/CDH/lib/solr/contrib/mr/search-mr-1.0.0-cdh5.2.0-job.jar org.apache.solr.hadoop.MapReduceIndexerTool \
+-D 'mapred.child.java.opts=-Xmx500m' \
+--log4j /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/solr-nrt/log4j.properties \
+--morphline-file /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/solr-nrt/test-morphlines/tutorialReadAvroContainer.conf \
+--output-dir hdfs://172.31.12.149:8020/user/root/outdir \
+--verbose --go-live --zk-host $ZKHOST:2181/solr \
+--collection collection3 hdfs://172.31.12.149:8020/user/root/indir
+
+
+job: org.apache.solr.hadoop.MapReduceIndexerTool/MorphlineMapper
+
+  Offline:
+solrctl collection --deletedocs collection3
+sudo -u hdfs hadoop fs -rm -r -skipTrash /user/root/outdir
+
+
+hadoop --config /etc/hadoop/conf.cloudera.yarn \
+jar /opt/cloudera/parcels/CDH/lib/solr/contrib/mr/search-mr-1.0.0-cdh5.2.0-job.jar org.apache.solr.hadoop.MapReduceIndexerTool \
+-D 'mapred.child.java.opts=-Xmx500m' \
+--log4j /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/solr-nrt/log4j.properties \
+--morphline-file /opt/cloudera/parcels/CDH/share/doc/search-1.0.0+cdh5.2.0+0/examples/solr-nrt/test-morphlines/tutorialReadAvroContainer.conf \
+--output-dir hdfs://172.31.12.149:8020/user/root/outdir --verbose \
+--solr-home-dir /root/solr/collection3 --shards 3 hdfs://172.31.12.149:8020/user/root/indir
+
+job: org.apache.solr.hadoop.MapReduceIndexerTool/MorphlineMapper
+
+[root@ip-172-31-12-149 solr]# hadoop fs -ls /user/root/outdir/results
+Found 4 items
+-rw-r--r--   3 root root          0 2014-10-26 11:43 /user/root/outdir/results/_SUCCESS
+drwxr-xr-x   - root root          0 2014-10-26 11:43 /user/root/outdir/results/part-00000
+drwxr-xr-x   - root root          0 2014-10-26 11:43 /user/root/outdir/results/part-00001
+drwxr-xr-x   - root root          0 2014-10-26 11:43 /user/root/outdir/results/part-00002
+[root@ip-172-31-12-149 solr]# hadoop fs -ls /user/root/outdir/results/part-00000/data/index
+Found 22 items
+-rwxr-xr-x   3 root root      30672 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.fdt
+-rwxr-xr-x   3 root root         69 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.fdx
+-rwxr-xr-x   3 root root       2758 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.fnm
+-rwxr-xr-x   3 root root       4940 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.nvd
+-rwxr-xr-x   3 root root        112 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.nvm
+-rwxr-xr-x   3 root root        379 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0.si
+-rwxr-xr-x   3 root root       6795 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0_Lucene41_0.doc
+-rwxr-xr-x   3 root root       3130 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0_Lucene41_0.pos
+-rwxr-xr-x   3 root root      38742 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0_Lucene41_0.tim
+-rwxr-xr-x   3 root root       1825 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_0_Lucene41_0.tip
+-rwxr-xr-x   3 root root      30672 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.fdt
+-rwxr-xr-x   3 root root         69 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.fdx
+-rwxr-xr-x   3 root root       2758 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.fnm
+-rwxr-xr-x   3 root root       4940 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.nvd
+-rwxr-xr-x   3 root root        112 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.nvm
+-rwxr-xr-x   3 root root        415 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1.si
+-rwxr-xr-x   3 root root       6795 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1_Lucene41_0.doc
+-rwxr-xr-x   3 root root       3130 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1_Lucene41_0.pos
+-rwxr-xr-x   3 root root      38742 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1_Lucene41_0.tim
+-rwxr-xr-x   3 root root       1825 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/_1_Lucene41_0.tip
+-rwxr-xr-x   3 root root         98 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/segments_2
+-rwxr-xr-x   3 root root         98 2014-10-26 11:43 /user/root/outdir/results/part-00000/data/index/segments_3
+
+
+
+sudo -u solr hadoop fs -rm -r -skipTrash /solr/collection3/core_node1/data/index
+sudo -u solr hadoop fs -rm -r -skipTrash /solr/collection3/core_node2/data/index
+sudo -u solr hadoop fs -rm -r -skipTrash /solr/collection3/core_node3/data/index
+
+sudo -u hdfs hadoop fs -chown -R solr /user/root/outdir/results
+
+sudo -u solr hadoop fs -mv /user/root/outdir/results/part-00000/data/index /solr/collection3/core_node1/data
+sudo -u solr hadoop fs -mv /user/root/outdir/results/part-00001/data/index /solr/collection3/core_node2/data
+sudo -u solr hadoop fs -mv /user/root/outdir/results/part-00002/data/index /solr/collection3/core_node3/data
