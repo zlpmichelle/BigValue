@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<indexes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="index-conf.xsd">
+    <index>
+        <name>a</name>
+        <table>test</table>
+        <fields>
+            <field columnFamily="f" qualifier="q1" maxLength="20" isLengthVariable="true" isOrderInverted="false"
+                   formatter="com.cloudera.bigdata.analysis.index.formatter.LengthVariableValueFormatter"/>
+        </fields>
+    </index>    
+    <index>
+        <name>b</name>
+        <table>test</table>
+        <fields>
+            <field columnFamily="f" qualifier="q2" maxLength="16" isLengthVariable="false" isOrderInverted="false"/>
+            <field columnFamily="f" qualifier="q3" maxLength="16" isLengthVariable="false" isOrderInverted="false"/>
+        </fields>
+    </index>
+    <index>
+        <name>c</name>
+        <table>test</table>
+        <fields>
+            <field columnFamily="f" qualifier="q4" maxLength="20" isLengthVariable="true" isOrderInverted="false"
+                   formatter="com.cloudera.bigdata.analysis.index.formatter.LengthVariableValueFormatter"/>
+        </fields>
+    </index>
+</indexes>
