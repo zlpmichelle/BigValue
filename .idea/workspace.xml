@@ -1,116 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_com_cloudera_hadoop_tool_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_com_cloudera_hadoop_util_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_hadoop_core_Cloudera_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hbase_hbase_Cloudera_0_94_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hive_hive_exec_Cloudera_0_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_zookeeper_zookeeper_Cloudera_3_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_r09.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_4_0a.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_core_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hyperic_sigar_sigar_1_6_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_rrd4j_rrd4j_2_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example1/datagen/datagen_local.cygwin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example1/datagen/datagen_local.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example2/datagen/generator_mapreduce.cygwin" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/example2/datagen/generator_mapreduce.sh" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/ASB/datagen/datagen_local.cygwin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/ASB/datagen/datagen_local.sh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.cygwin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/datagen/generator_mapreduce.sh" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conf/asbHdfs2hbase.xml" afterPath="$PROJECT_DIR$/conf/example1Hdfs2hbase.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conf/asbHdfs2hbase_3q.xml" afterPath="$PROJECT_DIR$/examples/example1/conf/example1Hdfs2hbase_3q.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/conf/asbHdfs2hbase_sep.xml" afterPath="$PROJECT_DIR$/conf/example1Hdfs2hbase_sep.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/README.txt" afterPath="$PROJECT_DIR$/examples/example1/README.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb.properties" afterPath="$PROJECT_DIR$/examples/example1/bulkload/conf-bulkload-example1.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/bulkload/conf-bulkload-asb5red.properties" afterPath="$PROJECT_DIR$/examples/example1/bulkload/conf-bulkload-example15red.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/conf/asbHdfs2hbase_3q.xml" afterPath="$PROJECT_DIR$/conf/example1Hdfs2hbase_3q.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/conf/test_index-conf.xml" afterPath="$PROJECT_DIR$/examples/example1/conf/test_index-conf.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/datagen/mobile.xml" afterPath="$PROJECT_DIR$/examples/example1/datagen/example1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/dataload/asb-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/examples/example1/dataload/example1-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/ASB/dataload/asb5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/examples/example1/dataload/example15-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/bulkload/conf-bulkload-unicom.properties" afterPath="$PROJECT_DIR$/examples/example2/bulkload/conf-bulkload-example2.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/datagen/gd_cuc.xml" afterPath="$PROJECT_DIR$/examples/example2/datagen/example2_cuc.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/examples/example2/dataload/example2-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/GD_China_UniCom/dataload/unicom5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/examples/example2/dataload/example25-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/asb-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/example1-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/asb5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/example15-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/conf-bulkload-asb.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-example1.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/conf-bulkload-asb5red.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-example15red.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/unicom-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/example2-hdfs2hbase-sample.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/properties/unicom5-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/example25-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/20g.pro" afterPath="$PROJECT_DIR$/conf/20g.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/2g.pro" afterPath="$PROJECT_DIR$/conf/2g.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/5red.pro" afterPath="$PROJECT_DIR$/conf/5red.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigValue.iml" afterPath="$PROJECT_DIR$/BigValue.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/READMEINDEX.TXT" afterPath="$PROJECT_DIR$/bin/READMEINDEX.TXT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/alter.sh" afterPath="$PROJECT_DIR$/bin/alter.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/clouderasearch/bulkloadbatchhbase" afterPath="$PROJECT_DIR$/examples/CDH5.0/clouderasearch/bulkloadbatchhbase" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/cleanupHBaseTable.sh" afterPath="$PROJECT_DIR$/bin/cleanupHBaseTable.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties" afterPath="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties" afterPath="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-bulkload-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-bulkload-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-inmemory-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-inmemory-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/coprocessorPrepare.sh" afterPath="$PROJECT_DIR$/bin/coprocessorPrepare.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/createcollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/createcollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/createcollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/createcollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/createcollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/createcollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/createcollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/createcollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/current.properties" afterPath="$PROJECT_DIR$/conf/current.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/bulkload/current.properties" afterPath="$PROJECT_DIR$/examples/CDH5.0/bulkload/current.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/parallelquery_scalabilitytest/bulkload/current.properties" afterPath="$PROJECT_DIR$/examples/CDH5.0/parallelquery_scalabilitytest/bulkload/current.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/current_hdfs2hbase.properties" afterPath="$PROJECT_DIR$/conf/current_hdfs2hbase.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/mrload/current_hdfs2hbase.properties" afterPath="$PROJECT_DIR$/examples/CDH5.0/mrload/current_hdfs2hbase.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/mrload/current_inmemory.properties" afterPath="$PROJECT_DIR$/examples/CDH5.0/mrload/current_inmemory.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/delete.sh" afterPath="$PROJECT_DIR$/bin/delete.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/deletecollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/deletecollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/deletecollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/deletecollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/deletecollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/deletecollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/deletecollection.sh" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/deletecollection.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/deployMutipleClient.sh" afterPath="$PROJECT_DIR$/bin/deployMutipleClient.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/genStreamingData.sh" afterPath="$PROJECT_DIR$/bin/genStreamingData.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/reference/dataload/immemory_dataload/inmemory.xml" afterPath="$PROJECT_DIR$/examples/reference/dataload/immemory_dataload/inmemory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/kafkaServiceStartAndTopicCreate.sh" afterPath="$PROJECT_DIR$/bin/kafkaServiceStartAndTopicCreate.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/lilyhbasemorphline.conf" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/lilyhbasemorphline.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/lilyhbasemorphlines.conf" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/lilyhbasemorphlines.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/loadStreamingData.sh" afterPath="$PROJECT_DIR$/bin/loadStreamingData.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/morphline-hbase-mapper.xml" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/morphline-hbase-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/morphline-hbase-mapper.xml" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/morphline-hbase-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/morphline-hbase-mapper.xml" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/morphline-hbase-mapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/morphline.conf" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/morphline.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/morphlines.conf" afterPath="$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/morphlines.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/mrload.pro" afterPath="$PROJECT_DIR$/conf/mrload.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/mrload5red.pro" afterPath="$PROJECT_DIR$/conf/mrload5red.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/phoenix/phoenix_cmd" afterPath="$PROJECT_DIR$/examples/CDH5.0/phoenix/phoenix_cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/refreshIndexConf.sh" afterPath="$PROJECT_DIR$/bin/refreshIndexConf.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/restartHBase.sh" afterPath="$PROJECT_DIR$/bin/restartHBase.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/CDH5.0/conf/test_inmemory.xml" afterPath="$PROJECT_DIR$/examples/CDH5.0/conf/test_inmemory.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="" />
     <ignored path="BigValue.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -204,8 +95,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="506" column="0" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7081545">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -787,16 +678,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="23" width="1403" height="877" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.49617592" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37229988" sideWeight="0.710507" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37229988" sideWeight="0.70315945" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37229988" sideWeight="0.28949302" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37229988" sideWeight="0.29684055" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.5325048" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.49617592" order="6" side_tool="false" content_ui="tabs" />
@@ -1245,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="506" column="0" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7081545">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
