@@ -70,7 +70,7 @@
 			<qualifierNum>10</qualifierNum>
 			<buildIndex>false</buildIndex>
 			<useConstant>true</useConstant>
-			<constantValue>Shanghai, China</constantValue>
+			<constantValue>SanFrancisco, US</constantValue>
 			<length>50</length>
 			<fieldType>STRING</fieldType>
 			<fieldPattern>ALPHABET</fieldPattern>

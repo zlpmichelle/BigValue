@@ -1,1 +1,0 @@
-java -cp .;..\..\..\target\BigValue-1.0.jar;..\..\..\lib\* com.cloudera.bigdata.analysis.datagen.GeneratorDriver --instanceDoc=gd_cuc.xml --totalSize=100 --minSize=10 --maxSize=100 --outputDir=hdfs://192.168.0.150:8020/gd_unicom_jianzhong --replicaNum=1 --parallel=18

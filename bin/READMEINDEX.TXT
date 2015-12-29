@@ -8,6 +8,6 @@ bin/killProcess.sh
 
 bin/kafkaServiceStartAndTopicCreate.sh
 
-cd /root/zhangliping/ASB
+cd /root/zhangliping/EXAMPLE1
 bin/loadStreamingData.sh
 bin/genStreamingData.sh

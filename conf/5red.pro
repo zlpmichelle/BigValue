@@ -7,7 +7,7 @@ cdh.hbase.master.ip.address=ip-172-31-12-149.us-west-2.compute.internal
 # 1. Source Definition, all are required
 hdfs.source.file.input.path=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/test/bltest
 
-#gd_unicom_5red_new
+#example2_5red_new
 hdfs.source.file.encoding=gb2312
 hdfs.source.file.record.fields.delimiter=|
 hdfs.source.file.record.fields.number=30
@@ -32,7 +32,7 @@ f.q5=concat(trim(f2),trim(f11),trim(f17),trim(f19),trim(f27))
 buildIndex=false
 regionQuantity=30
 indexConfFileName=test_index-conf.xml
-hbaseCoprocessorLocation=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/asb/IndexCoprocessor-1.0.jar
+hbaseCoprocessorLocation=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/example1/IndexCoprocessor-1.0.jar
 
 # 3.2 only if not build index(buildIndex=false), following 3.2 properties only set when buildIndex=false in 3.1
 onlyGenerateSplitKeySpec=false

@@ -2,7 +2,7 @@
 
 currentpath=$(cd "$(dirname "$0")";pwd)
 jarname=$currentpath/../IndexCoprocessor-1.0.jar
-dirname=asb
+dirname=example1
 
 regionserverlist=(192.168.0.121 192.168.0.122 192.168.0.123)
 masterlist=(192.168.0.121 192.168.0.122 192.168.0.123)

@@ -1,52 +1,52 @@
 1.create table
-!sql CREATE TABLE "nci20gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+!sql CREATE TABLE "example320gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
 
 2.count table
-!sql SELECT COUNT("f"."q1") FROM "nci20gb";
+!sql SELECT COUNT("f"."q1") FROM "example320gb";
 
 3.create global index
-!sql CREATE INDEX NCI20GB_Q4 ON "nci20gb" ("f"."q4");
+!sql CREATE INDEX EXAMPLE320GB_Q4 ON "example320gb" ("f"."q4");
 
-nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/nci20gb.sql
+nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/example320gb.sql
 
 4.explian global index
-!sql EXPLAIN SELECT "f"."q4" FROM "nci20gb" WHERE "f"."q4" > '1234' LIMIT 5;
+!sql EXPLAIN SELECT "f"."q4" FROM "example320gb" WHERE "f"."q4" > '1234' LIMIT 5;
 
 5.execute gloable index query
-!sql SELECT "f"."q4" FROM "nci20gb" WHERE "f"."q4" > '1234' LIMIT 5;
+!sql SELECT "f"."q4" FROM "example320gb" WHERE "f"."q4" > '1234' LIMIT 5;
 
 6.rebuild global index
-!sql ALTER INDEX IF EXISTS NCI20GB_Q4 ON "nci20gb" REBUILD;
+!sql ALTER INDEX IF EXISTS EXAMPLE320GB_Q4 ON "example320gb" REBUILD;
 
 
 7. create local index
-!sql CREATE LOCAL INDEX NCI20GB_LOCAL_Q3 ON "nci20gb" ("f"."q3");
+!sql CREATE LOCAL INDEX EXAMPLE320GB_LOCAL_Q3 ON "example320gb" ("f"."q3");
 
-nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/nci20gb.sql
+nohup sqlline.py 172.31.12.149,172.31.12.150,172.31.12.151 zlp/example320gb.sql
 
 8. explain local index
-!sql EXPLAIN SELECT "f"."q3" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+!sql EXPLAIN SELECT "f"."q3" FROM "example320gb" WHERE "f"."q3" > '1234' LIMIT 5;
 
-!sql EXPLAIN SELECT "f"."q5" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+!sql EXPLAIN SELECT "f"."q5" FROM "example320gb" WHERE "f"."q3" > '1234' LIMIT 5;
 
 9. execute local index query
-!sql SELECT "f"."q3" FROM "nci20gb" WHERE "f"."q3" > '1234' LIMIT 5;
+!sql SELECT "f"."q3" FROM "example320gb" WHERE "f"."q3" > '1234' LIMIT 5;
 
 10. rebuild local index
-!sql ALTER INDEX IF EXISTS NCI20GB_LOCAL_Q3 ON "nci20gb" REBUILD;
+!sql ALTER INDEX IF EXISTS EXAMPLE320GB_LOCAL_Q3 ON "example320gb" REBUILD;
 
-!sql ALTER INDEX IF EXISTS NCI20GB_LOCAL_Q3 ON "nci20gb" DISABLE;
+!sql ALTER INDEX IF EXISTS EXAMPLE320GB_LOCAL_Q3 ON "example320gb" DISABLE;
 
 https://issues.apache.org/jira/browse/PHOENIX-1112
 
 11. drop inde table
-!sql DROP INDEX NCI20GB_LOCAL_Q3 on "nci20gb";
+!sql DROP INDEX EXAMPLE320GB_LOCAL_Q3 on "example320gb";
 
 
 12. rowkey query 
-!sql EXPLAIN SELECT "f"."q1" FROM "nci20gb" WHERE MYPK > '1234' LIMIT 5;
+!sql EXPLAIN SELECT "f"."q1" FROM "example320gb" WHERE MYPK > '1234' LIMIT 5;
 
-!sql SELECT "f"."q1" FROM "nci20gb" WHERE MYPK > '1234' LIMIT 5;
+!sql SELECT "f"."q1" FROM "example320gb" WHERE MYPK > '1234' LIMIT 5;
 
 
 
@@ -126,12 +126,12 @@ CREATE LOCAL INDEX TEXT_LOCAL_Q1Q2Q3 ON "test" ("f"."q1" DESC, "f"."q2") INCLUDE
 
 
 
-!sql CREATE TABLE "nci2gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+!sql CREATE TABLE "example32gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" VARCHAR, "f"."q3" VARCHAR, "f"."q4" VARCHAR, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
 
 
-!sql CREATE TABLE "nci2gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" UNSIGNED_INT, "f"."q3" VARCHAR, "f"."q4" UNSIGNED_DOUBLE, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
+!sql CREATE TABLE "example32gb" (myPK VARCHAR PRIMARY KEY, "f"."q1" VARCHAR, "f"."q2" UNSIGNED_INT, "f"."q3" VARCHAR, "f"."q4" UNSIGNED_DOUBLE, "f"."q5" VARCHAR) SALT_BUCKETS = 24;
 
 
-!sql CREATE INDEX NCI2GB_Q2 ON "nci2gb" ("f"."q2");
+!sql CREATE INDEX EXAMPLE32GB_Q2 ON "example32gb" ("f"."q2");
 
-﻿upsert into "nci" values('1zh', 'azhangliping', '123', 'c', 'd','e');
+﻿upsert into "example3" values('1zh', 'azhangliping', '123', 'c', 'd','e');

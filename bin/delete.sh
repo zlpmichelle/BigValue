@@ -2,7 +2,7 @@
 
 currentpath=$(cd "$(dirname "$0")";pwd)
 PROJECT_HOME=$currentpath/../
-CLASSPATH=$PROJECT_HOME/unicomgd.jar
+CLASSPATH=$PROJECT_HOME/example2.jar
 CONF_FILE=$currentpath/delete.properties
 
 jars=`ls $PROJECT_HOME/lib`

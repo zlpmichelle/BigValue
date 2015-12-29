@@ -4,12 +4,12 @@ currentpath=$(cd "$(dirname "$0")";pwd)
 . $currentpath/function.sh
 
 # generate args as number
-arg=$(echo "--instanceDoc=/root/lizeming/workspace/mobile.xml --totalNum=160000000 --mode=local --outputDir=hdfs://vt-nn:8020/ASB_zhangliping --replicaNum=1 --parallel=1 --minNum=6000000 --maxNum=6000000 --neverStop=true")
-#arg=--instanceDoc=/root/lizeming/workspace/mobile.xml --totalNum=6000000   --mode=mapred  --outputDir=hdfs://vt-nn:8020/ASB_zhangliping --replicaNum=1 --parallel=1 --minNum=6000000 --maxNum=6000000 --neverStop=true
-#arg=--instanceDoc=/root/lizeming/workspace/mobile.xml --totalNum=6000000 --outputDir=hdfs://vt-nn:8020/user/lizeming --parallel=72 --replicaNum=1 --mode=mapred --minNum=6000000 --maxNum=6000000
+arg=$(echo "--instanceDoc=/root/lizeming/workspace/example1.xml --totalNum=160000000 --mode=local --outputDir=hdfs://vt-nn:8020/EXAMPLE1_zhangliping --replicaNum=1 --parallel=1 --minNum=6000000 --maxNum=6000000 --neverStop=true")
+#arg=--instanceDoc=/root/lizeming/workspace/example1.xml --totalNum=6000000   --mode=mapred  --outputDir=hdfs://vt-nn:8020/EXAMPLE1_zhangliping --replicaNum=1 --parallel=1 --minNum=6000000 --maxNum=6000000 --neverStop=true
+#arg=--instanceDoc=/root/lizeming/workspace/example1.xml --totalNum=6000000 --outputDir=hdfs://vt-nn:8020/user/lizeming --parallel=72 --replicaNum=1 --mode=mapred --minNum=6000000 --maxNum=6000000
 
 # generate args as size
-#arg=--instanceDoc=/root/lizeming/workspace/mobile.xml --totalSize=2 --outputDir=hdfs://vt-nn:8020/user/lizeming --parallel=72 --replicaNum=1 --mode=mapred --minSize=2000 --maxSize=2000
+#arg=--instanceDoc=/root/lizeming/workspace/example1.xml --totalSize=2 --outputDir=hdfs://vt-nn:8020/user/lizeming --parallel=72 --replicaNum=1 --mode=mapred --minSize=2000 --maxSize=2000
 
 
 

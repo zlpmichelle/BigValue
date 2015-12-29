@@ -24,9 +24,9 @@ dataload.client.threadsPerMapper=4
 # define target table
 #hbase.target.table.name=nci2gb
 hbase.target.table.name=test
-indexConfFileName=nci2gb_index-conf.xml
+indexConfFileName=example32gb_index-conf.xml
 server.search.enableStatistics=false
-hbaseCoprocessorLocation=hdfs://gzp1:8020/user/asb/IndexCoprocessor-1.0.jar
+hbaseCoprocessorLocation=hdfs://gzp1:8020/user/example1/IndexCoprocessor-1.0.jar
 hbase.table.useInMemory=
 
 #hbase.table.splitKeyPrefixes=1329999

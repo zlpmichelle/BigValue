@@ -2,7 +2,7 @@
 
 currentpath=$(cd "$(dirname "$0")";pwd)
 jarname=$currentpath/../BigValue-1.0.jar
-dirname=asb
+dirname=example1
 indexconf=index-conf
 hdfs2hbaseconf=hdfs2hbase
 inmemoryconf=inmemory

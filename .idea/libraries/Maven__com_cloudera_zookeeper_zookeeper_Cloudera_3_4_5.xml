@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.cloudera.zookeeper:zookeeper:Cloudera:3.4.5">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/cloudera/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5-Cloudera.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/cloudera/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/cloudera/zookeeper/zookeeper/3.4.5/zookeeper-3.4.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

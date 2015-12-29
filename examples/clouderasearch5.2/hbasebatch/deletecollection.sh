@@ -1,3 +1,4 @@
-solrctl collection --deletedocs nci20gb-collection
-solrctl collection --delete nci20gb-collection 
-solrctl instancedir --delete nci20gb-collection
+#!/usr/bin/env bash
+solrctl collection --deletedocs example320gb-collection
+solrctl collection --delete example320gb-collection
+solrctl instancedir --delete example320gb-collection

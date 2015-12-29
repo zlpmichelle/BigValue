@@ -7,12 +7,12 @@ dataload.only.a.large.file=true
 
 # define data source
 dataload.source.dataSourceClass=com.cloudera.bigdata.analysis.dataload.source.HDFSDataSource
-dataload.source.hdfsDirs=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/nci2gb/bltest
+dataload.source.hdfsDirs=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/example32gb/bltest
 #dataload.source.hdfsDirs=hdfs://ip-172-31-12-149.us-west-2.compute.internal:8020/user/test/bltest
 
 # define data format
 dataload.source.parserType=csv
-dataload.source.instanceDocPath=/user/hbase/conf/nci2gb_hdfs2hbase.xml
+dataload.source.instanceDocPath=/user/hbase/conf/example32gb_hdfs2hbase.xml
 #dataload.source.instanceDocPath=/user/hbase/conf/test_hdfs2hbase.xml
 #dataload.source.instanceDocPath=/opt/zlp/BigValue/conf/test_hdfs2hbase.xml
 
@@ -22,11 +22,11 @@ dataload.client.fetchParallel=8
 dataload.client.threadsPerMapper=4
 
 # define target table
-hbase.target.table.name=nci2gb
+hbase.target.table.name=example32gb
 #hbase.target.table.name=test
-indexConfFileName=nci2gb_index-conf.xml
+indexConfFileName=example32gb_index-conf.xml
 server.search.enableStatistics=false
-hbaseCoprocessorLocation=hdfs://gzp1:8020/user/asb/IndexCoprocessor-1.0.jar
+hbaseCoprocessorLocation=hdfs://gzp1:8020/user/example1/IndexCoprocessor-1.0.jar
 hbase.table.useInMemory=
 
 #hbase.table.splitKeyPrefixes=1329999

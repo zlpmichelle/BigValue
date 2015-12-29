@@ -5,7 +5,7 @@ currentpath=$(cd "$(dirname "$0")";pwd)
 
 # kafka args
 nodelist=(192.168.0.121 192.168.0.122 192.168.0.123)
-ASBhome=/root/zhangliping/ASB
+EXAMPLE1home=/root/zhangliping/EXAMPLE1
 kafkahome=/root/zhangliping/kafka_2.8.0-0.8.0/
 zookeeperlist=gzp1:2181,gzp2:2181,gzp3:2181 
 partition=3
@@ -23,7 +23,7 @@ for i in "${nodelist[@]}"
 do
 	# start kafka
 	echo start kafka service on $i ...
-	ssh $i "nohup \"$kafkahome\"/bin/kafka-server-start.sh \"$kafkahome\"/config/server.properties > \"$ASBhome\"/log/kafkastart.log 2>&1 &"
+	ssh $i "nohup \"$kafkahome\"/bin/kafka-server-start.sh \"$kafkahome\"/config/server.properties > \"$EXAMPLE1home\"/log/kafkastart.log 2>&1 &"
 done
 
 	

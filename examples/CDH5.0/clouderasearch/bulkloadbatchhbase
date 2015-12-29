@@ -173,32 +173,32 @@ put 'zlp', '3', 'f', 'v3'
 ---------------------------
 Batch:
 
-solrctl instancedir --generate /root/solr/nci2gb-collection
-vim /root/solr/nci2gb-collection/conf/schema.xml
-solrctl instancedir --create nci2gb-collection /root/solr/nci2gb-collection
-solrctl instancedir --update nci2gb-collection /root/solr/nci2gb-collection
-solrctl instancedir --delete nci2gb-collection
+solrctl instancedir --generate /root/solr/example32gb-collection
+vim /root/solr/example32gb-collection/conf/schema.xml
+solrctl instancedir --create example32gb-collection /root/solr/example32gb-collection
+solrctl instancedir --update example32gb-collection /root/solr/example32gb-collection
+solrctl instancedir --delete example32gb-collection
 
-solrctl instancedir --create nci20gb-collection /root/solr/nci20gb-collection
-solrctl instancedir --delete nci20gb-collection
+solrctl instancedir --create example320gb-collection /root/solr/example320gb-collection
+solrctl instancedir --delete example320gb-collection
 
 
 /root/solr/morphline-hbase-mapper.xml
 /etc/hbase-solr/conf/morphlines.conf
 configure and restart Lilyhbase(Chinese Segmentation need to restart lily hbase)
-solrctl collection --create nci2gb-collection -s 3
-solrctl collection --reload nci2gb-collection
-solrctl collection --delete nci2gb-collection
+solrctl collection --create example32gb-collection -s 3
+solrctl collection --reload example32gb-collection
+solrctl collection --delete example32gb-collection
 
-solrctl collection --create nci20gb-collection -s 3
-solrctl collection --delete nci20gb-collection
+solrctl collection --create example320gb-collection -s 3
+solrctl collection --delete example320gb-collection
 
 hadoop --config /etc/hadoop/conf.cloudera.yarn \
 jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0-job.jar \
 --conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
 -D 'mapred.child.java.opts=-Xmx500m' \
 --hbase-indexer-file /root/solr/morphline-hbase-mapper.xml \
---zk-host $ZKHOME/solr --collection nci2gb-collection \
+--zk-host $ZKHOME/solr --collection example32gb-collection \
 --go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties --reducers 24
 
 hadoop --config /etc/hadoop/conf.cloudera.yarn \
@@ -206,7 +206,7 @@ jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0
 --conf /etc/hbase/conf.cloudera.hbase/hbase-site.xml \
 -D 'mapred.child.java.opts=-Xmx10240m' \
 --hbase-indexer-file /root/solr/morphline-hbase-mapper.xml \
---zk-host $ZKHOME/solr --collection nci20gb-collection \
+--zk-host $ZKHOME/solr --collection example320gb-collection \
 --go-live --log4j /etc/hbase/conf.cloudera.hbase/log4j.properties --reducers 240
 
 --reducers
@@ -214,33 +214,33 @@ jar /opt/cloudera/parcels/CDH/lib/hbase-solr/tools/hbase-indexer-mr-1.5-cdh5.2.0
 
 --------
 NRT:
-disable 'nci2gb'
-alter 'nci2gb', {NAME => 'f', REPLICATION_SCOPE => 1}
-enable 'nci2gb'
+disable 'example32gb'
+alter 'example32gb', {NAME => 'f', REPLICATION_SCOPE => 1}
+enable 'example32gb'
 
-solrctl instancedir --generate /root/solr/nci2gb-collection
-vim /root/solr/nci2gb-collection/conf/schema.xml
-solrctl instancedir --create nci2gb-collection /root/solr/nci2gb-collection
-solrctl instancedir --delete nci2gb-collection
+solrctl instancedir --generate /root/solr/example32gb-collection
+vim /root/solr/example32gb-collection/conf/schema.xml
+solrctl instancedir --create example32gb-collection /root/solr/example32gb-collection
+solrctl instancedir --delete example32gb-collection
 
 /root/solr/morphline-hbase-mapper.xml
 CM->lilyhbase->configuration->morphlines.conf  
 restart lily hbase
 configure and restart Lilyhbase(Chinese Segmentation need to restart lily hbase)
-solrctl collection --create nci2gb-collection -s 3
-solrctl collection --delete nci2gb-collection
+solrctl collection --create example32gb-collection -s 3
+solrctl collection --delete example32gb-collection
 
-hbase-indexer add-indexer --name nci2gbIndexer \
+hbase-indexer add-indexer --name example32gbIndexer \
 --indexer-conf /root/solr/morphline-hbase-mapper.xml \
 --connection-param solr.zk=$ZKHOST/solr \
---connection-param solr.collection=nci2gb-collection \
+--connection-param solr.collection=example32gb-collection \
 --zookeeper $ZKHOST:2181
 
 
 hbase-indexer list-indexers
-hbase-indexer delete-indexer --name nci2gbIndexer
+hbase-indexer delete-indexer --name example32gbIndexer
 
 
-put 'nci2gb', '3', 'f:q1', 'v3zhangliping'
-upsert into "nci2gb" values('1zh', 'azhangliping', 'b', 'c', 'd','e');
+put 'example32gb', '3', 'f:q1', 'v3zhangliping'
+upsert into "example32gb" values('1zh', 'azhangliping', 'b', 'c', 'd','e');
 
