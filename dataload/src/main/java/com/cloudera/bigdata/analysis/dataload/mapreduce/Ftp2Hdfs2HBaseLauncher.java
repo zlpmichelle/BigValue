@@ -32,9 +32,7 @@ import com.cloudera.bigdata.analysis.dataload.DataLoad;
 import com.cloudera.bigdata.analysis.dataload.source.FtpDirDesc;
 import com.cloudera.bigdata.analysis.dataload.util.CommonUtils;
 import com.cloudera.bigdata.analysis.dataload.util.Util;
-import com.intel.fangpei.for_test_code.DisLog;
-import com.intel.fangpei.for_test_code.DisLogObj;
-import com.intel.fangpei.network.PacketLine.segment;
+
 
 public class Ftp2Hdfs2HBaseLauncher implements LoadLauncher {
 
@@ -393,7 +391,7 @@ public class Ftp2Hdfs2HBaseLauncher implements LoadLauncher {
     }
   }
 
-  public static void main(String[] args) throws IOException,
+  /* public static void main(String[] args) throws IOException,
       InterruptedException {
     Thread t = new Thread() {
       public void run() {
@@ -444,5 +442,5 @@ public class Ftp2Hdfs2HBaseLauncher implements LoadLauncher {
     }
     // launcher.launch();
 
-  }
+  } */
 }

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obfuscator/analysis_CDH5.0.pro" afterPath="$PROJECT_DIR$/obfuscator/analysis_CDH5.0.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obfuscator/analysis_CDH5.1.pro" afterPath="$PROJECT_DIR$/obfuscator/analysis_CDH5.1.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/log4j.properties" afterPath="$PROJECT_DIR$/conf/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2Hdfs2HBaseLauncher.java" afterPath="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2Hdfs2HBaseLauncher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="BigValue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,31 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="181" column="25" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.25067386">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/log4j.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ftp2Hdfs2HBaseLauncher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ftp2Hdfs2HBaseLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2Hdfs2HBaseLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39892185">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.4444447">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,10 +141,11 @@
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/conf/log4j.properties" />
         <option value="$PROJECT_DIR$/obfuscator/analysis_CDH5.0.pro" />
         <option value="$PROJECT_DIR$/obfuscator/analysis_CDH5.1.pro" />
+        <option value="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2Hdfs2HBaseLauncher.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -1118,13 +1108,13 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="211" column="35" selection-start-line="211" selection-start-column="35" selection-end-line="211" selection-end-column="35" />
           <folding>
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451370181000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451370931000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1279,21 +1269,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$PROJECT_DIR$/lib/cluster.jar!/com/intel/fangpei/for_test_code/DisLog.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="181" column="25" selection-start-line="181" selection-start-column="25" selection-end-line="181" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.2616279">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2Hdfs2HBaseLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39892185">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.4444447">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25067386">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

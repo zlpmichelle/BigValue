@@ -177,13 +177,6 @@
             <version>2.1</version>
         </dependency>
         
-        <!-- cluster的版本有好多 我们用的是fangpei写得那个。。 -->
-        <dependency>
-            <groupId>com.intel.fangpei</groupId>
-            <artifactId>cluster</artifactId>
-            <version>1.0</version>
-        </dependency> 
-        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
