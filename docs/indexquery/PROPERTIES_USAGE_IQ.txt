@@ -1,7 +1,7 @@
 The example of single dimension query is as:
-        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "(f,q1,EQ,16778556)"
+        # $BIGVALUE_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "(f,q1,EQ,16778556)"
 The example of multiple dimensions query is as:
-        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "[(f,q2,EQ,460001905263155)(f,q3,EQ,01284600)]"
+        # $BIGVALUE_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "[(f,q2,EQ,460001905263155)(f,q3,EQ,01284600)]"
 
 -table:
 	# The table name needs to be queries need

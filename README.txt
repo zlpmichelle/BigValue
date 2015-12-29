@@ -1,20 +1,20 @@
-BigDataAnalysis is a distributed big data analysis system over Cloudera Distributed Hadoop(CDH).
+BigValue is a distributed big data analysis system over Cloudera Distributed Hadoop(CDH).
 
 ------------------------
 The delivery for customer:
-1.Run $BIGDATAANALYSIS_HOME/build.sh, it will generated a obfuscator codes package under $BIGDATAANALYSIS_HOME/target/BigDataAnalysis-1.0.tar.gz
-2.Bring the $BIGDATAANALYSIS_HOME/target/BigDataAnalysis-1.0.tar.gz to cluster side.
+1.Run $BIGVALUE_HOME/build.sh, it will generated a obfuscator codes package under $BIGVALUE_HOME/target/BigValue-1.0.tar.gz
+2.Bring the $BIGVALUE_HOME/target/BigValue-1.0.tar.gz to cluster side.
 
 
 
-The latest BigDataAnalysis can be downloaded from an BigDataAnalysis Mirror [1].
+The latest BigValue can be downloaded from an BigValue Mirror [1].
 
 The source code can be found at [1]
 
-The BigDataAnalysis changes tracker is at [2]
+The BigValue changes tracker is at [2]
 
-1. BigDataAnalysis
-2. BigDataAnalysis/CHANGES.txt
+1. BigValue
+2. BigValue/CHANGES.txt
 
 BUILD
 ====================
@@ -34,6 +34,6 @@ Maven
 
 RUN
 ====================
-To get started using BigDataAnalysis's different components, like BulkLoad, DataGen, etc., the full documentation for this release can be found under the docs/ directory that accompanies this README. 
+To get started using BigValue's different components, like BulkLoad, DataGen, etc., the full documentation for this release can be found under the docs/ directory that accompanies this README.
 
 Also, you can find some pre-built examples in examples folder to understand the usage directly.

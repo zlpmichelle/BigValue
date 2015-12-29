@@ -1,6 +1,6 @@
-BigDataAnalysis Generator Change Log
+BigValue Generator Change Log
 
-BigDataAnalysis Generator 1.1 - Unreleased
+BigValue Generator 1.1 - Unreleased
 
 Bug
 
@@ -23,7 +23,7 @@ Test
     1.
 
     
-BigDataAnalysis Generator Release 1.0 Final GA - 5/19/2014  - Revision 26053
+BigValue Generator Release 1.0 Final GA - 5/19/2014  - Revision 26053
 
 
 

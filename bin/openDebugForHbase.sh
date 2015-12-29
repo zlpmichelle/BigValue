@@ -8,7 +8,7 @@ option=$1
 for i in "${nodelist[@]}"
 do
 	echo open debug on $i
-	ssh $i "cd /root/zhangliping/ && tar zxf BigDataAnalysis.tar.gz"	
+	ssh $i "cd /root/zhangliping/ && tar zxf BigValue.tar.gz"
 done
 
 
@@ -16,7 +16,7 @@ done
 for i in "${nodelist[@]}"
 do
 	echo close debug on $i
-	ssh $i "cd /root/zhangliping/ && tar zxf BigDataAnalysis.tar.gz"	
+	ssh $i "cd /root/zhangliping/ && tar zxf BigValue.tar.gz"
 done
 
 

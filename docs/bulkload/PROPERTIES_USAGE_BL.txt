@@ -83,7 +83,7 @@ column ETL:
 buildIndex
 	# The flag of building index while bulkload or not
 	# if there are different columns based queries or complex queries in later on business, 
-	# and you'd like to use BigDataAnalysis build-in secondary index (NOT using phoenix created table in advanced), 
+	# and you'd like to use BigValue build-in secondary index (NOT using phoenix created table in advanced),
 	# then set it to true, and not forget to specify indexConfPath with index configuration 
 	# else only run bulkload, set it to false
 	# by default it is false
@@ -168,7 +168,7 @@ extendedHbaseRowConverterClass:
     # final byte[] separator) and CommonUtils.mergeByteArray(byte[] src, byte[] dest,
     # int offsetOfDest, byte delimiter, boolean addDelimiter) in your own extended hbase row converter class
 	# com.cloudera.bigdata.analysis.dataload.transform.SampleExtendedHBaseRowConverter is for ordinary sample
-	# $BIGDATAANALYSIS_HOME/properties/conf-bulkload-sample.properties is the sample conf for com.cloudera.bigdata.analysis.dataload.transform.SampleExtendedHBaseRowConverter 
+	# $BIGVALUE_HOME/properties/conf-bulkload-sample.properties is the sample conf for com.cloudera.bigdata.analysis.dataload.transform.SampleExtendedHBaseRowConverter
 	# com.cloudera.bigdata.analysis.dataload.transform.NativeTaskExtendedHBaseRowConverter is for native task
 	# if using ExtensibleHBaseRowConverter, specify the extended class name, such as "com.cloudera.bigdata.analysis.dataload.transform.ImprovedExtendedHBaseRowConverter"
 	# if using default CustomizedHBaseRowConverter, keep it empty

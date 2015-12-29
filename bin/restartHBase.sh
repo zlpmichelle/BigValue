@@ -1,7 +1,7 @@
 #!/bin/sh
 
 currentpath=$(cd "$(dirname "$0")";pwd)
-jarname=$currentpath/../BigDataAnalysis-1.0.jar
+jarname=$currentpath/../BigValue-1.0.jar
 dirname=asb
 indexconf=index-conf
 

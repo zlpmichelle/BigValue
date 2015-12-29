@@ -1,5 +1,5 @@
--injars '../target/BigDataAnalysis-1.0.jar'
--outjars '../target/BigDataAnalysis-1.0-obfuscator.jar'
+-injars '../target/BigValue-1.0.jar'
+-outjars '../target/BigValue-1.0-obfuscator.jar'
 
 -libraryjars '/usr/java/latest/jre/lib/rt.jar'
 -libraryjars '../lib/jaxb'

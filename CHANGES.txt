@@ -1,6 +1,6 @@
-BigDataAnalysis Change Log
+BigValue Change Log
 
-BigDataAnalysis 1.0 - Unreleased
+BigValue 1.0 - Unreleased
 Bug
 
     1.
@@ -11,7 +11,7 @@ Improvement
    
 New Feature
 
-    1.Add Bulkload into BigDataAnalysis 
+    1.Add Bulkload into BigValue
     2.Add Ftp to HBase Data load in General Load
     3.Add Ftp to HDFS to HBase Data load in General Load
     4.Add XML parser to General Load

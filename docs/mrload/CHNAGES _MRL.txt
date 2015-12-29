@@ -1,6 +1,6 @@
-BigDataAnalysis MRLoad Change Log
+BigValue MRLoad Change Log
 
-BigDataAnalysis MRLoad 1.1 - Unreleased
+BigValue MRLoad 1.1 - Unreleased
 Bug
 
     1.
@@ -36,5 +36,5 @@ Test
     1.
 
     
-BigDataAnalysis MRLoad Release 1.0 Final GA - 5/19/2014  - Revision 26053
+BigValue MRLoad Release 1.0 Final GA - 5/19/2014  - Revision 26053
 

@@ -5,14 +5,14 @@ currentpath=$(cd "$(dirname "$0")";pwd)
 
 
 # for debug with target dir
-#cp $currentpath/../../BigDataAnalysis-1.0.jar $currentpath/../
-#rm -rf $currentpath/../BigDataAnalysis-1.0-obfuscator.jar
-#CLASSPATH=.:$currentpath/../target/BigDataAnalysis-1.0.jar
+#cp $currentpath/../../BigValue-1.0.jar $currentpath/../
+#rm -rf $currentpath/../BigValue-1.0-obfuscator.jar
+#CLASSPATH=.:$currentpath/../target/BigValue-1.0.jar
 
 # for debug with source codes
-CLASSPATH=.:$currentpath/../target/BigDataAnalysis-1.0.jar
+CLASSPATH=.:$currentpath/../target/BigValue-1.0.jar
 
-#CLASSPATH=.:$currentpath/../BigDataAnalysis-1.0-obfuscator.jar
+#CLASSPATH=.:$currentpath/../BigValue-1.0-obfuscator.jar
 jars=`ls $currentpath/../lib`
 for jar in $jars
 do

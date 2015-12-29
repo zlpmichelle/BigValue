@@ -14,9 +14,9 @@ arg=$(echo "--instanceDoc=/root/lizeming/workspace/mobile.xml --totalNum=1600000
 
 
 # for debug with source codes
-CLASSPATH=.:$currentpath/../target/BigDataAnalysis-1.0.jar
+CLASSPATH=.:$currentpath/../target/BigValue-1.0.jar
 
-#CLASSPATH=.:$currentpath/../BigDataAnalysis-1.0-obfuscator.jar
+#CLASSPATH=.:$currentpath/../BigValue-1.0-obfuscator.jar
 jars=`ls $currentpath/../lib`
 for jar in $jars
 do

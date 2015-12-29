@@ -1,28 +1,28 @@
-Following are the getting start steps of BigDataAnalysis BulkLoad:(take $BIGDATAANALYSIS_HOME/properties/conf-bulkload-sample.properties as example)
+Following are the getting start steps of BigValue BulkLoad:(take $BIGVALUE_HOME/properties/conf-bulkload-sample.properties as example)
 
 Step 1: Set Environment:
-		1).Copy the BigDataAnalysis.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGDATAANALYSIS_HOME dir. 
+		1).Copy the BigValue.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGVALUE_HOME dir.
 		2).Configure SSH password-less from client node to hbase regionserver nodes.
 		3).Install ant and set ant_home, java_home(export JAVA_HOME=/usr/java/latest) for bashrc. Set "export LD_LIBRARY_PATH=/opt/cloudera/parcels/CDH/lib/hadoop/lib/native/" in your bashrc. Remember to comment out line "Defaults    requiretty" in /etc/sudoers.
-		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml yarn-site.xml from jobtracker or resource manager, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGDATAANALYSIS_HOME/conf/. In existing running CDH cluster, the configuration dirs are:  /etc/hadoop/conf/conf.cloudera.hdfs, /etc/hbase/conf/conf.cloudera.yarn, /etc/hive/conf/conf.cloudera.hive.
-		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, hive*.jar from hive server, zookeeper*.jar from zookeeper into $BIGDATAANALYSIS_HOME/lib/cdh5.0. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
+		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml yarn-site.xml from jobtracker or resource manager, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGVALUE_HOME/conf/. In existing running CDH cluster, the configuration dirs are:  /etc/hadoop/conf/conf.cloudera.hdfs, /etc/hbase/conf/conf.cloudera.yarn, /etc/hive/conf/conf.cloudera.hive.
+		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, hive*.jar from hive server, zookeeper*.jar from zookeeper into $BIGVALUE_HOME/lib/cdh5.0. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
 		
 Step 2: Put data to hdfs. e.g.
 		# sudo -u hdfs hadoop fs -mkdir /user/test
 		# sudo -u hdfs hadoop fs -chown -R root:root /user/test
 		# hadoop fs -mkdir /user/test/bltest
-		# hadoop fs -put $BIGDATAANALYSIS_HOME/test/src/test/java/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt /user/test/bltest/
+		# hadoop fs -put $BIGVALUE_HOME/test/src/test/java/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt /user/test/bltest/
 
-Step 3: Customized your configuration in $BIGDATAANALYSIS_HOME/properties/conf-bulkload-sample.properties. For each properties usage, please refer to $BIGDATAANALYSIS_HOME/docs/bulkload/PROPERTIES_USAGE_BL.txt.	
+Step 3: Customized your configuration in $BIGVALUE_HOME/properties/conf-bulkload-sample.properties. For each properties usage, please refer to $BIGVALUE_HOME/docs/bulkload/PROPERTIES_USAGE_BL.txt.
 		
 		Steps for index, if not building index, please ignore these steps:
 		1). use following command to deploy coprocessor, then restart hbase service if it is the first time to deploy this corprocessor
-		    # $BIGDATAANALYSIS_HOME/bin/coprocessorPrepare.sh
-		2). create and configure $BIGDATAANALYSIS_HOME/conf/[table_name]_index-conf.xml
-		2). # cp $BIGDATAANALYSIS_HOME/properties/conf-bulkload-sample.properties $BIGDATAANALYSIS_HOME/conf/current.properties
-		3). # $BIGDATAANALYSIS_HOME/bin/refreshIndexConf.sh
+		    # $BIGVALUE_HOME/bin/coprocessorPrepare.sh
+		2). create and configure $BIGVALUE_HOME/conf/[table_name]_index-conf.xml
+		2). # cp $BIGVALUE_HOME/properties/conf-bulkload-sample.properties $BIGVALUE_HOME/conf/current.properties
+		3). # $BIGVALUE_HOME/bin/refreshIndexConf.sh
 
-Step 4: Run "$BIGDATAANALYSIS_HOME/bin/bulkload.sh $BIGDATAANALYSIS_HOME/conf/current.propertiess" to bulk load
+Step 4: Run "$BIGVALUE_HOME/bin/bulkload.sh $BIGVALUE_HOME/conf/current.propertiess" to bulk load
            
-Step 5: If you want to clean up the previous useless bulkload work, do some edit and execute $BIGDATAANALYSIS_HOME/bin/cleanup.sh, 
+Step 5: If you want to clean up the previous useless bulkload work, do some edit and execute $BIGVALUE_HOME/bin/cleanup.sh,
 		it will delete tmp hive table, tmp dir(record count file), hfile dir and HBase table.3

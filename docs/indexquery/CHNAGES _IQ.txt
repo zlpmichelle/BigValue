@@ -1,6 +1,6 @@
-BigDataAnalysis IndexQuery Change Log
+BigValue IndexQuery Change Log
 
-BigDataAnalysis IndexQuery 1.1 - Unreleased
+BigValue IndexQuery 1.1 - Unreleased
 
 Bug
 
@@ -31,6 +31,6 @@ Test
     1.
 
     
-BigDataAnalysis IndexQuery Release 1.0 Final GA - 5/19/2014  - Revision 26053
+BigValue IndexQuery Release 1.0 Final GA - 5/19/2014  - Revision 26053
 
 

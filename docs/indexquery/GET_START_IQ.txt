@@ -1,24 +1,24 @@
-Following are the getting start steps of BigDataAnalysis index query:
+Following are the getting start steps of BigValue index query:
 
 Step 1: Set Environment:
-		1).Copy the BigDataAnalysis.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGDATAANALYSIS_HOME dir. 
+		1).Copy the BigValue.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGVALUE_HOME dir.
 		2).Configure SSH password-less from client node to hbase regionserver nodes.
 		3).Install ant and set ant_home, java_home(export JAVA_HOME=/usr/java/latest) for bashrc. Set "export LD_LIBRARY_PATH=/opt/cloudera/parcels/CDH/lib/hadoop/lib/native/" in your bashrc. Remember to comment out line "Defaults    requiretty" in /etc/sudoers.
-		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml from jobtracker, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGDATAANALYSIS_HOME/conf/. In existing running CDH cluster, the configuration dirs are:  /etc/hadoop/conf, /etc/hbase/conf.
-		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, zookeeper*.jar from zookeeper into $BIGDATAANALYSIS_HOME/lib/. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
-		6).run index mrload or index bulkload, for how to run mrload and bulkload, please refer to $BIGDATAANALYSIS_HOME/docs/bulkload/GET_START_BL.txt and $BIGDATAANALYSIS_HOME/docs/mrload/GET_START_MRL.txt
-			# $BIGDATAANALYSIS_HOME/bin/inMemoryAndHdfs2HBase.sh $BIGDATAANALYSIS_HOME/conf/current.properties
+		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml from jobtracker, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGVALUE_HOME/conf/. In existing running CDH cluster, the configuration dirs are:  /etc/hadoop/conf, /etc/hbase/conf.
+		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, zookeeper*.jar from zookeeper into $BIGVALUE_HOME/lib/. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
+		6).run index mrload or index bulkload, for how to run mrload and bulkload, please refer to $BIGVALUE_HOME/docs/bulkload/GET_START_BL.txt and $BIGVALUE_HOME/docs/mrload/GET_START_MRL.txt
+			# $BIGVALUE_HOME/bin/inMemoryAndHdfs2HBase.sh $BIGVALUE_HOME/conf/current.properties
 			or
-			# $BIGDATAANALYSIS_HOME/bin/bulkload.sh $BIGDATAANALYSIS_HOME/conf/current.propertiess
+			# $BIGVALUE_HOME/bin/bulkload.sh $BIGVALUE_HOME/conf/current.propertiess
 			
 Step 2: Steps for refresh index, if index configurations are not updated, follow below steps.  If there is no update for index configuration, please ignore these steps:
-		1). edit [table_name]_index-conf.xml under $BIGDATAANALYSIS_HOME/conf/ 
-		2). # $BIGDATAANALYSIS_HOME/bin/refreshIndexConf.sh
-		3). # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh refreshindex
+		1). edit [table_name]_index-conf.xml under $BIGVALUE_HOME/conf/
+		2). # $BIGVALUE_HOME/bin/refreshIndexConf.sh
+		3). # $BIGVALUE_HOME/bin/coprocessorQuery.sh refreshindex
 
 Step 3: Run index query, e.g. ("-paged" is optional, which is for index result paging function, by default it is false)
-        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "(f,q1,EQ,965119696)" -paged true
-        # $BIGDATAANALYSIS_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "[(f,q2,EQ,5108836081253744)(f,q3,EQ,7663125842424245)]" -paged true
+        # $BIGVALUE_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "(f,q1,EQ,965119696)" -paged true
+        # $BIGVALUE_HOME/bin/coprocessorQuery.sh -table test -resultsLimit 5 -condition "[(f,q2,EQ,5108836081253744)(f,q3,EQ,7663125842424245)]" -paged true
         
  
 --------------------------   

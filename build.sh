@@ -22,7 +22,7 @@ ant package
 
 currentpath=$(cd "$(dirname "$0")";pwd)
 cd $currentpath/target/ 
-tar zcf BigDataAnalysis-1.0.tar.gz BigDataAnalysis-1.0 --exclude BigDataAnalysis-1.0/build.sh
+tar zcf BigValue-1.0.tar.gz BigValue-1.0 --exclude BigValue-1.0/build.sh
 
 currentpath=`pwd`
-echo "The Released BigDataAnalysis is generated in $currentpath/BigDataAnalysis-1.0.tar.gz"
+echo "The Released BigValue is generated in $currentpath/BigValue-1.0.tar.gz"

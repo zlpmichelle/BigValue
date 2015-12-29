@@ -1,24 +1,24 @@
-Following are the getting start steps of BigDataAnalysis MRLoad:(take $BIGDATAANALYSIS_HOME/properties/conf-hdfs2hbase-sample.properties as example, for inmemory mapreduce load please refer to $BIGDATAANALYSIS_HOME/properties/conf-inmemory-sample.properties )
+Following are the getting start steps of BigValue MRLoad:(take $BIGVALUE_HOME/properties/conf-hdfs2hbase-sample.properties as example, for inmemory mapreduce load please refer to $BIGVALUE_HOME/properties/conf-inmemory-sample.properties )
 
 Step 1: Set Environment:
-		1).Copy the BigDataAnalysis.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGDATAANALYSIS_HOME dir. 
+		1).Copy the BigValue.tar.gz into any one of IDH cluster client nodes, then unpack it in $BIGVALUE_HOME dir.
 		2).Configure SSH password-less from client node to hbase regionserver nodes.
 		3).Install ant and set ant_home, java_home(export JAVA_HOME=/usr/java/latest) for bashrc. Set "export LD_LIBRARY_PATH=/opt/cloudera/parcels/CDH/lib/hadoop/lib/native/" in your bashrc. Remember to comment out line "Defaults    requiretty" in /etc/sudoers.
-		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml from jobtracker, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGDATAANALYSIS_HOME/conf/. In existing running CDH cluster, the configuration dirs are: /etc/hadoop/conf, /etc/hbase/conf
-		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, zookeeper*.jar from zookeeper into $BIGDATAANALYSIS_HOME/lib/. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
+		4).Copy core-site.xml, hdfs-site.xml from namenode, mapred-site.xml from jobtracker, hbase-site.xml from hbase master, hive-site.xml from hive server into $BIGVALUE_HOME/conf/. In existing running CDH cluster, the configuration dirs are: /etc/hadoop/conf, /etc/hbase/conf
+		5).Replace running hadoop*.jar, hadoop/lib/native from namenode, hbase*.jar from hbase master, zookeeper*.jar from zookeeper into $BIGVALUE_HOME/lib/. In existing running CDH cluster, the lib dirs are under: /opt/cloudera/parcels/CDH/lib/
 		
 
 Step 2: Put data to hdfs. e.g.
 		# hadoop fs -mkdir /user/test/mrtest
-		# hadoop fs -put $BIGDATAANALYSIS_HOME/test/src/test/java/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt /user/test/mrtest/
+		# hadoop fs -put $BIGVALUE_HOME/test/src/test/java/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt /user/test/mrtest/
 
-Step 3: Customized your configuration in $BIGDATAANALYSIS_HOME/properties/conf-hdfs2hbase-sample.properties, and in $BIGDATAANALYSIS_HOME/conf/[table_name]_hdfs2hbase.xml. For each properties usage, please refer to $BIGDATAANALYSIS_HOME/docs/mrload/PROPERTIES_USAGE_MRL.txt.
+Step 3: Customized your configuration in $BIGVALUE_HOME/properties/conf-hdfs2hbase-sample.properties, and in $BIGVALUE_HOME/conf/[table_name]_hdfs2hbase.xml. For each properties usage, please refer to $BIGVALUE_HOME/docs/mrload/PROPERTIES_USAGE_MRL.txt.
 		
 		Steps for index, if not building index, please ignore these steps:
 		1). use following command to deploy coprocessor, then restart hbase service if it is the first time to deploy this corprocessor
-		    # $BIGDATAANALYSIS_HOME/bin/coprocessorPrepare.sh
-		2). create and configure $BIGDATAANALYSIS_HOME/conf/[table_name]_index-conf.xml
-		3). cp $BIGDATAANALYSIS_HOME/properties/conf-hdfs2hbase-sample.properties $BIGDATAANALYSIS_HOME/conf/current.properties
-		4). # $BIGDATAANALYSIS_HOME/bin/refreshIndexConf.sh
+		    # $BIGVALUE_HOME/bin/coprocessorPrepare.sh
+		2). create and configure $BIGVALUE_HOME/conf/[table_name]_index-conf.xml
+		3). cp $BIGVALUE_HOME/properties/conf-hdfs2hbase-sample.properties $BIGVALUE_HOME/conf/current.properties
+		4). # $BIGVALUE_HOME/bin/refreshIndexConf.sh
 
-Step 4: Run "$BIGDATAANALYSIS_HOME/bin/inMemoryAndHdfs2HBase.sh $BIGDATAANALYSIS_HOME/conf/current.properties" to run mapreduce load
+Step 4: Run "$BIGVALUE_HOME/bin/inMemoryAndHdfs2HBase.sh $BIGVALUE_HOME/conf/current.properties" to run mapreduce load
