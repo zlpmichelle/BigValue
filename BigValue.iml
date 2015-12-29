@@ -5,14 +5,26 @@
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/conf" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/datagen" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/dataload" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/generated" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/solution/src/main/java" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bench/HBaseBinding/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bench/YCSBCore/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bench/YCSBCore/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/core/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/datagen/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dataload/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/endpoint/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/generated/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hbase/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hdfs/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hive/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/obfuscator/proguard4.11/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/server/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/solution/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/src/test/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/util/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

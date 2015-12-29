@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="build" name="BigDataAnalysis">
+<project basedir="." default="build" name="BigValue">
 	<property environment="env"/>
 	<property name="debuglevel" value="source,lines,vars"/>
 	<property name="target" value="1.6"/>
 	<property name="source" value="1.6"/>
 	<property name="base.dir" value="${basedir}"/>
-	<property name="name" value="BigDataAnalysis"/>
+	<property name="name" value="BigValue"/>
 	<property name="version" value="1.0"/>
 	<property name="final.name" value="${name}-${version}"/>
 	<property name="bin.dir" value="${basedir}/bin"/>
@@ -31,7 +31,7 @@
 
         <fileset id="cdh.classpath" dir="${cdh.lib.dir}" includes="**/*.jar"/>
 
-	<path id="BigDataAnalysis.classpath">
+	<path id="BigValue.classpath">
 		<fileset dir="${lib.dir}" includes="*.jar"/>
 		<fileset refid="cdh.classpath"/>
 	</path>
@@ -132,7 +132,7 @@
             -->
 			<src path="test/src/test/java"/>
 
-			<classpath refid="BigDataAnalysis.classpath"/>
+			<classpath refid="BigValue.classpath"/>
 		</javac>
 	</target>
 

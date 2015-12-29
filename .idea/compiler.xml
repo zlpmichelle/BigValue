@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="BigDataAnalysis" />
+        <module name="BigValue" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="BigDataAnalysis" target="1.5" />
+      <module name="BigValue" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
