@@ -1,4 +1,4 @@
-package com.cloudera.bigdata.analysis.solution.iptv;
+package com.cloudera.bigdata.analysis.solution.y;
 
 import java.io.DataInput;
 import java.io.DataOutput;
@@ -6,21 +6,21 @@ import java.io.IOException;
 
 import org.apache.hadoop.io.WritableComparable;
 
-public class IPTVMetrics implements WritableComparable<IPTVMetrics>{
+public class YMetrics implements WritableComparable<YMetrics>{
 	
 	private long reqNum;
 	private long failNum;
 	private long recordNum;
 	
-	public IPTVMetrics(){
+	public YMetrics(){
 		this(0, 0);
 	}
 	
-	public IPTVMetrics(long reqNum, long failNum){
+	public YMetrics(long reqNum, long failNum){
 		this(reqNum, failNum, 1);
 	}
 	
-	public IPTVMetrics(long reqNum, long failNum, long recordNum){
+	public YMetrics(long reqNum, long failNum, long recordNum){
 		this.reqNum = reqNum;
 		this.failNum = failNum;
 		this.recordNum = recordNum;
@@ -49,10 +49,10 @@ public class IPTVMetrics implements WritableComparable<IPTVMetrics>{
 	}
 
 	@Override
-	public int compareTo(IPTVMetrics o) {
+	public int compareTo(YMetrics o) {
 		// TODO Auto-generated method stub
-		IPTVMetrics thisMetrics = this;
-		IPTVMetrics thatMetrics = (IPTVMetrics)o;
+		YMetrics thisMetrics = this;
+		YMetrics thatMetrics = (YMetrics)o;
 		
 		return 0;
 	}

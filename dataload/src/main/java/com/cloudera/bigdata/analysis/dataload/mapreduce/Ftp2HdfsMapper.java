@@ -15,7 +15,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cloudera.bigdata.analysis.dataload.ftp2hdfs2hbase.ZJCMCCConstants;
+import com.cloudera.bigdata.analysis.dataload.ftp2hdfs2hbase.ZConstants;
 import com.cloudera.bigdata.analysis.dataload.source.FtpDirDesc;
 import com.cloudera.bigdata.analysis.dataload.util.FtpUtil;
 
@@ -146,7 +146,7 @@ public class Ftp2HdfsMapper<K> extends
       if (out != null) {
         out.flush();
         out.close();
-        context.getCounter(ZJCMCCConstants.COUNTER.FILECOUNT).increment(1);
+        context.getCounter(ZConstants.COUNTER.FILECOUNT).increment(1);
       }
       if (fileDown != null) {
         fileDown.close();

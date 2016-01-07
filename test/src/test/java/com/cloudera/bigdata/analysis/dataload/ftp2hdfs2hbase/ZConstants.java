@@ -1,6 +1,6 @@
 package com.cloudera.bigdata.analysis.dataload.ftp2hdfs2hbase;
 
-public class ZJCMCCConstants {
+public class ZConstants {
   public final static String TABLENAME = "tableName";
 
   public static final String MAPREDSERVER = "mapredserver";

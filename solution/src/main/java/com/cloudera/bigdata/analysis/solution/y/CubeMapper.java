@@ -1,10 +1,6 @@
-package com.cloudera.bigdata.analysis.solution.iptv;
+package com.cloudera.bigdata.analysis.solution.y;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,8 +13,9 @@ import org.apache.hadoop.mapreduce.Reducer.Context;
 
 import com.cloudera.bigdata.analysis.core.Constants;
 import com.cloudera.bigdata.analysis.util.Util;
+import sun.org.mozilla.javascript.internal.ast.Yield;
 
-public class CubeMapper extends Mapper<LongWritable, Text, Text, IPTVMetrics> {
+public class CubeMapper extends Mapper<LongWritable, Text, Text, YMetrics> {
 	private final static int REQNUM_IDX = 2;
 	private final static int FAILNUM_IDX = 3;
 	private final static int ACCESSTYPE_IDX = 4;
@@ -64,7 +61,7 @@ public class CubeMapper extends Mapper<LongWritable, Text, Text, IPTVMetrics> {
 		String line = text.toString();
 		String[] fields = line.split(",");
 
-		IPTVMetrics metrics = new IPTVMetrics();
+		YMetrics metrics = new YMetrics();
 		metrics.setReqNum(Long.parseLong(fields[REQNUM_IDX]));
 		long l = Long.parseLong(fields[FAILNUM_IDX]);
 		metrics.setFailNum(l);

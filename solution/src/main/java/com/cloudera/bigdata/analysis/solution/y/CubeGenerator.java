@@ -1,8 +1,6 @@
-package com.cloudera.bigdata.analysis.solution.iptv;
+package com.cloudera.bigdata.analysis.solution.y;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import org.apache.hadoop.conf.Configuration;
@@ -17,7 +15,6 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.cloudera.bigdata.analysis.core.Constants;
 import com.cloudera.bigdata.analysis.util.Util;
 
 public class CubeGenerator {
@@ -74,7 +71,7 @@ public class CubeGenerator {
 			job.setMapperClass(CubeMapper.class);
 			job.setReducerClass(CubeReducer.class);
 			job.setMapOutputKeyClass(Text.class);
-			job.setMapOutputValueClass(IPTVMetrics.class);
+			job.setMapOutputValueClass(YMetrics.class);
 			job.setInputFormatClass(NLineInputFormat.class);
 			NLineInputFormat.setNumLinesPerSplit(job, linesPerMapper);
 			FileInputFormat.addInputPath(job, new Path(args[0]));

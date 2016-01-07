@@ -1,8 +1,8 @@
-package com.cloudera.bigdata.analysis.solution.iptv;
+package com.cloudera.bigdata.analysis.solution.y;
 
 import org.apache.hadoop.io.Text;
 
-public class OutputMetrics extends IPTVMetrics {
+public class OutputMetrics extends YMetrics {
 	private long totalFailNum;
 	private double QosWeight;
 	private Text key;

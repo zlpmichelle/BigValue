@@ -1,4 +1,4 @@
-package com.cloudera.bigdata.analysis.solution.iptv;
+package com.cloudera.bigdata.analysis.solution.y;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.collect.MinMaxPriorityQueue;
 
-public class CubeReducer extends Reducer<Text, IPTVMetrics, Text, Text> {
+public class CubeReducer extends Reducer<Text, YMetrics, Text, Text> {
 	private static final Logger LOG = LoggerFactory.getLogger(CubeGenerator.class);
 	private int totalProcessed = 0;
 	private DecimalFormat format;
@@ -58,14 +58,14 @@ public class CubeReducer extends Reducer<Text, IPTVMetrics, Text, Text> {
 		}).<OutputMetrics>create();
 	}
 	
-	protected void reduce(Text key, Iterable<IPTVMetrics> values, Context context) 
+	protected void reduce(Text key, Iterable<YMetrics> values, Context context)
 		throws IOException, InterruptedException {
 		long totalReqNum = 0;
 		long totalFailNum = 0;
 		long totalRecordNum = 0;
 		long totalFailRecordNum = 0;
 		
-		for(IPTVMetrics metrics : values){
+		for(YMetrics metrics : values){
 			totalReqNum += metrics.getReqNum();
 			if(metrics.getFailNum() != 0){
 			totalFailRecordNum++;
