@@ -2,15 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ccfe4f5-e1d2-4e88-a42f-a17c43464397" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/iptv/CubeGenerator.java" afterPath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/iptv/CubeMapper.java" afterPath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeMapper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/iptv/CubeReducer.java" afterPath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeReducer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/iptv/IPTVMetrics.java" afterPath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/IPTVMetrics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/iptv/OutputMetrics.java" afterPath="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/OutputMetrics.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/ZJCMCCConstants.java" afterPath="$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/ZConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2HdfsMapper.java" afterPath="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2HdfsMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/properties/conf-ftp2hdfs2hbase-sample.properties" afterPath="$PROJECT_DIR$/properties/conf-ftp2hdfs2hbase-sample.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt" afterPath="$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_com_cloudera_hadoop_tool_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_com_cloudera_hadoop_util_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hadoop_hadoop_core_Cloudera_1_0_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hbase_hbase_Cloudera_0_94_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_hive_hive_exec_Cloudera_0_11_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cloudera_zookeeper_zookeeper_Cloudera_3_4_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_4_0a.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_net_commons_net_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/asbHdfs2hbase.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/asbHdfs2hbase_3q.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/asbHdfs2hbase_sep.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/apache/hadoop/io/orc/test/ORC_demo_commands.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/apache/hadoop/io/orc/test/orc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/ant/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/ant/task.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/attribute/annotation/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/attribute/annotation/visitor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/attribute/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/attribute/visitor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/constant/visitor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/editor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/instruction/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/instruction/visitor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/io/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/util/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/classfile/visitor/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/evaluation/value/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/GUIResources.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/arrow.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/boilerplate.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/default.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/splash/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/gui/vtitle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/io/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/obfuscate/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/optimize/evaluation/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/optimize/info/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/optimize/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/optimize/peephole/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/retrace/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/retrace/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/shrink/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/util/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/wtk/default.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/proguard/wtk/package.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/main/main29.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/main/main3.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/main/main39.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/main/main8.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/java/com/cloudera/bigdata/analysis/dataload/etl/hdfssourcedata.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/java/com/cloudera/bigdata/analysis/dataload/etl/run.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/java/com/cloudera/bigdata/analysis/dataload/etl/runWithoutCreateSource.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/java/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/src/test/test1.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/BaseColumnFamilyType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/BaseColumnFamilyType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/BaseQualifierType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/BaseQualifierType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigValue.iml" afterPath="$PROJECT_DIR$/BigValue.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnFamilyType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnFamilyType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnRef.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnRef.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnSpec.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ColumnSpec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/CompressionType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/CompressionType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/FieldPattern.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/FieldPattern.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/FieldType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/FieldType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryColumnFamilyType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryColumnFamilyType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryQualifierType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryQualifierType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRecordType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRecordType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRowKeyFieldType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRowKeyFieldType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRowKeyType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/InMemoryRowKeyType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/MultiInMemoryQualifierType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/MultiInMemoryQualifierType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/MultiQualifierType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/MultiQualifierType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ObjectFactory.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/ObjectFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/OpType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/OpType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/QualifierType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/QualifierType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomAlgorithm.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomAlgorithm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomPattern.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomPattern.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RandomType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RecordSpec.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RecordSpec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RowKeyFieldType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RowKeyFieldType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RowKeyType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/RowKeyType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/StorageType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/StorageType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/TxtRecordType.java" afterPath="$PROJECT_DIR$/generated/src/main/java/com/cloudera/bigdata/analysis/generated/TxtRecordType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase.xml" afterPath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase_3q.xml" afterPath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase_3q.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase_sep.xml" afterPath="$PROJECT_DIR$/target/classes/example1Hdfs2hbase_sep.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ftpOrHdfs2hbase.xml" afterPath="$PROJECT_DIR$/target/classes/ftpOrHdfs2hbase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/hdfssourcedata.txt" afterPath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/hdfssourcedata.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/index-conf.xml" afterPath="$PROJECT_DIR$/target/classes/index-conf.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/nci2gb_hdfs2hbase.xml" afterPath="$PROJECT_DIR$/target/classes/nci2gb_hdfs2hbase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/run.sh" afterPath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/runWithoutCreateSource.sh" afterPath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/etl/runWithoutCreateSource.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/test_hdfs2hbase.xml" afterPath="$PROJECT_DIR$/target/classes/test_hdfs2hbase.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt" afterPath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt" afterPath="$PROJECT_DIR$/target/classes/com/cloudera/bigdata/analysis/dataload/testdata_5red.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BigValue.iws" />
@@ -33,51 +126,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Ftp2HdfsMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/mapreduce/Ftp2HdfsMapper.java">
+      <file leaf-file-name="OrcStruct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hive/src/main/java/org/apache/hadoop/io/orc/OrcStruct.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="62" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+              <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+              <folding>
+                <element signature="e#5953#5961#0" expanded="false" />
+                <element signature="e#7593#7623#0" expanded="false" />
+                <element signature="e#8776#8806#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProtoUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/index/protobuf/ProtoUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main8.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataload/src/main/main8.iml">
+      <file leaf-file-name="IndexScanFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/index/search/IndexScanFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testdata_10red.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/testdata_10red.txt">
+      <file leaf-file-name="FilterBase.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0-cdh5.6.0/hbase-client-1.0.0-cdh5.6.0-sources.jar!/org/apache/hadoop/hbase/filter/FilterBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="62" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZConstants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/test/java/com/cloudera/bigdata/analysis/dataload/ftp2hdfs2hbase/ZConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf-ftp2hdfs2hbase-sample.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/properties/conf-ftp2hdfs2hbase-sample.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,32 +174,32 @@
         <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeReducer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPTVMetrics.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/IPTVMetrics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#1766#1781#0" expanded="false" />
+                <element signature="e#1791#2104#0" expanded="false" />
+                <element signature="e#2103#2104#0" expanded="false" />
+                <element signature="e#2106#2121#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputMetrics.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/OutputMetrics.java">
+      <file leaf-file-name="FieldGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datagen/src/main/java/com/cloudera/bigdata/analysis/datagen/FieldGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8099352">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.5227273">
+              <caret line="124" column="27" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -123,7 +210,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,7 +222,37 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#974#989#0" expanded="false" />
+                <element signature="e#1709#1718#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBaseTableSpec.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/transform/HBaseTableSpec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding>
+                <element signature="e#1050#1070#0" expanded="false" />
+                <element signature="e#1977#1978#0" expanded="false" />
+                <element signature="e#2003#2004#0" expanded="false" />
+                <element signature="e#2041#2042#0" expanded="false" />
+                <element signature="e#2071#2072#0" expanded="false" />
+                <element signature="e#2108#2109#0" expanded="false" />
+                <element signature="e#2137#2138#0" expanded="false" />
+                <element signature="e#2185#2186#0" expanded="false" />
+                <element signature="e#2225#2226#0" expanded="false" />
+                <element signature="e#2525#2526#0" expanded="false" />
+                <element signature="e#2556#2557#0" expanded="false" />
+                <element signature="e#2593#2594#0" expanded="false" />
+                <element signature="e#2624#2625#0" expanded="false" />
+                <element signature="e#2797#2798#0" expanded="false" />
+                <element signature="e#2847#2848#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,9 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/examples/example2/dataload/example25-hdfs2hbase-sample.properties" />
-        <option value="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tb.properties" />
-        <option value="$PROJECT_DIR$/examples/Parallel_Scalability_Test/bulkload/conf-bulkload-1tbdata.properties" />
         <option value="$PROJECT_DIR$/properties/example25-hdfs2hbase-sample.properties" />
         <option value="$PROJECT_DIR$/bin/genStreamingData.sh" />
         <option value="$PROJECT_DIR$/examples/example2/datagen/generator_mapreduce.cygwin" />
@@ -209,6 +325,9 @@
         <option value="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeReducer.java" />
         <option value="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/IPTVMetrics.java" />
         <option value="$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/OutputMetrics.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/transform/BenchMarkExtendedHBaseRowConverter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -217,6 +336,11 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="Bundled (Maven 3)" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -227,8 +351,12 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="BigDataAnalysis" />
+          <option name="myItemId" value="BigValue" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -237,12 +365,8 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="BigDataAnalysis" />
+          <option name="myItemId" value="BigValue" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -251,9 +375,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="37" />
-    <option name="y" value="23" />
-    <option name="width" value="1403" />
+    <option name="x" value="67" />
+    <option name="y" value="42" />
+    <option name="width" value="1182" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -286,6 +410,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="BigValue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -463,22 +591,8 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hdfs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,7 +606,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hdfs" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -508,7 +622,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -522,95 +640,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BigValue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -626,7 +656,107 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="orc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datagen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BigValue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datagen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -642,7 +772,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.31264368" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -887,28 +1017,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="37" y="23" width="1403" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="67" y="42" width="1182" height="877" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.49617592" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3761118" sideWeight="0.662748" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3761118" sideWeight="0.33725202" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25732484" sideWeight="0.48947367" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37707007" sideWeight="0.65789473" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25732484" sideWeight="0.5105263" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32658958" sideWeight="0.5325048" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803467" sideWeight="0.49617592" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32611465" sideWeight="0.52894735" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738853" sideWeight="0.4526316" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738853" sideWeight="0.48947367" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21510516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18070175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3166789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30614036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32738853" sideWeight="0.47391623" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -935,148 +1065,18 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <expanded value="true" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/deletecollection.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/lilyhbasemorphline.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/createcollection.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/deletecollection.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/createcollection.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/deletecollection.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/lilyhbasemorphlines.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/schema.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdh.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="208" column="132" selection-start-line="208" selection-start-column="132" selection-end-line="208" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/clouderasearch/hdfsbatch/schema.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80472106">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/CDH5.0/clouderasearch/hbasebatch/schema.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80472106">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/reference/dataload/immemory_dataload/inmemory.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58154505">
-          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hdfsbatch/morphline.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12875536">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/current.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hbasebatch/morphline-hbase-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/hbasenrt/morphline-hbase-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/clouderasearch5.2/solrChineseSegmentation/morphline-hbase-mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obfuscator/proguard4.11/src/proguard/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="326" column="68" selection-start-line="326" selection-start-column="68" selection-end-line="326" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/obfuscator/proguard4.11/build/maven/ant/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="12" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bench/YCSBCore/CHANGELOG">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1095,14 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="205" column="13" selection-start-line="205" selection-start-column="13" selection-end-line="205" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1191,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +1190,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1209,15 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hive/src/main/java/org/apache/hadoop/io/orc/OrcStruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,24 +1207,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/cloudera/bigdata/analysis/core/Memory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/cloudera/bigdata/analysis/core/CPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1251,7 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1287,26 +1251,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/OutputMetrics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeMapper.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/cloudera/bigdata/analysis/core/CPU.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeReducer.java">
+    <entry file="file://$PROJECT_DIR$/obfuscator/proguard4.11/src/proguard/gui/OptimizationsDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+          <folding>
+            <element signature="e#6660#6807#0" expanded="false" />
+            <element signature="e#6806#6807#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/index/protobuf/generated/IndexScanFilterProtos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1051" column="44" selection-start-line="1051" selection-start-column="44" selection-end-line="1051" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1314,20 +1289,234 @@
     <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/IPTVMetrics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/query/Condition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
           <folding>
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/OutputMetrics.java">
+    <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8099352">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="282" column="50" selection-start-line="282" selection-start-column="50" selection-end-line="282" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdh.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6486486">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/cloudera/bigdata/analysis/core/Memory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6756757">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/com/cloudera/bigdata/analysis/datagen/TextRecordGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8108108">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/com/cloudera/bigdata/analysis/datagen/RandomDateGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/transform/ExtensibleHBaseRowConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#765#766#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/transform/BenchMarkExtendedHBaseRowConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataload/src/main/java/com/cloudera/bigdata/analysis/dataload/transform/HBaseTableSpec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <element signature="e#1050#1070#0" expanded="false" />
+            <element signature="e#1977#1978#0" expanded="false" />
+            <element signature="e#2003#2004#0" expanded="false" />
+            <element signature="e#2041#2042#0" expanded="false" />
+            <element signature="e#2071#2072#0" expanded="false" />
+            <element signature="e#2108#2109#0" expanded="false" />
+            <element signature="e#2137#2138#0" expanded="false" />
+            <element signature="e#2185#2186#0" expanded="false" />
+            <element signature="e#2225#2226#0" expanded="false" />
+            <element signature="e#2525#2526#0" expanded="false" />
+            <element signature="e#2556#2557#0" expanded="false" />
+            <element signature="e#2593#2594#0" expanded="false" />
+            <element signature="e#2624#2625#0" expanded="false" />
+            <element signature="e#2797#2798#0" expanded="false" />
+            <element signature="e#2847#2848#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/index/protobuf/ProtoUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/query/QueryResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35135135">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hive/src/main/java/org/apache/hadoop/io/orc/OrcStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+          <folding>
+            <element signature="e#5953#5961#0" expanded="false" />
+            <element signature="e#7593#7623#0" expanded="false" />
+            <element signature="e#8776#8806#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0-cdh5.6.0/hbase-client-1.0.0-cdh5.6.0.jar!/org/apache/hadoop/hbase/filter/FilterBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hbase/hbase-client/1.0.0-cdh5.6.0/hbase-client-1.0.0-cdh5.6.0-sources.jar!/org/apache/hadoop/hbase/filter/FilterBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/cloudera/bigdata/analysis/index/search/IndexScanFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#974#989#0" expanded="false" />
+            <element signature="e#1709#1718#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/com/cloudera/bigdata/analysis/datagen/FieldGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solution/src/main/java/com/cloudera/bigdata/analysis/solution/y/CubeReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#1766#1781#0" expanded="false" />
+            <element signature="e#1791#2104#0" expanded="false" />
+            <element signature="e#2103#2104#0" expanded="false" />
+            <element signature="e#2106#2121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.5227273">
+          <caret line="124" column="27" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -50,26 +50,32 @@
             <artifactId>commons-logging</artifactId>
             <version>1.0.4</version>
         </dependency>
-        
+
         <dependency>
-            <groupId>commons-net</groupId>
-            <artifactId>commons-net</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        
-        <!-- hadoop-core-1.0.3-cdh.jar 不是开源的 -->
-        <dependency>
-            <groupId>com.cloudera.hadoop</groupId>
-            <artifactId>hadoop-core</artifactId>
-            <version>1.0.3</version>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-assembly</artifactId>
+            <version>1.0.0-cdh5.6.0</version>
 			<classifier>Cloudera</classifier>
         </dependency>
-        <!-- hbase-0.94.1-cdh.jar 不是开源的 -->
+
         <dependency>
-            <groupId>com.cloudera.hbase</groupId>
-            <artifactId>hbase</artifactId>
-            <version>0.94.1</version>
-			<classifier>Cloudera</classifier>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-common</artifactId>
+            <version>1.0.0-cdh5.6.0</version>
+            <classifier>Cloudera</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>1.0.0-cdh5.6.0</version>
+            <classifier>Cloudera</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.1</version>
         </dependency>
         
         <dependency>
@@ -143,32 +149,50 @@
             <version>r09</version>
         </dependency>
         
-        <!-- zookeeper-3.4.5-cdh.jar -->
+
         <dependency>
-            <groupId>com.cloudera.zookeeper</groupId>
+            <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.5</version>
+            <version>3.4.5-cdh5.6.0</version>
 			<classifier>Cloudera</classifier>
         </dependency>
         
-		<!-- sigar是fangpei那个 在中央仓库里面没有 -->
+		<!--  -->
         <dependency>
             <groupId>org.hyperic.sigar</groupId>
             <artifactId>sigar</artifactId>
             <version>1.6.5</version>
-        </dependency> 
-        
-        <!-- com.cloudera.hadoop.tool.jar -->
-        <dependency>
-            <groupId>com.cloudera.hadoop</groupId>
-            <artifactId>com.cloudera.hadoop.tool</artifactId>
-            <version>1.0</version>
         </dependency>
-        <!-- com.cloudera.hadoop.util.jar -->
+
         <dependency>
-            <groupId>com.cloudera.hadoop</groupId>
-            <artifactId>com.cloudera.hadoop.util</artifactId>
-            <version>1.0</version>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>2.6.0-mr1-cdh5.6.0</version>
+        </dependency>
+        
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-tools</artifactId>
+            <version>2.6.0-mr1-cdh5.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.6.0-cdh5.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>2.6.0-cdh5.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce</artifactId>
+            <version>2.6.0-cdh5.6.0</version>
         </dependency>
         
         <dependency>
@@ -183,11 +207,10 @@
             <version>4.5</version>
         </dependency>
         
-        <!-- hive-exec-0.11.0-cdh.jar -->
         <dependency>
-            <groupId>com.cloudera.hive</groupId>
+            <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
-            <version>0.11.0</version>
+            <version>1.1.0-cdh5.6.0</version>
 			<classifier>Cloudera</classifier>
         </dependency>
         
@@ -208,7 +231,7 @@
 	<repositories>
         <repository>
             <id>cloudera.hadoop</id>
-            <url>http://192.168.0.100:8081/nexus/content/repositories/cloudera.hadoop</url>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
         </repository>
         <repository>
             <id>central</id>
