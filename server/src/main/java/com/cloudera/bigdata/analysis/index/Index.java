@@ -255,7 +255,7 @@ public class Index {
       this.formatter = formatter;
     }
 
-    @Override
+
     public void write(DataOutput dataOutput) throws IOException {
       Bytes.writeByteArray(dataOutput, columnFamily.getBytes());
       Bytes.writeByteArray(dataOutput, qualifier.getBytes());
@@ -266,7 +266,7 @@ public class Index {
       WritableUtil.writeInstance(dataOutput, formatter);
     }
 
-    @Override
+
     public void readFields(DataInput dataInput) throws IOException {
       columnFamily = new ByteArray(Bytes.readByteArray(dataInput));
       qualifier = new ByteArray(Bytes.readByteArray(dataInput));

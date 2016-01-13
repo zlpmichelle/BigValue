@@ -54,12 +54,11 @@ public class RecordServiceEndpoint extends RecordService implements
     }
   }
 
-  @Override
   public Service getService() {
     return this;
   }
 
-  @Override
+
   public void start(CoprocessorEnvironment env) throws IOException {
     if (env instanceof RegionCoprocessorEnvironment) {
       this.env = (RegionCoprocessorEnvironment) env;
@@ -72,7 +71,7 @@ public class RecordServiceEndpoint extends RecordService implements
 
   }
 
-  @Override
+
   public void stop(CoprocessorEnvironment env) throws IOException {
     // Nothing to do
 
