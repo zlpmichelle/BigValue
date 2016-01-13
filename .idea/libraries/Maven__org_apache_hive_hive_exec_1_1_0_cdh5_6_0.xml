@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="Maven: org.apache.hive:hive-exec:Cloudera:1.1.0-cdh5.6.0">
+  <library name="Maven: org.apache.hive:hive-exec:1.1.0-cdh5.6.0">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/1.1.0-cdh5.6.0/hive-exec-1.1.0-cdh5.6.0-Cloudera.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/1.1.0-cdh5.6.0/hive-exec-1.1.0-cdh5.6.0.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/1.1.0-cdh5.6.0/hive-exec-1.1.0-cdh5.6.0-javadoc.jar!/" />
