@@ -22,7 +22,7 @@ public class HTableNew extends HTable {
   public <T extends Service> T coprocessorProxy(final Class<T> service,
       final byte[] row) {
     final RegionCoprocessorRpcChannel channel = new RegionCoprocessorRpcChannel(
-        connection, TableName.valueOf(getTableName()), row, null, null);
+        connection, TableName.valueOf(getTableName()), row);
     T instance = null;
     try {
       instance = ProtobufUtil.newServiceStub(service, channel);

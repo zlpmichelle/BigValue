@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.exceptions.DeserializationException;
+import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.filter.FilterBase;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hdfs.util.ByteArray;
@@ -112,6 +114,11 @@ public class IndexScanFilter extends FilterBase {
       i++;
     }
     return false;
+  }
+
+  @Override
+  public ReturnCode filterKeyValue(Cell v) throws IOException {
+    return null;
   }
 
   /*--------------------------------------------     Common Methods    ---------------------------------------------*/

@@ -4,53 +4,42 @@
 package com.cloudera.bigdata.analysis.index.protobuf.generated;
 
 public final class FilterProto {
-  private FilterProto() {
-  }
-
+  private FilterProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-
   public interface FulltableScanFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:FulltableScanFilter)
       com.google.protobuf.MessageOrBuilder {
 
-    // optional .Query query = 1;
     /**
      * <code>optional .Query query = 1;</code>
      */
     boolean hasQuery();
-
     /**
      * <code>optional .Query query = 1;</code>
      */
     com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query getQuery();
-
     /**
      * <code>optional .Query query = 1;</code>
      */
     com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder getQueryOrBuilder();
   }
-
   /**
    * Protobuf type {@code FulltableScanFilter}
    */
   public static final class FulltableScanFilter extends
       com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:FulltableScanFilter)
       FulltableScanFilterOrBuilder {
     // Use FulltableScanFilter.newBuilder() to construct.
-    private FulltableScanFilter(
-        com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private FulltableScanFilter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-
-    private FulltableScanFilter(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet
-          .getDefaultInstance();
-    }
+    private FulltableScanFilter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final FulltableScanFilter defaultInstance;
-
     public static FulltableScanFilter getDefaultInstance() {
       return defaultInstance;
     }
@@ -60,49 +49,47 @@ public final class FilterProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private FulltableScanFilter(com.google.protobuf.CodedInputStream input,
+    private FulltableScanFilter(
+        com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
-          .newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
           int tag = input.readTag();
           switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+            case 0:
               done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
-          case 10: {
-            com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder subBuilder = null;
-            if (((bitField0_ & 0x00000001) == 0x00000001)) {
-              subBuilder = query_.toBuilder();
+            case 10: {
+              com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = query_.toBuilder();
+              }
+              query_ = input.readMessage(com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(query_);
+                query_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
             }
-            query_ = input
-                .readMessage(
-                    com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.PARSER,
-                    extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(query_);
-              query_ = subBuilder.buildPartial();
-            }
-            bitField0_ |= 0x00000001;
-            break;
-          }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -115,19 +102,20 @@ public final class FilterProto {
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_FulltableScanFilter_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_FulltableScanFilter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.class,
-              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.Builder.class);
+              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<FulltableScanFilter> PARSER = new com.google.protobuf.AbstractParser<FulltableScanFilter>() {
+    public static com.google.protobuf.Parser<FulltableScanFilter> PARSER =
+        new com.google.protobuf.AbstractParser<FulltableScanFilter>() {
       public FulltableScanFilter parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -142,24 +130,20 @@ public final class FilterProto {
     }
 
     private int bitField0_;
-    // optional .Query query = 1;
     public static final int QUERY_FIELD_NUMBER = 1;
     private com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query query_;
-
     /**
      * <code>optional .Query query = 1;</code>
      */
     public boolean hasQuery() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
      * <code>optional .Query query = 1;</code>
      */
     public com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query getQuery() {
       return query_;
     }
-
     /**
      * <code>optional .Query query = 1;</code>
      */
@@ -168,23 +152,20 @@ public final class FilterProto {
     }
 
     private void initFields() {
-      query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-          .getDefaultInstance();
+      query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1)
-        return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(1, query_);
@@ -193,16 +174,14 @@ public final class FilterProto {
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
-      if (size != -1)
-        return size;
+      if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream.computeMessageSize(1,
-            query_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, query_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -210,7 +189,6 @@ public final class FilterProto {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
@@ -220,7 +198,7 @@ public final class FilterProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter)) {
         return super.equals(obj);
@@ -230,13 +208,13 @@ public final class FilterProto {
       boolean result = true;
       result = result && (hasQuery() == other.hasQuery());
       if (hasQuery()) {
-        result = result && getQuery().equals(other.getQuery());
+        result = result && getQuery()
+            .equals(other.getQuery());
       }
-      result = result && getUnknownFields().equals(other.getUnknownFields());
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
       return result;
     }
-
-    private int memoizedHashCode = 0;
 
     @java.lang.Override
     public int hashCode() {
@@ -259,54 +237,47 @@ public final class FilterProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -314,22 +285,12 @@ public final class FilterProto {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
@@ -337,42 +298,40 @@ public final class FilterProto {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code FulltableScanFilter}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:FulltableScanFilter)
         com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_FulltableScanFilter_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_FulltableScanFilter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.class,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.Builder.class);
+                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.Builder.class);
       }
 
-      // Construct using
-      // com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.newBuilder()
+      // Construct using com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getQueryFieldBuilder();
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
@@ -380,8 +339,7 @@ public final class FilterProto {
       public Builder clear() {
         super.clear();
         if (queryBuilder_ == null) {
-          query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-              .getDefaultInstance();
+          query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
         } else {
           queryBuilder_.clear();
         }
@@ -393,13 +351,13 @@ public final class FilterProto {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_FulltableScanFilter_descriptor;
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter getDefaultInstanceForType() {
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter
-            .getDefaultInstance();
+        return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.getDefaultInstance();
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter build() {
@@ -411,8 +369,7 @@ public final class FilterProto {
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter buildPartial() {
-        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter(
-            this);
+        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -430,18 +387,15 @@ public final class FilterProto {
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter) {
-          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter) other);
+          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter other) {
-        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter
-            .getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter other) {
+        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter.getDefaultInstance()) return this;
         if (other.hasQuery()) {
           mergeQuery(other.getQuery());
         }
@@ -453,15 +407,15 @@ public final class FilterProto {
         return true;
       }
 
-      public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter) e
-              .getUnfinishedMessage();
+          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.FulltableScanFilter) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -470,21 +424,17 @@ public final class FilterProto {
         }
         return this;
       }
-
       private int bitField0_;
 
-      // optional .Query query = 1;
-      private com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-          .getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder> queryBuilder_;
-
+      private com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder> queryBuilder_;
       /**
        * <code>optional .Query query = 1;</code>
        */
       public boolean hasQuery() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
@@ -495,12 +445,10 @@ public final class FilterProto {
           return queryBuilder_.getMessage();
         }
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
-      public Builder setQuery(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query value) {
+      public Builder setQuery(com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query value) {
         if (queryBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -513,7 +461,6 @@ public final class FilterProto {
         bitField0_ |= 0x00000001;
         return this;
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
@@ -528,18 +475,15 @@ public final class FilterProto {
         bitField0_ |= 0x00000001;
         return this;
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
-      public Builder mergeQuery(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query value) {
+      public Builder mergeQuery(com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query value) {
         if (queryBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)
-              && query_ != com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-                  .getDefaultInstance()) {
-            query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-                .newBuilder(query_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              query_ != com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance()) {
+            query_ =
+              com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.newBuilder(query_).mergeFrom(value).buildPartial();
           } else {
             query_ = value;
           }
@@ -550,14 +494,12 @@ public final class FilterProto {
         bitField0_ |= 0x00000001;
         return this;
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
       public Builder clearQuery() {
         if (queryBuilder_ == null) {
-          query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-              .getDefaultInstance();
+          query_ = com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
           onChanged();
         } else {
           queryBuilder_.clear();
@@ -565,7 +507,6 @@ public final class FilterProto {
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
@@ -574,7 +515,6 @@ public final class FilterProto {
         onChanged();
         return getQueryFieldBuilder().getBuilder();
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
@@ -585,14 +525,18 @@ public final class FilterProto {
           return query_;
         }
       }
-
       /**
        * <code>optional .Query query = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder> getQueryFieldBuilder() {
+      private com.google.protobuf.SingleFieldBuilder<
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder> 
+          getQueryFieldBuilder() {
         if (queryBuilder_ == null) {
-          queryBuilder_ = new com.google.protobuf.SingleFieldBuilder<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder>(
-              query_, getParentForChildren(), isClean());
+          queryBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.Builder, com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryOrBuilder>(
+                  getQuery(),
+                  getParentForChildren(),
+                  isClean());
           query_ = null;
         }
         return queryBuilder_;
@@ -610,39 +554,33 @@ public final class FilterProto {
   }
 
   public interface IndexScanFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:IndexScanFilter)
       com.google.protobuf.MessageOrBuilder {
 
-    // required bytes data = 1;
     /**
      * <code>required bytes data = 1;</code>
      */
     boolean hasData();
-
     /**
      * <code>required bytes data = 1;</code>
      */
     com.google.protobuf.ByteString getData();
   }
-
   /**
    * Protobuf type {@code IndexScanFilter}
    */
   public static final class IndexScanFilter extends
-      com.google.protobuf.GeneratedMessage implements IndexScanFilterOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:IndexScanFilter)
+      IndexScanFilterOrBuilder {
     // Use IndexScanFilter.newBuilder() to construct.
-    private IndexScanFilter(
-        com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private IndexScanFilter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-
-    private IndexScanFilter(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet
-          .getDefaultInstance();
-    }
+    private IndexScanFilter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final IndexScanFilter defaultInstance;
-
     public static IndexScanFilter getDefaultInstance() {
       return defaultInstance;
     }
@@ -652,38 +590,39 @@ public final class FilterProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private IndexScanFilter(com.google.protobuf.CodedInputStream input,
+    private IndexScanFilter(
+        com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
-          .newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
           int tag = input.readTag();
           switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+            case 0:
               done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
-          case 10: {
-            bitField0_ |= 0x00000001;
-            data_ = input.readBytes();
-            break;
-          }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              data_ = input.readBytes();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -696,19 +635,20 @@ public final class FilterProto {
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_IndexScanFilter_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_IndexScanFilter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.class,
-              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.Builder.class);
+              com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<IndexScanFilter> PARSER = new com.google.protobuf.AbstractParser<IndexScanFilter>() {
+    public static com.google.protobuf.Parser<IndexScanFilter> PARSER =
+        new com.google.protobuf.AbstractParser<IndexScanFilter>() {
       public IndexScanFilter parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -723,17 +663,14 @@ public final class FilterProto {
     }
 
     private int bitField0_;
-    // required bytes data = 1;
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
-
     /**
      * <code>required bytes data = 1;</code>
      */
     public boolean hasData() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
      * <code>required bytes data = 1;</code>
      */
@@ -744,13 +681,11 @@ public final class FilterProto {
     private void initFields() {
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1)
-        return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasData()) {
         memoizedIsInitialized = 0;
@@ -761,7 +696,7 @@ public final class FilterProto {
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, data_);
@@ -770,16 +705,14 @@ public final class FilterProto {
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
-      if (size != -1)
-        return size;
+      if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-            .computeBytesSize(1, data_);
+          .computeBytesSize(1, data_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -787,7 +720,6 @@ public final class FilterProto {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
@@ -797,7 +729,7 @@ public final class FilterProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter)) {
         return super.equals(obj);
@@ -807,13 +739,13 @@ public final class FilterProto {
       boolean result = true;
       result = result && (hasData() == other.hasData());
       if (hasData()) {
-        result = result && getData().equals(other.getData());
+        result = result && getData()
+            .equals(other.getData());
       }
-      result = result && getUnknownFields().equals(other.getUnknownFields());
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
       return result;
     }
-
-    private int memoizedHashCode = 0;
 
     @java.lang.Override
     public int hashCode() {
@@ -836,54 +768,47 @@ public final class FilterProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -891,22 +816,12 @@ public final class FilterProto {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
@@ -914,41 +829,39 @@ public final class FilterProto {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code IndexScanFilter}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:IndexScanFilter)
         com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_IndexScanFilter_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_IndexScanFilter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.class,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.Builder.class);
+                com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.Builder.class);
       }
 
-      // Construct using
-      // com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.newBuilder()
+      // Construct using com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
@@ -964,13 +877,13 @@ public final class FilterProto {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.internal_static_IndexScanFilter_descriptor;
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter getDefaultInstanceForType() {
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter
-            .getDefaultInstance();
+        return com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.getDefaultInstance();
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter build() {
@@ -982,8 +895,7 @@ public final class FilterProto {
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter buildPartial() {
-        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter(
-            this);
+        com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -997,18 +909,15 @@ public final class FilterProto {
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter) {
-          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter) other);
+          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter other) {
-        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter
-            .getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter other) {
+        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter.getDefaultInstance()) return this;
         if (other.hasData()) {
           setData(other.getData());
         }
@@ -1018,21 +927,21 @@ public final class FilterProto {
 
       public final boolean isInitialized() {
         if (!hasData()) {
-
+          
           return false;
         }
         return true;
       }
 
-      public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter) e
-              .getUnfinishedMessage();
+          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.FilterProto.IndexScanFilter) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1041,39 +950,33 @@ public final class FilterProto {
         }
         return this;
       }
-
       private int bitField0_;
 
-      // required bytes data = 1;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
-
       /**
        * <code>required bytes data = 1;</code>
        */
       public boolean hasData() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
        * <code>required bytes data = 1;</code>
        */
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
-
       /**
        * <code>required bytes data = 1;</code>
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         data_ = value;
         onChanged();
         return this;
       }
-
       /**
        * <code>required bytes data = 1;</code>
        */
@@ -1095,44 +998,57 @@ public final class FilterProto {
     // @@protoc_insertion_point(class_scope:IndexScanFilter)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor internal_static_FulltableScanFilter_descriptor;
-  private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_FulltableScanFilter_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor internal_static_IndexScanFilter_descriptor;
-  private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_IndexScanFilter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_FulltableScanFilter_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_FulltableScanFilter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_IndexScanFilter_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_IndexScanFilter_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+  private static com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
-    java.lang.String[] descriptorData = { "\n\014Filter.proto\032\017QueryType.proto\",\n\023Fullt"
-        + "ableScanFilter\022\025\n\005query\030\001 \001(\0132\006.Query\"\037\n"
-        + "\017IndexScanFilter\022\014\n\004data\030\001 \002(\014BJ\n3com.in"
-        + "tel.bigdata.analysis.index.protobuf.gene"
-        + "ratedB\013FilterProtoH\001\210\001\001\240\001\001" };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-      public com.google.protobuf.ExtensionRegistry assignDescriptors(
-          com.google.protobuf.Descriptors.FileDescriptor root) {
-        descriptor = root;
-        internal_static_FulltableScanFilter_descriptor = getDescriptor()
-            .getMessageTypes().get(0);
-        internal_static_FulltableScanFilter_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_FulltableScanFilter_descriptor,
-            new java.lang.String[] { "Query", });
-        internal_static_IndexScanFilter_descriptor = getDescriptor()
-            .getMessageTypes().get(1);
-        internal_static_IndexScanFilter_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_IndexScanFilter_descriptor,
-            new java.lang.String[] { "Data", });
-        return null;
-      }
+    java.lang.String[] descriptorData = {
+      "\n\014Filter.proto\032\017QueryType.proto\",\n\023Fullt" +
+      "ableScanFilter\022\025\n\005query\030\001 \001(\0132\006.Query\"\037\n" +
+      "\017IndexScanFilter\022\014\n\004data\030\001 \002(\014BM\n6com.cl" +
+      "oudera.bigdata.analysis.index.protobuf.g" +
+      "eneratedB\013FilterProtoH\001\210\001\001\240\001\001"
     };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
-        .internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] { com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto
-                .getDescriptor(), }, assigner);
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.getDescriptor(),
+        }, assigner);
+    internal_static_FulltableScanFilter_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_FulltableScanFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_FulltableScanFilter_descriptor,
+        new java.lang.String[] { "Query", });
+    internal_static_IndexScanFilter_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_IndexScanFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_IndexScanFilter_descriptor,
+        new java.lang.String[] { "Data", });
+    com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

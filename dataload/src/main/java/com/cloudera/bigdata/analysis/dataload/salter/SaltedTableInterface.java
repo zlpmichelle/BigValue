@@ -27,6 +27,7 @@ import org.apache.hadoop.hbase.client.RowMutations;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.coprocessor.Batch.Call;
 import org.apache.hadoop.hbase.client.coprocessor.Batch.Callback;
+import org.apache.hadoop.hbase.filter.CompareFilter;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
 //import org.apache.hadoop.hbase.ipc.CoprocessorProtocol;
 import org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel;
@@ -54,12 +55,11 @@ public class SaltedTableInterface implements HTableInterface {
     this.salter = salter;
   }
 
-  @Override
+
   public Result get(Get get) throws IOException {
     return unSalt(table.get(salt(get)));
   }
 
-  @Override
   public ResultScanner getScanner(Scan scan) throws IOException {
     return getScanner(scan, null);
   }
@@ -93,12 +93,11 @@ public class SaltedTableInterface implements HTableInterface {
     return null;
   }
 
-  @Override
   public void put(Put put) throws IOException {
     table.put(salt(put));
   }
 
-  @Override
+
   public void delete(Delete delete) throws IOException {
     table.delete(salt(delete));
   }
@@ -203,43 +202,47 @@ public class SaltedTableInterface implements HTableInterface {
     return this.table;
   }
 
-  @Override
+
   public byte[] getTableName() {
     return table.getTableName();
   }
 
-  @Override
+
   public Configuration getConfiguration() {
     return table.getConfiguration();
   }
 
-  @Override
+
   public HTableDescriptor getTableDescriptor() throws IOException {
     return table.getTableDescriptor();
   }
 
-  @Override
+
   public boolean isAutoFlush() {
     return table.isAutoFlush();
   }
 
-  @Override
+
   public void flushCommits() throws IOException {
     table.flushCommits();
   }
 
-  @Override
+
   public void close() throws IOException {
     table.close();
   }
 
-  @Override
+
   public boolean exists(Get get) throws IOException {
     Get newGet = salt(get);
     return table.exists(newGet);
   }
 
-  @Override
+  public boolean[] existsAll(List<Get> gets) throws IOException {
+    return new boolean[0];
+  }
+
+
   public Result[] get(List<Get> gets) throws IOException {
     if (null == gets || gets.size() == 0) {
       return null;
@@ -252,7 +255,7 @@ public class SaltedTableInterface implements HTableInterface {
     return result;
   }
 
-  @Override
+
   public void put(List<Put> puts) throws IOException {
     if (null == puts || puts.size() == 0) {
       return;
@@ -264,7 +267,6 @@ public class SaltedTableInterface implements HTableInterface {
     table.put(newPuts);
   }
 
-  @Override
   public void delete(List<Delete> deletes) throws IOException {
     if (null == deletes || deletes.size() == 0) {
       return;
@@ -276,7 +278,7 @@ public class SaltedTableInterface implements HTableInterface {
     table.delete(newDeletes);
   }
 
-  @Override
+
   public Result append(Append append) throws IOException {
     Result result = table.append(salt(append));
     return unSalt(result);
@@ -305,21 +307,21 @@ public class SaltedTableInterface implements HTableInterface {
   // table.unlockRow(rl);
   // }
 
-  @Override
+
   public Result getRowOrBefore(byte[] row, byte[] family) throws IOException {
     byte[] newRow = salter.salt(row);
     Result result = table.getRowOrBefore(newRow, family);
     return unSalt(result);
   }
 
-  @Override
+
   public ResultScanner getScanner(byte[] family) throws IOException {
     Scan scan = new Scan();
     scan.addFamily(family);
     return getScanner(scan);
   }
 
-  @Override
+
   public ResultScanner getScanner(byte[] family, byte[] qualifier)
       throws IOException {
     Scan scan = new Scan();
@@ -327,7 +329,7 @@ public class SaltedTableInterface implements HTableInterface {
     return getScanner(scan);
   }
 
-  @Override
+
   public boolean checkAndPut(byte[] row, byte[] family, byte[] qualifier,
       byte[] value, Put put) throws IOException {
     byte[] newRow = salter.salt(row);
@@ -335,7 +337,12 @@ public class SaltedTableInterface implements HTableInterface {
     return table.checkAndPut(newRow, family, qualifier, value, newPut);
   }
 
-  @Override
+  public boolean checkAndPut(byte[] row, byte[] family, byte[] qualifier,
+      CompareOp compareOp, byte[] value, Put put) throws IOException {
+    return false;
+  }
+
+
   public boolean checkAndDelete(byte[] row, byte[] family, byte[] qualifier,
       byte[] value, Delete delete) throws IOException {
     byte[] newRow = salter.salt(row);
@@ -343,20 +350,25 @@ public class SaltedTableInterface implements HTableInterface {
     return table.checkAndDelete(newRow, family, qualifier, value, newDelete);
   }
 
-  @Override
+  public boolean checkAndDelete(byte[] row, byte[] family, byte[] qualifier,
+      CompareOp compareOp, byte[] value, Delete delete) throws IOException {
+    return false;
+  }
+
+
   public void mutateRow(RowMutations rm) throws IOException {
     throw new UnsupportedOperationException(
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public long incrementColumnValue(byte[] row, byte[] family, byte[] qualifier,
       long amount) throws IOException {
     byte[] newRow = salter.salt(row);
     return table.incrementColumnValue(newRow, family, qualifier, amount);
   }
 
-  @Override
+
   public long incrementColumnValue(byte[] row, byte[] family, byte[] qualifier,
       long amount, boolean writeToWAL) throws IOException {
     byte[] newRow = salter.salt(row);
@@ -364,20 +376,20 @@ public class SaltedTableInterface implements HTableInterface {
         writeToWAL);
   }
 
-  @Override
+
   public Result increment(Increment increment) throws IOException {
     throw new UnsupportedOperationException(
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public void batch(List<? extends Row> actions, Object[] results)
       throws IOException, InterruptedException {
     throw new UnsupportedOperationException(
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public Object[] batch(List<? extends Row> actions) throws IOException,
       InterruptedException {
     throw new UnsupportedOperationException(
@@ -522,34 +534,34 @@ public class SaltedTableInterface implements HTableInterface {
   // }
   // }
 
-  @Override
+
   public void setAutoFlush(boolean autoFlush, boolean clearBufferOnFail) {
     table.setAutoFlush(autoFlush, clearBufferOnFail);
   }
 
-  @Override
+
   public void setWriteBufferSize(long writeBufferSize) throws IOException {
     table.setWriteBufferSize(writeBufferSize);
   }
 
-  @Override
+
   public long getWriteBufferSize() {
     return table.getWriteBufferSize();
   }
 
-  @Override
+
   public void setAutoFlush(boolean arg0) {
     table.setAutoFlush(arg0);
   }
 
-  @Override
+
   public <R> Object[] batchCallback(List<? extends Row> arg0, Callback<R> arg1)
       throws IOException, InterruptedException {
     throw new UnsupportedOperationException(
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public <R> void batchCallback(List<? extends Row> arg0, Object[] arg1,
       Callback<R> arg2) throws IOException, InterruptedException {
     throw new UnsupportedOperationException(
@@ -572,13 +584,13 @@ public class SaltedTableInterface implements HTableInterface {
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public CoprocessorRpcChannel coprocessorService(byte[] arg0) {
     throw new UnsupportedOperationException(
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public <T extends Service, R> Map<byte[], R> coprocessorService(
       Class<T> arg0, byte[] arg1, byte[] arg2, Call<T, R> arg3)
       throws ServiceException, Throwable {
@@ -586,7 +598,7 @@ public class SaltedTableInterface implements HTableInterface {
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public <T extends Service, R> void coprocessorService(Class<T> arg0,
       byte[] arg1, byte[] arg2, Call<T, R> arg3, Callback<R> arg4)
       throws ServiceException, Throwable {
@@ -594,7 +606,7 @@ public class SaltedTableInterface implements HTableInterface {
         "Please use getRawTable to get underlying table");
   }
 
-  @Override
+
   public Boolean[] exists(List<Get> gets) throws IOException {
     // TODO Auto-generated method stub
     Boolean[] ret = new Boolean[gets.size()];
@@ -604,12 +616,12 @@ public class SaltedTableInterface implements HTableInterface {
     return ret;
   }
 
-  @Override
+
   public TableName getName() {
     return table.getName();
   }
 
-  @Override
+
   public long incrementColumnValue(byte[] row, byte[] family, byte[] qualifier,
       long amount, Durability durability) throws IOException {
     byte[] newRow = salter.salt(row);
@@ -617,7 +629,7 @@ public class SaltedTableInterface implements HTableInterface {
         durability);
   }
 
-  @Override
+
   public void setAutoFlushTo(boolean arg0) {
     table.setAutoFlushTo(arg0);
   }

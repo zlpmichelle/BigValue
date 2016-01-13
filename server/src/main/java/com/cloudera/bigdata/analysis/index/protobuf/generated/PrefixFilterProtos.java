@@ -4,46 +4,38 @@
 package com.cloudera.bigdata.analysis.index.protobuf.generated;
 
 public final class PrefixFilterProtos {
-  private PrefixFilterProtos() {
-  }
-
+  private PrefixFilterProtos() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-
   public interface PrefixFilterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PrefixFilter)
       com.google.protobuf.MessageOrBuilder {
 
-    // optional bytes prefix = 1;
     /**
      * <code>optional bytes prefix = 1;</code>
      */
     boolean hasPrefix();
-
     /**
      * <code>optional bytes prefix = 1;</code>
      */
     com.google.protobuf.ByteString getPrefix();
   }
-
   /**
    * Protobuf type {@code PrefixFilter}
    */
   public static final class PrefixFilter extends
-      com.google.protobuf.GeneratedMessage implements PrefixFilterOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:PrefixFilter)
+      PrefixFilterOrBuilder {
     // Use PrefixFilter.newBuilder() to construct.
     private PrefixFilter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-
-    private PrefixFilter(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet
-          .getDefaultInstance();
-    }
+    private PrefixFilter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final PrefixFilter defaultInstance;
-
     public static PrefixFilter getDefaultInstance() {
       return defaultInstance;
     }
@@ -53,38 +45,39 @@ public final class PrefixFilterProtos {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private PrefixFilter(com.google.protobuf.CodedInputStream input,
+    private PrefixFilter(
+        com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
-          .newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
           int tag = input.readTag();
           switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+            case 0:
               done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
-          case 10: {
-            bitField0_ |= 0x00000001;
-            prefix_ = input.readBytes();
-            break;
-          }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              prefix_ = input.readBytes();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -97,19 +90,20 @@ public final class PrefixFilterProtos {
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.internal_static_PrefixFilter_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.internal_static_PrefixFilter_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.class,
-              com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.Builder.class);
+              com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<PrefixFilter> PARSER = new com.google.protobuf.AbstractParser<PrefixFilter>() {
+    public static com.google.protobuf.Parser<PrefixFilter> PARSER =
+        new com.google.protobuf.AbstractParser<PrefixFilter>() {
       public PrefixFilter parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -124,17 +118,14 @@ public final class PrefixFilterProtos {
     }
 
     private int bitField0_;
-    // optional bytes prefix = 1;
     public static final int PREFIX_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString prefix_;
-
     /**
      * <code>optional bytes prefix = 1;</code>
      */
     public boolean hasPrefix() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
      * <code>optional bytes prefix = 1;</code>
      */
@@ -145,20 +136,18 @@ public final class PrefixFilterProtos {
     private void initFields() {
       prefix_ = com.google.protobuf.ByteString.EMPTY;
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1)
-        return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, prefix_);
@@ -167,16 +156,14 @@ public final class PrefixFilterProtos {
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
-      if (size != -1)
-        return size;
+      if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream.computeBytesSize(1,
-            prefix_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, prefix_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -184,7 +171,6 @@ public final class PrefixFilterProtos {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
@@ -194,7 +180,7 @@ public final class PrefixFilterProtos {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter)) {
         return super.equals(obj);
@@ -204,13 +190,13 @@ public final class PrefixFilterProtos {
       boolean result = true;
       result = result && (hasPrefix() == other.hasPrefix());
       if (hasPrefix()) {
-        result = result && getPrefix().equals(other.getPrefix());
+        result = result && getPrefix()
+            .equals(other.getPrefix());
       }
-      result = result && getUnknownFields().equals(other.getUnknownFields());
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
       return result;
     }
-
-    private int memoizedHashCode = 0;
 
     @java.lang.Override
     public int hashCode() {
@@ -233,54 +219,47 @@ public final class PrefixFilterProtos {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -288,22 +267,12 @@ public final class PrefixFilterProtos {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
@@ -311,41 +280,39 @@ public final class PrefixFilterProtos {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code PrefixFilter}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PrefixFilter)
         com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.internal_static_PrefixFilter_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.internal_static_PrefixFilter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.class,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.Builder.class);
+                com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.class, com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.Builder.class);
       }
 
-      // Construct using
-      // com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.newBuilder()
+      // Construct using com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
@@ -361,13 +328,13 @@ public final class PrefixFilterProtos {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.internal_static_PrefixFilter_descriptor;
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter getDefaultInstanceForType() {
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter
-            .getDefaultInstance();
+        return com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.getDefaultInstance();
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter build() {
@@ -379,8 +346,7 @@ public final class PrefixFilterProtos {
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter buildPartial() {
-        com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter(
-            this);
+        com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter result = new com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -394,18 +360,15 @@ public final class PrefixFilterProtos {
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter) {
-          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter) other);
+          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter other) {
-        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter
-            .getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter other) {
+        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter.getDefaultInstance()) return this;
         if (other.hasPrefix()) {
           setPrefix(other.getPrefix());
         }
@@ -417,15 +380,15 @@ public final class PrefixFilterProtos {
         return true;
       }
 
-      public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter) e
-              .getUnfinishedMessage();
+          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos.PrefixFilter) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -434,39 +397,33 @@ public final class PrefixFilterProtos {
         }
         return this;
       }
-
       private int bitField0_;
 
-      // optional bytes prefix = 1;
       private com.google.protobuf.ByteString prefix_ = com.google.protobuf.ByteString.EMPTY;
-
       /**
        * <code>optional bytes prefix = 1;</code>
        */
       public boolean hasPrefix() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
        * <code>optional bytes prefix = 1;</code>
        */
       public com.google.protobuf.ByteString getPrefix() {
         return prefix_;
       }
-
       /**
        * <code>optional bytes prefix = 1;</code>
        */
       public Builder setPrefix(com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         prefix_ = value;
         onChanged();
         return this;
       }
-
       /**
        * <code>optional bytes prefix = 1;</code>
        */
@@ -488,34 +445,43 @@ public final class PrefixFilterProtos {
     // @@protoc_insertion_point(class_scope:PrefixFilter)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor internal_static_PrefixFilter_descriptor;
-  private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_PrefixFilter_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PrefixFilter_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_PrefixFilter_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+  private static com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
-    java.lang.String[] descriptorData = { "\n\022PrefixFilter.proto\"\036\n\014PrefixFilter\022\016\n\006"
-        + "prefix\030\001 \001(\014BQ\n3com.cloudera.bigdata.analys"
-        + "is.index.protobuf.generatedB\022PrefixFilte"
-        + "rProtosH\001\210\001\001\240\001\001" };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-      public com.google.protobuf.ExtensionRegistry assignDescriptors(
-          com.google.protobuf.Descriptors.FileDescriptor root) {
-        descriptor = root;
-        internal_static_PrefixFilter_descriptor = getDescriptor()
-            .getMessageTypes().get(0);
-        internal_static_PrefixFilter_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_PrefixFilter_descriptor,
-            new java.lang.String[] { "Prefix", });
-        return null;
-      }
+    java.lang.String[] descriptorData = {
+      "\n\022PrefixFilter.proto\"\036\n\014PrefixFilter\022\016\n\006" +
+      "prefix\030\001 \001(\014BT\n6com.cloudera.bigdata.ana" +
+      "lysis.index.protobuf.generatedB\022PrefixFi" +
+      "lterProtosH\001\210\001\001\240\001\001"
     };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
-        .internalBuildGeneratedFileFrom(descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        }, assigner);
+    internal_static_PrefixFilter_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_PrefixFilter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_PrefixFilter_descriptor,
+        new java.lang.String[] { "Prefix", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

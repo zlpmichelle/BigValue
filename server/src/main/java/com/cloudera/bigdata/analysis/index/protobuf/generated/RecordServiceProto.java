@@ -4,47 +4,38 @@
 package com.cloudera.bigdata.analysis.index.protobuf.generated;
 
 public final class RecordServiceProto {
-  private RecordServiceProto() {
-  }
-
+  private RecordServiceProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-
   public interface RefreshRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RefreshRequest)
       com.google.protobuf.MessageOrBuilder {
 
-    // optional bytes tableName = 1;
     /**
      * <code>optional bytes tableName = 1;</code>
      */
     boolean hasTableName();
-
     /**
      * <code>optional bytes tableName = 1;</code>
      */
     com.google.protobuf.ByteString getTableName();
   }
-
   /**
    * Protobuf type {@code RefreshRequest}
    */
   public static final class RefreshRequest extends
-      com.google.protobuf.GeneratedMessage implements RefreshRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:RefreshRequest)
+      RefreshRequestOrBuilder {
     // Use RefreshRequest.newBuilder() to construct.
-    private RefreshRequest(
-        com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private RefreshRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-
-    private RefreshRequest(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet
-          .getDefaultInstance();
-    }
+    private RefreshRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final RefreshRequest defaultInstance;
-
     public static RefreshRequest getDefaultInstance() {
       return defaultInstance;
     }
@@ -54,38 +45,39 @@ public final class RecordServiceProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private RefreshRequest(com.google.protobuf.CodedInputStream input,
+    private RefreshRequest(
+        com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
-          .newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
           int tag = input.readTag();
           switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+            case 0:
               done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
-          case 10: {
-            bitField0_ |= 0x00000001;
-            tableName_ = input.readBytes();
-            break;
-          }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              tableName_ = input.readBytes();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -98,19 +90,20 @@ public final class RecordServiceProto {
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.class,
-              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.Builder.class);
+              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.class, com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<RefreshRequest> PARSER = new com.google.protobuf.AbstractParser<RefreshRequest>() {
+    public static com.google.protobuf.Parser<RefreshRequest> PARSER =
+        new com.google.protobuf.AbstractParser<RefreshRequest>() {
       public RefreshRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -125,17 +118,14 @@ public final class RecordServiceProto {
     }
 
     private int bitField0_;
-    // optional bytes tableName = 1;
     public static final int TABLENAME_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString tableName_;
-
     /**
      * <code>optional bytes tableName = 1;</code>
      */
     public boolean hasTableName() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
      * <code>optional bytes tableName = 1;</code>
      */
@@ -146,20 +136,18 @@ public final class RecordServiceProto {
     private void initFields() {
       tableName_ = com.google.protobuf.ByteString.EMPTY;
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1)
-        return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, tableName_);
@@ -168,16 +156,14 @@ public final class RecordServiceProto {
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
-      if (size != -1)
-        return size;
+      if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream.computeBytesSize(1,
-            tableName_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, tableName_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -185,7 +171,6 @@ public final class RecordServiceProto {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
@@ -195,7 +180,7 @@ public final class RecordServiceProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest)) {
         return super.equals(obj);
@@ -205,13 +190,13 @@ public final class RecordServiceProto {
       boolean result = true;
       result = result && (hasTableName() == other.hasTableName());
       if (hasTableName()) {
-        result = result && getTableName().equals(other.getTableName());
+        result = result && getTableName()
+            .equals(other.getTableName());
       }
-      result = result && getUnknownFields().equals(other.getUnknownFields());
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
       return result;
     }
-
-    private int memoizedHashCode = 0;
 
     @java.lang.Override
     public int hashCode() {
@@ -234,54 +219,47 @@ public final class RecordServiceProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -289,22 +267,12 @@ public final class RecordServiceProto {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
@@ -312,41 +280,39 @@ public final class RecordServiceProto {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code RefreshRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:RefreshRequest)
         com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshRequest_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.class,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.Builder.class);
+                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.class, com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.Builder.class);
       }
 
-      // Construct using
-      // com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.newBuilder()
+      // Construct using com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
@@ -362,13 +328,13 @@ public final class RecordServiceProto {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshRequest_descriptor;
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest getDefaultInstanceForType() {
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest
-            .getDefaultInstance();
+        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.getDefaultInstance();
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest build() {
@@ -380,8 +346,7 @@ public final class RecordServiceProto {
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest buildPartial() {
-        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest result = new com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest(
-            this);
+        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest result = new com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -395,18 +360,15 @@ public final class RecordServiceProto {
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) {
-          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) other);
+          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest other) {
-        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest
-            .getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest other) {
+        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.getDefaultInstance()) return this;
         if (other.hasTableName()) {
           setTableName(other.getTableName());
         }
@@ -418,15 +380,15 @@ public final class RecordServiceProto {
         return true;
       }
 
-      public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) e
-              .getUnfinishedMessage();
+          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -435,39 +397,33 @@ public final class RecordServiceProto {
         }
         return this;
       }
-
       private int bitField0_;
 
-      // optional bytes tableName = 1;
       private com.google.protobuf.ByteString tableName_ = com.google.protobuf.ByteString.EMPTY;
-
       /**
        * <code>optional bytes tableName = 1;</code>
        */
       public boolean hasTableName() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
        * <code>optional bytes tableName = 1;</code>
        */
       public com.google.protobuf.ByteString getTableName() {
         return tableName_;
       }
-
       /**
        * <code>optional bytes tableName = 1;</code>
        */
       public Builder setTableName(com.google.protobuf.ByteString value) {
         if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
         tableName_ = value;
         onChanged();
         return this;
       }
-
       /**
        * <code>optional bytes tableName = 1;</code>
        */
@@ -490,39 +446,33 @@ public final class RecordServiceProto {
   }
 
   public interface RefreshResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:RefreshResponse)
       com.google.protobuf.MessageOrBuilder {
 
-    // optional int32 indexMapSize = 1;
     /**
      * <code>optional int32 indexMapSize = 1;</code>
      */
     boolean hasIndexMapSize();
-
     /**
      * <code>optional int32 indexMapSize = 1;</code>
      */
     int getIndexMapSize();
   }
-
   /**
    * Protobuf type {@code RefreshResponse}
    */
   public static final class RefreshResponse extends
-      com.google.protobuf.GeneratedMessage implements RefreshResponseOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:RefreshResponse)
+      RefreshResponseOrBuilder {
     // Use RefreshResponse.newBuilder() to construct.
-    private RefreshResponse(
-        com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private RefreshResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-
-    private RefreshResponse(boolean noInit) {
-      this.unknownFields = com.google.protobuf.UnknownFieldSet
-          .getDefaultInstance();
-    }
+    private RefreshResponse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final RefreshResponse defaultInstance;
-
     public static RefreshResponse getDefaultInstance() {
       return defaultInstance;
     }
@@ -532,38 +482,39 @@ public final class RecordServiceProto {
     }
 
     private final com.google.protobuf.UnknownFieldSet unknownFields;
-
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
       return this.unknownFields;
     }
-
-    private RefreshResponse(com.google.protobuf.CodedInputStream input,
+    private RefreshResponse(
+        com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
-          .newBuilder();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
           int tag = input.readTag();
           switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+            case 0:
               done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
             }
-            break;
-          }
-          case 8: {
-            bitField0_ |= 0x00000001;
-            indexMapSize_ = input.readInt32();
-            break;
-          }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              indexMapSize_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -576,19 +527,20 @@ public final class RecordServiceProto {
         makeExtensionsImmutable();
       }
     }
-
-    public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshResponse_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
       return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class,
-              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.Builder.class);
+              com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class, com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<RefreshResponse> PARSER = new com.google.protobuf.AbstractParser<RefreshResponse>() {
+    public static com.google.protobuf.Parser<RefreshResponse> PARSER =
+        new com.google.protobuf.AbstractParser<RefreshResponse>() {
       public RefreshResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -603,17 +555,14 @@ public final class RecordServiceProto {
     }
 
     private int bitField0_;
-    // optional int32 indexMapSize = 1;
     public static final int INDEXMAPSIZE_FIELD_NUMBER = 1;
     private int indexMapSize_;
-
     /**
      * <code>optional int32 indexMapSize = 1;</code>
      */
     public boolean hasIndexMapSize() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-
     /**
      * <code>optional int32 indexMapSize = 1;</code>
      */
@@ -624,20 +573,18 @@ public final class RecordServiceProto {
     private void initFields() {
       indexMapSize_ = 0;
     }
-
     private byte memoizedIsInitialized = -1;
-
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1)
-        return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
     }
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeInt32(1, indexMapSize_);
@@ -646,16 +593,14 @@ public final class RecordServiceProto {
     }
 
     private int memoizedSerializedSize = -1;
-
     public int getSerializedSize() {
       int size = memoizedSerializedSize;
-      if (size != -1)
-        return size;
+      if (size != -1) return size;
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream.computeInt32Size(1,
-            indexMapSize_);
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, indexMapSize_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -663,7 +608,6 @@ public final class RecordServiceProto {
     }
 
     private static final long serialVersionUID = 0L;
-
     @java.lang.Override
     protected java.lang.Object writeReplace()
         throws java.io.ObjectStreamException {
@@ -673,7 +617,7 @@ public final class RecordServiceProto {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
       if (!(obj instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse)) {
         return super.equals(obj);
@@ -683,13 +627,13 @@ public final class RecordServiceProto {
       boolean result = true;
       result = result && (hasIndexMapSize() == other.hasIndexMapSize());
       if (hasIndexMapSize()) {
-        result = result && (getIndexMapSize() == other.getIndexMapSize());
+        result = result && (getIndexMapSize()
+            == other.getIndexMapSize());
       }
-      result = result && getUnknownFields().equals(other.getUnknownFields());
+      result = result &&
+          getUnknownFields().equals(other.getUnknownFields());
       return result;
     }
-
-    private int memoizedHashCode = 0;
 
     @java.lang.Override
     public int hashCode() {
@@ -712,54 +656,47 @@ public final class RecordServiceProto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
-        byte[] data) throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
-        byte[] data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-
-    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseDelimitedFrom(
-        java.io.InputStream input) throws java.io.IOException {
+    public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
-        com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-
     public static com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -767,22 +704,12 @@ public final class RecordServiceProto {
       return PARSER.parseFrom(input, extensionRegistry);
     }
 
-    public static Builder newBuilder() {
-      return Builder.create();
-    }
-
-    public Builder newBuilderForType() {
-      return newBuilder();
-    }
-
-    public static Builder newBuilder(
-        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse prototype) {
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse prototype) {
       return newBuilder().mergeFrom(prototype);
     }
-
-    public Builder toBuilder() {
-      return newBuilder(this);
-    }
+    public Builder toBuilder() { return newBuilder(this); }
 
     @java.lang.Override
     protected Builder newBuilderForType(
@@ -790,41 +717,39 @@ public final class RecordServiceProto {
       Builder builder = new Builder(parent);
       return builder;
     }
-
     /**
      * Protobuf type {@code RefreshResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-        implements
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:RefreshResponse)
         com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshResponse_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.Builder.class);
+                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class, com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.Builder.class);
       }
 
-      // Construct using
-      // com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.newBuilder()
+      // Construct using com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
-
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
-
       private static Builder create() {
         return new Builder();
       }
@@ -840,13 +765,13 @@ public final class RecordServiceProto {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
         return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.internal_static_RefreshResponse_descriptor;
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse getDefaultInstanceForType() {
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-            .getDefaultInstance();
+        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance();
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse build() {
@@ -858,8 +783,7 @@ public final class RecordServiceProto {
       }
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse buildPartial() {
-        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse result = new com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse(
-            this);
+        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse result = new com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -873,18 +797,15 @@ public final class RecordServiceProto {
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) {
-          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) other);
+          return mergeFrom((com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(
-          com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse other) {
-        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-            .getDefaultInstance())
-          return this;
+      public Builder mergeFrom(com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse other) {
+        if (other == com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance()) return this;
         if (other.hasIndexMapSize()) {
           setIndexMapSize(other.getIndexMapSize());
         }
@@ -896,15 +817,15 @@ public final class RecordServiceProto {
         return true;
       }
 
-      public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) e
-              .getUnfinishedMessage();
+          parsedMessage = (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -913,26 +834,21 @@ public final class RecordServiceProto {
         }
         return this;
       }
-
       private int bitField0_;
 
-      // optional int32 indexMapSize = 1;
-      private int indexMapSize_;
-
+      private int indexMapSize_ ;
       /**
        * <code>optional int32 indexMapSize = 1;</code>
        */
       public boolean hasIndexMapSize() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-
       /**
        * <code>optional int32 indexMapSize = 1;</code>
        */
       public int getIndexMapSize() {
         return indexMapSize_;
       }
-
       /**
        * <code>optional int32 indexMapSize = 1;</code>
        */
@@ -942,7 +858,6 @@ public final class RecordServiceProto {
         onChanged();
         return this;
       }
-
       /**
        * <code>optional int32 indexMapSize = 1;</code>
        */
@@ -967,10 +882,9 @@ public final class RecordServiceProto {
   /**
    * Protobuf service {@code RecordService}
    */
-  public static abstract class RecordService implements
-      com.google.protobuf.Service {
-    protected RecordService() {
-    }
+  public static abstract class RecordService
+      implements com.google.protobuf.Service {
+    protected RecordService() {}
 
     public interface Interface {
       /**
@@ -995,7 +909,7 @@ public final class RecordServiceProto {
         final Interface impl) {
       return new RecordService() {
         @java.lang.Override
-        public void query(
+        public  void query(
             com.google.protobuf.RpcController controller,
             com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query request,
             com.google.protobuf.RpcCallback<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult> done) {
@@ -1003,7 +917,7 @@ public final class RecordServiceProto {
         }
 
         @java.lang.Override
-        public void refreshIndexMap(
+        public  void refreshIndexMap(
             com.google.protobuf.RpcController controller,
             com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest request,
             com.google.protobuf.RpcCallback<com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse> done) {
@@ -1013,10 +927,11 @@ public final class RecordServiceProto {
       };
     }
 
-    public static com.google.protobuf.BlockingService newReflectiveBlockingService(
-        final BlockingInterface impl) {
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
       return new com.google.protobuf.BlockingService() {
-        public final com.google.protobuf.Descriptors.ServiceDescriptor getDescriptorForType() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
           return getDescriptor();
         }
 
@@ -1027,60 +942,52 @@ public final class RecordServiceProto {
             throws com.google.protobuf.ServiceException {
           if (method.getService() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
-                "Service.callBlockingMethod() given method descriptor for "
-                    + "wrong service type.");
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
           }
-          switch (method.getIndex()) {
-          case 0:
-            return impl
-                .query(
-                    controller,
-                    (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query) request);
-          case 1:
-            return impl
-                .refreshIndexMap(
-                    controller,
-                    (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) request);
-          default:
-            throw new java.lang.AssertionError("Can't get here.");
+          switch(method.getIndex()) {
+            case 0:
+              return impl.query(controller, (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query)request);
+            case 1:
+              return impl.refreshIndexMap(controller, (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
           }
         }
 
-        public final com.google.protobuf.Message getRequestPrototype(
+        public final com.google.protobuf.Message
+            getRequestPrototype(
             com.google.protobuf.Descriptors.MethodDescriptor method) {
           if (method.getService() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
-                "Service.getRequestPrototype() given method "
-                    + "descriptor for wrong service type.");
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
           }
-          switch (method.getIndex()) {
-          case 0:
-            return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-                .getDefaultInstance();
-          case 1:
-            return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest
-                .getDefaultInstance();
-          default:
-            throw new java.lang.AssertionError("Can't get here.");
+          switch(method.getIndex()) {
+            case 0:
+              return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
+            case 1:
+              return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
           }
         }
 
-        public final com.google.protobuf.Message getResponsePrototype(
+        public final com.google.protobuf.Message
+            getResponsePrototype(
             com.google.protobuf.Descriptors.MethodDescriptor method) {
           if (method.getService() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
-                "Service.getResponsePrototype() given method "
-                    + "descriptor for wrong service type.");
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
           }
-          switch (method.getIndex()) {
-          case 0:
-            return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult
-                .getDefaultInstance();
-          case 1:
-            return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-                .getDefaultInstance();
-          default:
-            throw new java.lang.AssertionError("Can't get here.");
+          switch(method.getIndex()) {
+            case 0:
+              return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.getDefaultInstance();
+            case 1:
+              return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
           }
         }
 
@@ -1103,12 +1010,13 @@ public final class RecordServiceProto {
         com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest request,
         com.google.protobuf.RpcCallback<com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse> done);
 
-    public static final com.google.protobuf.Descriptors.ServiceDescriptor getDescriptor() {
-      return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto
-          .getDescriptor().getServices().get(0);
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.getDescriptor().getServices().get(0);
     }
-
-    public final com.google.protobuf.Descriptors.ServiceDescriptor getDescriptorForType() {
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
       return getDescriptor();
     }
 
@@ -1116,78 +1024,71 @@ public final class RecordServiceProto {
         com.google.protobuf.Descriptors.MethodDescriptor method,
         com.google.protobuf.RpcController controller,
         com.google.protobuf.Message request,
-        com.google.protobuf.RpcCallback<com.google.protobuf.Message> done) {
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
       if (method.getService() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
-            "Service.callMethod() given method descriptor for wrong "
-                + "service type.");
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
       }
-      switch (method.getIndex()) {
-      case 0:
-        this.query(
-            controller,
-            (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query) request,
-            com.google.protobuf.RpcUtil
-                .<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult> specializeCallback(done));
-        return;
-      case 1:
-        this.refreshIndexMap(
-            controller,
-            (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest) request,
-            com.google.protobuf.RpcUtil
-                .<com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse> specializeCallback(done));
-        return;
-      default:
-        throw new java.lang.AssertionError("Can't get here.");
+      switch(method.getIndex()) {
+        case 0:
+          this.query(controller, (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query)request,
+            com.google.protobuf.RpcUtil.<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult>specializeCallback(
+              done));
+          return;
+        case 1:
+          this.refreshIndexMap(controller, (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest)request,
+            com.google.protobuf.RpcUtil.<com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
       }
     }
 
-    public final com.google.protobuf.Message getRequestPrototype(
+    public final com.google.protobuf.Message
+        getRequestPrototype(
         com.google.protobuf.Descriptors.MethodDescriptor method) {
       if (method.getService() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
-            "Service.getRequestPrototype() given method "
-                + "descriptor for wrong service type.");
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
       }
-      switch (method.getIndex()) {
-      case 0:
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query
-            .getDefaultInstance();
-      case 1:
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest
-            .getDefaultInstance();
-      default:
-        throw new java.lang.AssertionError("Can't get here.");
+      switch(method.getIndex()) {
+        case 0:
+          return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query.getDefaultInstance();
+        case 1:
+          return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
       }
     }
 
-    public final com.google.protobuf.Message getResponsePrototype(
+    public final com.google.protobuf.Message
+        getResponsePrototype(
         com.google.protobuf.Descriptors.MethodDescriptor method) {
       if (method.getService() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
-            "Service.getResponsePrototype() given method "
-                + "descriptor for wrong service type.");
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
       }
-      switch (method.getIndex()) {
-      case 0:
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult
-            .getDefaultInstance();
-      case 1:
-        return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-            .getDefaultInstance();
-      default:
-        throw new java.lang.AssertionError("Can't get here.");
+      switch(method.getIndex()) {
+        case 0:
+          return com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.getDefaultInstance();
+        case 1:
+          return com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
       }
     }
 
-    public static Stub newStub(com.google.protobuf.RpcChannel channel) {
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
       return new Stub(channel);
     }
 
-    public static final class Stub
-        extends
-        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RecordService
-        implements Interface {
+    public static final class Stub extends com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RecordService implements Interface {
       private Stub(com.google.protobuf.RpcChannel channel) {
         this.channel = channel;
       }
@@ -1198,42 +1099,34 @@ public final class RecordServiceProto {
         return channel;
       }
 
-      public void query(
+      public  void query(
           com.google.protobuf.RpcController controller,
           com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query request,
           com.google.protobuf.RpcCallback<com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult> done) {
-        channel
-            .callMethod(
-                getDescriptor().getMethods().get(0),
-                controller,
-                request,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult
-                    .getDefaultInstance(),
-                com.google.protobuf.RpcUtil
-                    .generalizeCallback(
-                        done,
-                        com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.class,
-                        com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult
-                            .getDefaultInstance()));
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.class,
+            com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.getDefaultInstance()));
       }
 
-      public void refreshIndexMap(
+      public  void refreshIndexMap(
           com.google.protobuf.RpcController controller,
           com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest request,
           com.google.protobuf.RpcCallback<com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse> done) {
-        channel
-            .callMethod(
-                getDescriptor().getMethods().get(1),
-                controller,
-                request,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-                    .getDefaultInstance(),
-                com.google.protobuf.RpcUtil
-                    .generalizeCallback(
-                        done,
-                        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class,
-                        com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-                            .getDefaultInstance()));
+        channel.callMethod(
+          getDescriptor().getMethods().get(1),
+          controller,
+          request,
+          com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.class,
+            com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance()));
       }
     }
 
@@ -1265,26 +1158,23 @@ public final class RecordServiceProto {
           com.google.protobuf.RpcController controller,
           com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.Query request)
           throws com.google.protobuf.ServiceException {
-        return (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult) channel
-            .callBlockingMethod(
-                getDescriptor().getMethods().get(0),
-                controller,
-                request,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult
-                    .getDefaultInstance());
+        return (com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.QueryResult.getDefaultInstance());
       }
+
 
       public com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse refreshIndexMap(
           com.google.protobuf.RpcController controller,
           com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshRequest request)
           throws com.google.protobuf.ServiceException {
-        return (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) channel
-            .callBlockingMethod(
-                getDescriptor().getMethods().get(1),
-                controller,
-                request,
-                com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse
-                    .getDefaultInstance());
+        return (com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(1),
+          controller,
+          request,
+          com.cloudera.bigdata.analysis.index.protobuf.generated.RecordServiceProto.RefreshResponse.getDefaultInstance());
       }
 
     }
@@ -1292,47 +1182,60 @@ public final class RecordServiceProto {
     // @@protoc_insertion_point(class_scope:RecordService)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor internal_static_RefreshRequest_descriptor;
-  private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_RefreshRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor internal_static_RefreshResponse_descriptor;
-  private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_RefreshResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RefreshRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_RefreshRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_RefreshResponse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_RefreshResponse_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+  public static com.google.protobuf.Descriptors.FileDescriptor
+      getDescriptor() {
     return descriptor;
   }
-
-  private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+  private static com.google.protobuf.Descriptors.FileDescriptor
+      descriptor;
   static {
-    java.lang.String[] descriptorData = { "\n\023RecordService.proto\032\017QueryType.proto\"#"
-        + "\n\016RefreshRequest\022\021\n\ttableName\030\001 \001(\014\"\'\n\017R"
-        + "efreshResponse\022\024\n\014indexMapSize\030\001 \001(\0052d\n\r"
-        + "RecordService\022\035\n\005query\022\006.Query\032\014.QueryRe"
-        + "sult\0224\n\017refreshIndexMap\022\017.RefreshRequest"
-        + "\032\020.RefreshResponseBQ\n3com.cloudera.bigdata."
-        + "analysis.index.protobuf.generatedB\022Recor"
-        + "dServiceProtoH\001\210\001\001\240\001\001" };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-      public com.google.protobuf.ExtensionRegistry assignDescriptors(
-          com.google.protobuf.Descriptors.FileDescriptor root) {
-        descriptor = root;
-        internal_static_RefreshRequest_descriptor = getDescriptor()
-            .getMessageTypes().get(0);
-        internal_static_RefreshRequest_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_RefreshRequest_descriptor,
-            new java.lang.String[] { "TableName", });
-        internal_static_RefreshResponse_descriptor = getDescriptor()
-            .getMessageTypes().get(1);
-        internal_static_RefreshResponse_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-            internal_static_RefreshResponse_descriptor,
-            new java.lang.String[] { "IndexMapSize", });
-        return null;
-      }
+    java.lang.String[] descriptorData = {
+      "\n\023RecordService.proto\032\017QueryType.proto\"#" +
+      "\n\016RefreshRequest\022\021\n\ttableName\030\001 \001(\014\"\'\n\017R" +
+      "efreshResponse\022\024\n\014indexMapSize\030\001 \001(\0052d\n\r" +
+      "RecordService\022\035\n\005query\022\006.Query\032\014.QueryRe" +
+      "sult\0224\n\017refreshIndexMap\022\017.RefreshRequest" +
+      "\032\020.RefreshResponseBT\n6com.cloudera.bigda" +
+      "ta.analysis.index.protobuf.generatedB\022Re" +
+      "cordServiceProtoH\001\210\001\001\240\001\001"
     };
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
-        .internalBuildGeneratedFileFrom(
-            descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] { com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto
-                .getDescriptor(), }, assigner);
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.getDescriptor(),
+        }, assigner);
+    internal_static_RefreshRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_RefreshRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_RefreshRequest_descriptor,
+        new java.lang.String[] { "TableName", });
+    internal_static_RefreshResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_RefreshResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_RefreshResponse_descriptor,
+        new java.lang.String[] { "IndexMapSize", });
+    com.cloudera.bigdata.analysis.index.protobuf.generated.QueryTypeProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

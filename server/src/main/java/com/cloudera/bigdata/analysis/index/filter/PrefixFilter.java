@@ -1,11 +1,15 @@
 package com.cloudera.bigdata.analysis.index.filter;
 
+import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.exceptions.DeserializationException;
+import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.filter.FilterBase;
 
 import com.cloudera.bigdata.analysis.index.protobuf.generated.PrefixFilterProtos;
 import com.google.protobuf.HBaseZeroCopyByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
+
+import java.io.IOException;
 
 public class PrefixFilter extends FilterBase {
 
@@ -13,6 +17,11 @@ public class PrefixFilter extends FilterBase {
 
   public PrefixFilter(final byte[] prefix) {
     this.prefix = prefix;
+  }
+
+  @Override
+  public ReturnCode filterKeyValue(Cell cell) throws IOException {
+    return null;
   }
 
   /**

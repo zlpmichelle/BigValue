@@ -21,7 +21,7 @@ BUILD
 Apache-ANT:
   You should have jdk and apache-ant installed
   ant -Dcdh.version=<version> package
-      version can be 2.5.1 or 3.1
+      version can be 5.6
 
 Maven
   You should have jdk and maven installed in build machine.
