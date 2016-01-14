@@ -98,7 +98,6 @@ class RecordReaderImpl implements RecordReader {
       this.entry = entry;
     }
 
-    @Override
     public long getNext() {
       return entry.getPositions(index++);
     }
@@ -1161,12 +1160,10 @@ class RecordReaderImpl implements RecordReader {
     }
   }
 
-  @Override
   public boolean hasNext() throws IOException {
     return rowInStripe < rowCountInStripe || currentStripe < stripes.size() - 1;
   }
 
-  @Override
   public Object next(Object previous) throws IOException {
     if (rowInStripe >= rowCountInStripe) {
       currentStripe += 1;
@@ -1176,12 +1173,10 @@ class RecordReaderImpl implements RecordReader {
     return reader.next(previous);
   }
 
-  @Override
   public void close() throws IOException {
     file.close();
   }
 
-  @Override
   public long getRowNumber() {
     return rowInStripe + rowBaseInStripe + firstRow;
   }
@@ -1192,7 +1187,6 @@ class RecordReaderImpl implements RecordReader {
    * 
    * @return fraction between 0.0 and 1.0 of rows consumed
    */
-  @Override
   public float getProgress() {
     return ((float) rowBaseInStripe + rowInStripe) / totalRowCount;
   }
@@ -1243,7 +1237,6 @@ class RecordReaderImpl implements RecordReader {
     reader.seek(index);
   }
 
-  @Override
   public void seekToRow(long rowNumber) throws IOException {
     int rightStripe = findStripe(rowNumber);
     if (rightStripe != currentStripe) {

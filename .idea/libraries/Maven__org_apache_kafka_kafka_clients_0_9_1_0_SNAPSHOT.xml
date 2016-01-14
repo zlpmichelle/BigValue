@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.apache.kafka:kafka-clients:0.9.1.0-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160113.011824-44.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160114.011926-45.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160113.011824-44-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160114.011926-45-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160113.011824-44-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/0.9.1.0-SNAPSHOT/kafka-clients-0.9.1.0-20160114.011926-45-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -199,7 +199,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
-            <version>1.1.0-cdh5.6.0</version>
+            <version>0.11.0-cdh5.0.0-beta-1</version>
         </dependency>
         
         <dependency>
@@ -322,23 +322,19 @@
                 <configuration>  
                   <sources>
                     <!--
-                    <source>generated</source>
-                    <source>test</source>
-                    <source>dataload</source>
-                    <source>endpoint</source>  
-                    <source>hive</source>  
-                    <source>hbase</source>
-                    <source>mapreduce</source>
-                    <source>core</source>
-                    <source>solution</source>
-                    <source>util</source>
-                    <source>datagen</source>
+                    <source>endpoint</source>
+                    <source>hive</source>
                     -->
                       <source>generated/src/main/java</source>
                       <source>datagen/src/main/java</source>
                       <source>dataload/src/main/java</source>
                       <source>test/src/test/java</source>
                       <source>server/src/main/java</source>
+                      <source>core/src/main/java</source>
+                      <source>hbase/src/main/java</source>
+                      <source>hive/src/main/java</source>
+                      <source>hdfs/src/main/java</source>
+                      <source>util/src/main/java</source>
                   </sources>  
                 </configuration>  
               </execution>  
