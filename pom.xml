@@ -7,12 +7,6 @@
   <version>1.0</version>
 <packaging>jar</packaging>  
 
-<!--
- <modules>
-    <module>generated</module>
-  </modules>  
-
-  -->
     <dependencies>
         
         <dependency>
@@ -114,7 +108,6 @@
             	</exclusion>
             </exclusions>
         </dependency>
-        <!--1.2.15 要依赖两个sun的包，但sun的包已经被移除了 -->
 
         <dependency>
             <groupId>com.google.protobuf</groupId>
