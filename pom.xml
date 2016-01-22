@@ -325,7 +325,6 @@
                       <source>server/src/main/java</source>
                       <source>core/src/main/java</source>
                       <source>hbase/src/main/java</source>
-                      <source>hive/src/main/java</source>
                       <source>hdfs/src/main/java</source>
                       <source>util/src/main/java</source>
                   </sources>  
